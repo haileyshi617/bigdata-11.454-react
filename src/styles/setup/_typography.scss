@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import 'variables';
+
+$font-title: 'Spectral', serif;
+$font-main: 'Roboto', sans-serif;
+
+@mixin body-regular {
+  font-family: $font-main;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-title;
+  font-style: normal;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 37px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+p,
+pre {
+  @include body-regular;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+ul {
+  @include body-regular;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+ol {
+  @include body-regular;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+small {
+  @include body-regular;
+  font-size: 12px;
+  line-height: 19px;
+}
+
+span {
+  &.red {
+    color: $c-primary-dark;
+  }
+
+  &.blue {
+    color: $c-accent-dark;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  p,
+  pre {
+    @include body-regular;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  li {
+    @include body-regular;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

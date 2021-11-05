@@ -1,0 +1,24 @@
+.footer {
+  height: $footer-height;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+
+  h1 {
+    padding-bottom: 36px;
+  }
+
+  ul {
+    padding-bottom: 60px;
+    li {
+      list-style: none;
+      margin-bottom: 3px;
+    }
+  }
+
+  .logo-container {
+    padding: 20px;
+    margin-left: -40px;
+  }
+}

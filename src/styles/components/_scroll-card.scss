@@ -1,0 +1,23 @@
+.step {
+    max-width: $card-width;
+    margin: 400px auto;
+    padding: 30px 20px;
+    background-color: $c-white;
+    opacity: 0.95;
+    box-shadow: 1px 1px 7px -3px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:first-child {
+        margin-top: 20vh;
+    }
+
+    &:last-child {
+        opacity: 0;
+        margin-bottom: 0;
+    }
+    h2 {
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,9 @@
+@import '../components/section-card';
+
+.section-break {
+    height: 110vh;
+    padding-left: 2vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

@@ -1,0 +1,54 @@
+.intro {
+  height: 100vh;
+  text-align: center;
+  position: relative;
+
+  .header-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 60px;
+    padding-bottom: 20px;
+    line-height: 60px;
+  }
+
+  .subtitle {
+    font-family: $font-main;
+    font-size: 24px;
+    font-weight: 100;
+    padding-bottom: 30px;
+    line-height: 30px;
+  }
+
+  small {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    top: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    h1 {
+      font-size: 36px;
+      padding-bottom: 20px;
+      line-height: 30px;
+    }
+    .subtitle {
+      font-family: $font-main;
+      font-size: 16px;
+      font-weight: 100;
+      padding-bottom: 30px;
+      line-height: 30px;
+    }
+  }
+}

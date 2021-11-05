@@ -1,0 +1,37 @@
+// === COLORS
+
+// === COLORS PRIMARY
+// -----------------
+$c-primary-dark: #eb5832;
+$c-primary-light: #f8ad96;
+
+// === COLORS ACCENT
+// -----------------
+$c-accent-dark: #6bbaad;
+$c-accent-light: #b0d9d5;
+
+// === SHADES OF GRAY
+// -----------------
+$c-black: #2b363b;
+$c-white: #ffffff;
+$c-grey-dark: #bcbcbc;
+$c-grey-light: #efefef;
+
+// === LINK COLOR
+// -----------------
+$c-link: $c-accent-dark;
+
+// STATUS
+// -----------------
+$color-error: #780000;
+$color-success: $c-accent-light;
+
+// SIZES
+// -----------------
+$content-width-pc: 960px;
+$content-width-mobile: 90vw;
+
+$header-height: 60px;
+$footer-height: 480px;
+$card-width: 350px;
+$section-card-width: 692px;

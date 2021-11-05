@@ -1,0 +1,55 @@
+// === SETUP ===
+@import 'setup/typography';
+@import 'setup/variables';
+// @import 'setup/normalize';
+
+// === LAYOUT ===
+@import 'basics/layout';
+
+// === SECTIONS ===
+@import 'section/intro';
+@import 'section/outro';
+@import 'section/section-break';
+@import 'section/scroll';
+@import 'section/footer';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  color: $c-white;
+  background-color: $c-primary-dark;
+}
+
+html,
+body,
+textarea,
+select,
+input,
+button {
+  font-family: $font-main;
+  line-height: 100%;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  // overflow-x: hidden;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  @media screen and (max-height: 500px) {
+    height: inherit;
+  }
+}
+
+// .mapboxgl-control-container {
+//   display: none;
+// }
