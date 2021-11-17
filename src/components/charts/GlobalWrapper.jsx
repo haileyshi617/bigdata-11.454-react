@@ -11,11 +11,16 @@ const ChartWrapper = ({ gender }) => {
     }
     // skip the loading state, when data is still a pending promise
     else if (chart.menData) {
-      chart.update(gender);
+      chart.update();
     }
-  }, [chart, gender]);
+  }, [chart]);
 
-  return <div className="chart-area" ref={chartArea}></div>;
+  return (
+    <div>
+      <div className="chart-area" ref={chartArea}></div>
+      <div id="tooltip" class="hidden"></div>
+    </div>
+  );
 };
 
 export default ChartWrapper;
