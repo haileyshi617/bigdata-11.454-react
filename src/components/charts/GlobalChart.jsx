@@ -1,9 +1,15 @@
 import * as d3 from 'd3';
 import data from '../../data/food-global.csv';
 
-const MARGIN = { TOP: 10, BOTTOM: 50, LEFT: 70, RIGHT: 10 };
-const WIDTH = 1000 - MARGIN.LEFT - MARGIN.RIGHT;
+const MARGIN = { TOP: 10, BOTTOM: 50, LEFT: 20, RIGHT: 10 };
+const WIDTH = 800 - MARGIN.LEFT - MARGIN.RIGHT;
 const HEIGHT = 500 - MARGIN.TOP - MARGIN.BOTTOM;
+
+// conditional rendering
+const COUNTRIES = ['Honduras', 'El Salvador', 'Guatemala'];
+const CIRCLE = { REGULAR: 5, SELECT: 10 };
+const OPACITY = { REGULAR: 0.2, SELECT: 1 };
+const LINE = { REGULAR: 0.4, SELECT: 2 };
 
 export default class D3Chart {
   constructor(element) {
@@ -23,14 +29,6 @@ export default class D3Chart {
       .attr('y', HEIGHT + 50)
       .attr('text-anchor', 'middle');
 
-    vis.svg
-      .append('text')
-      .attr('x', -(HEIGHT / 2))
-      .attr('y', -50)
-      .attr('text-anchor', 'middle')
-      .text('Hunger Severity')
-      .attr('transform', 'rotate(-90)');
-
     vis.xAxisGroup = vis.svg
       .append('g')
       .attr('transform', `translate(0, ${HEIGHT})`);
@@ -45,7 +43,6 @@ export default class D3Chart {
 
   update() {
     const vis = this;
-
     vis.data = vis.data;
 
     const y = d3
@@ -62,9 +59,6 @@ export default class D3Chart {
       .range([0, WIDTH])
       .padding(0.4);
 
-    const xAxisCall = d3.axisBottom(x);
-    // vis.xAxisGroup.transition().duration(500).call(xAxisCall);
-
     const yAxisCall = d3.axisLeft(y);
     vis.yAxisGroup.transition().duration(500).call(yAxisCall);
 
@@ -73,56 +67,24 @@ export default class D3Chart {
     const circleModerate = vis.svg.selectAll('myCircle').data(vis.data);
     const circleSevere = vis.svg.selectAll('myCircle').data(vis.data);
 
-    // // EXIT
-    // lines
-    //   .exit()
-    //   .transition()
-    //   .duration(500)
-    //   .attr('x1', function (d) {
-    //     return x(d.country);
-    //   })
-    //   .attr('x2', function (d) {
-    //     return x(d.country);
-    //   })
-    //   .attr('y1', function (d) {
-    //     return y(d.moderate);
-    //   })
-    //   .attr('y2', function (d) {
-    //     return y(d.moderate);
-    //   })
-    //   .remove();
-
-    // // UPDATE
-    // lines
-    //   .transition()
-    //   .duration(500)
-    //   .ease(d3.easeCubicIn)
-    //   .attr('x1', function (d) {
-    //     return x(d.country);
-    //   })
-    //   .attr('x2', function (d) {
-    //     return x(d.country);
-    //   })
-    //   .attr('y1', function (d) {
-    //     return y(d.moderate);
-    //   })
-    //   .attr('y2', function (d) {
-    //     return y(d.severe);
-    //   });
-
-    // Mouse Event
+    // MOUSE EVENT
     const mouseover = function (event, d) {
-      console.log(event);
-      d3.select(this).style('opacity', 0.81);
-      d3.select('#tooltip')
-        .style('left', event.pageX + 'px')
-        .style('top', event.pageY + 'px')
-        .html(`<p> ${d.country} </p>`);
+      d3.select(this).style('r', CIRCLE.SELECT);
+      d3.select(this).attr('stroke-width', LINE.SELECT);
+      d3
+        .select('#tooltip')
+        .style('left', event.pageX - 100 + 'px')
+        .style('top', event.pageY - 100 + 'px').html(`<p> ${d.country} </p>
+        <p> Severe Hunger: ${d.severe} </p>
+        <p> Moderate Hunger: ${d.moderate} </p>`);
       d3.select('#tooltip').classed('hidden', false);
     };
 
     const mouseout = function (event, d) {
-      d3.select(this).style('opacity', 1);
+      d3.select(this).style('r', CIRCLE.REGULAR);
+      d3.select(this).attr('stroke-width', (d) => {
+        return COUNTRIES.includes(d.country) ? LINE.SELECT : LINE.REGULAR;
+      });
       d3.select('#tooltip').classed('hidden', true);
     };
 
@@ -156,7 +118,9 @@ export default class D3Chart {
         return y(d.severe);
       })
       .attr('stroke', '#bcbcbc')
-      .attr('stroke-width', '2px');
+      .attr('stroke-width', (d) => {
+        return COUNTRIES.includes(d.country) ? LINE.SELECT : LINE.REGULAR;
+      });
 
     circleModerate
       .enter()
@@ -174,7 +138,10 @@ export default class D3Chart {
       .transition()
       .ease(d3.easeCubicIn)
       .duration(500)
-      .attr('r', '3');
+      .attr('r', CIRCLE.REGULAR)
+      .attr('opacity', (d) => {
+        return COUNTRIES.includes(d.country) ? OPACITY.SELECT : OPACITY.REGULAR;
+      });
 
     circleSevere
       .enter()
@@ -194,7 +161,10 @@ export default class D3Chart {
       .transition()
       .ease(d3.easeCubicIn)
       .duration(500)
-      .attr('r', '3');
+      .attr('r', CIRCLE.REGULAR)
+      .attr('opacity', (d) => {
+        return COUNTRIES.includes(d.country) ? OPACITY.SELECT : OPACITY.REGULAR;
+      });
 
     // // EXIT
     // rects
