@@ -1,5 +1,6 @@
 import React, { Component,useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
+import CardScroll from '../ui/CardScroll';
 
 function Scroll01(){
   const imgs = ['https://images.unsplash.com/photo-1636335287146-a22df22cafe2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1632&q=80',
@@ -24,6 +25,7 @@ function Scroll01(){
       <div className='main'>
         <div className='main__graphic'>
           <img src={img} id="myImg"/>
+          {/* <d3 class='a' step={steps}></d3> */}
         </div>
         <div className='scroller'>
           <Scrollama
@@ -33,13 +35,13 @@ function Scroll01(){
             offset="0.5"
             debug
           >
-            <Step data={1} key={1}>
-              <div className='step'>
+            <Step data={1} value={1} >
+             <div className='step'>
                 <h2>I. Migration Desire</h2>
                 <p>The probability of experiencing moderate or severe food insecurity varies widely across countries—from <span className="red">less than 2 percent</span> in Switzerland to <span className="blue">85 percent</span> in Liberia.
                 </p>
-                <p>{Math.round(progress * 1000) / 10 + '%'}</p>
-              </div>
+                <p>{Math.round(progress * 1000) / 10 + '%'}</p>   
+              </div>           
             </Step>
             <Step data={2} key={2}>
               <div className='step'>
