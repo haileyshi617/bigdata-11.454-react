@@ -1,3 +1,9 @@
-import * as d3 from 'd3'
+import * as d3 from 'd3';
 
-const dataSource = 'src/data/food-global.csv'
+const dataSrc = '../../data/food-global.csv';
+
+export default class GlobalChart {
+    constructor(element) {
+        d3.csv("src/data/food-global.csv").then(data => console.log(data))
+    }
+}

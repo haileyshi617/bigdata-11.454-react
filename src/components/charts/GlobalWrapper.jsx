@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import D3Chart from './D3Chart';
+import GlobalChart from './GlobalChart';
 
 const ChartWrapper = () => {
     const chartArea = useRef(null);
@@ -7,7 +7,7 @@ const ChartWrapper = () => {
 
     useEffect(() => {
         if (!chart) {
-            setChart(new D3Chart(chartArea.current));
+            setChart(new GlobalChart(chartArea.current));
         } else {
             chart.update();
         }
