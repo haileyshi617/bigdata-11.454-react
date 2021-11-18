@@ -17,8 +17,8 @@ const FoodAndMigrationWrapper = ({}) => {
 
   return (
     <div>
-      <div className="chart-area" ref={chartArea}>
-        <div id="tooltip" className="hidden"></div>
+      <div className="food-chart-area" ref={chartArea}>
+        {/* <div id="tooltip" className="hidden"></div> */}
       </div>
     </div>
   );

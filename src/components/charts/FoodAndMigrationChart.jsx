@@ -1,5 +1,5 @@
 import * as d3 from 'd3';
-import data from '../../data/food-global.csv';
+import data from '../../data/roster.csv';
 
 const MARGIN = { TOP: 10, BOTTOM: 50, LEFT: 30, RIGHT: 10 };
 const WIDTH = 800 - MARGIN.LEFT - MARGIN.RIGHT;
@@ -16,6 +16,8 @@ const CIRCLE = { REGULAR: 5, SELECT: 10 };
 const OPACITY = { REGULAR: 0.2, SELECT: 1 };
 const LINE = { REGULAR: 0.4, SELECT: 2 };
 
+const t = d3.transition().duration(1000);
+
 export default class FoodAndMigrationChart {
   constructor(element) {
     const vis = this;
@@ -28,14 +30,15 @@ export default class FoodAndMigrationChart {
       .append('g')
       .attr('transform', `translate(${MARGIN.LEFT}, ${MARGIN.TOP})`);
 
-    vis.xLabel = vis.svg
-      .append('text')
-      .attr('x', WIDTH / 2)
-      .attr('y', HEIGHT + 50)
-      .attr('text-anchor', 'middle');
+    // vis.xLabel = vis.svg
+    //   .append('text')
+    //   .attr('x', WIDTH / 2)
+    //   .attr('y', HEIGHT + 50)
+    //   .attr('text-anchor', 'middle');
 
     vis.xAxisGroup = vis.svg
       .append('g')
+      .attr('id', 'x-axis')
       .attr('transform', `translate(0, ${HEIGHT})`);
 
     vis.yAxisGroup = vis.svg.append('g').attr('id', 'y-axis');
@@ -50,135 +53,219 @@ export default class FoodAndMigrationChart {
     const vis = this;
     vis.data = vis.data;
 
+    // add the tooltip area to the webpage
+    let tooltip = d3
+      .select('.food-chart-area')
+      .append('div')
+      .attr('class', 'tooltip')
+      .style('opacity', 0);
+
     const y = d3
       .scaleLinear()
       .domain([
-        d3.min(vis.data, (d) => d.severe),
-        d3.max(vis.data, (d) => d.moderate),
+        d3.min(vis.data, (d) => d.Value),
+        d3.max(vis.data, (d) => d.Value),
       ])
       .nice()
       .range([HEIGHT, 0]);
 
     const x = d3
       .scaleBand()
-      .domain(vis.data.map((d) => d.country))
+      .domain(vis.data.map((d) => d.Name))
       .range([0, WIDTH])
       .padding(0.4);
 
-    const yAxisCall = d3.axisLeft(y).tickFormat((d, i) => {
-      if (i % 2 == 0) {
-        return `${d}%`;
-      }
+    // Set up the binning parameters for the histogram
+    const nbins = vis.data.length;
+
+    const histogram = d3
+      .histogram()
+      .value(function (d) {
+        return d.Value;
+      })
+      .domain(x.domain())
+      .thresholds(nbins);
+
+    // Compute the histogram
+    const bins = histogram(vis.data);
+    console.log(bins);
+
+    // radius dependent of data length
+    const radius = y(nbins - 1) / 2;
+
+    // bins objects
+    const bin_container = vis.svg.selectAll('g').data(bins);
+
+    bin_container.enter().append('g');
+
+    // JOIN new data with old elements.
+    const dots = bin_container.selectAll('circle').data(function (d) {
+      return d.map(function (data, i) {
+        return {
+          idx: i,
+          name: data.Name,
+          value: data.Value,
+          xpos: x(d.x0) + (x(d.x1) - x(d.x0)) / 2,
+        };
+      });
     });
-    vis.yAxisGroup
-      .style('stroke-width', '0')
-      .transition()
-      .duration(500)
-      .call(yAxisCall);
 
-    // DATA JOIN
-    const lines = vis.svg.selectAll('myLine').data(vis.data);
-    const circleModerate = vis.svg.selectAll('myCircle').data(vis.data);
-    const circleSevere = vis.svg.selectAll('myCircle').data(vis.data);
+    // EXIT old elements not present in new data.
+    dots.exit().attr('class', 'exit').transition(t).attr('r', 0).remove();
 
-    // MOUSE EVENT
-    const mouseover = function (event, d) {
-      d3.select(this).style('r', CIRCLE.SELECT);
-      d3.select(this).attr('stroke-width', LINE.SELECT);
-      d3
-        .select('#tooltip')
-        .style('left', event.pageX - 100 + 'px')
-        .style('top', event.pageY - 100 + 'px').html(`<p> ${d.country} </p>
-        <p> Severe Hunger: ${d.severe} </p>
-        <p> Moderate Hunger: ${d.moderate} </p>`);
-      d3.select('#tooltip').classed('hidden', false);
-    };
+    // UPDATE old elements present in new data.
+    dots.attr('class', 'update');
 
-    const mouseout = function (event, d) {
-      d3.select(this).style('r', CIRCLE.REGULAR);
-      d3.select(this).attr('stroke-width', (d) => {
-        return COUNTRIES.includes(d.country) ? LINE.SELECT : LINE.REGULAR;
-      });
-      d3.select('#tooltip').classed('hidden', true);
-    };
-
-    // ENTER
-    lines
-      .enter()
-      .append('line')
-      .on('mouseover', mouseover)
-      .on('mouseout', mouseout)
-      .attr('x1', function (d) {
-        return x(d.country);
-      })
-      .attr('x2', function (d) {
-        return x(d.country);
-      })
-      .attr('y1', function (d) {
-        return y(d.moderate);
-      })
-      .attr('y2', function (d) {
-        return y(d.moderate);
-      })
-      .transition()
-      .duration(1000)
-      .transition()
-      .duration(800)
-      .ease(d3.easeCubicOut)
-      .attr('y1', function (d) {
-        return y(d.moderate);
-      })
-      .attr('y2', function (d) {
-        return y(d.severe);
-      })
-      .attr('stroke', '#bcbcbc')
-      .attr('stroke-width', (d) => {
-        return COUNTRIES.includes(d.country) ? LINE.SELECT : LINE.REGULAR;
-      });
-
-    circleModerate
+    // ENTER new elements present in new data.
+    // var cdots = dots.enter().append("circle")
+    dots
       .enter()
       .append('circle')
-      .on('mouseover', mouseover)
-      .on('mouseout', mouseout)
+      .attr('class', 'enter')
       .attr('cx', function (d) {
-        return x(d.country);
+        return d.xpos;
       })
+      // .attr("cy", 0)
       .attr('cy', function (d) {
-        return y(d.moderate);
+        return y(d.idx) - radius;
       })
-      .attr('r', '0')
-      .style('fill', '#6bbaad')
+      // .attr("r", function(d) { return (d.length==0) ? 0 : radius; })
+      .attr('r', 0)
+      //.style("fill", "steelblue")
+      .merge(dots)
+      .on('mouseover', function (d) {
+        d3.select(this).style('fill', 'red');
+        tooltip.transition().duration(200).style('opacity', 0.9);
+        tooltip
+          .html(d.name + '<br/> (' + d.value + ')')
+          .style('left', d3.select(this).attr('cx') + 'px')
+          .style('top', d3.select(this).attr('cy') - 50 + 'px');
+      })
+      .on('mouseout', function (d) {
+        d3.select(this).style('fill', 'steelblue');
+        tooltip.transition().duration(500).style('opacity', 0);
+      })
       .transition()
-      .ease(d3.easeCubicIn)
       .duration(500)
-      .attr('r', CIRCLE.REGULAR)
-      .attr('opacity', (d) => {
-        return COUNTRIES.includes(d.country) ? OPACITY.SELECT : OPACITY.REGULAR;
+      .attr('r', function (d) {
+        return d.length == 0 ? 0 : radius;
       });
 
-    circleSevere
-      .enter()
-      .append('circle')
-      .on('mouseover', mouseover)
-      .on('mouseout', mouseout)
-      .attr('cx', function (d) {
-        return x(d.country);
-      })
-      .attr('cy', function (d) {
-        return y(d.severe);
-      })
-      .attr('r', '0')
-      .style('fill', '#eb5832')
-      .transition()
-      .duration(1500)
-      .transition()
-      .ease(d3.easeCubicIn)
-      .duration(500)
-      .attr('r', CIRCLE.REGULAR)
-      .attr('opacity', (d) => {
-        return COUNTRIES.includes(d.country) ? OPACITY.SELECT : OPACITY.REGULAR;
-      });
+    /* -------------------------------- OLD CHART ------------------------------- */
+    // const yAxisCall = d3.axisLeft(y).tickFormat((d, i) => {
+    //   if (i % 2 == 0) {
+    //     return `${d}%`;
+    //   }
+    // });
+    // vis.yAxisGroup
+    //   .style('stroke-width', '0')
+    //   .transition()
+    //   .duration(500)
+    //   .call(yAxisCall);
+
+    // // DATA JOIN
+    // const lines = vis.svg.selectAll('myLine').data(vis.data);
+    // const circleModerate = vis.svg.selectAll('myCircle').data(vis.data);
+    // const circleSevere = vis.svg.selectAll('myCircle').data(vis.data);
+
+    // // MOUSE EVENT
+    // const mouseover = function (event, d) {
+    //   d3.select(this).style('r', CIRCLE.SELECT);
+    //   d3.select(this).attr('stroke-width', LINE.SELECT);
+    //   d3
+    //     .select('#tooltip')
+    //     .style('left', event.pageX - 100 + 'px')
+    //     .style('top', event.pageY - 100 + 'px').html(`<p> ${d.country} </p>
+    //     <p> Severe Hunger: ${d.severe} </p>
+    //     <p> Moderate Hunger: ${d.moderate} </p>`);
+    //   d3.select('#tooltip').classed('hidden', false);
+    // };
+
+    // const mouseout = function (event, d) {
+    //   d3.select(this).style('r', CIRCLE.REGULAR);
+    //   d3.select(this).attr('stroke-width', (d) => {
+    //     return COUNTRIES.includes(d.country) ? LINE.SELECT : LINE.REGULAR;
+    //   });
+    //   d3.select('#tooltip').classed('hidden', true);
+    // };
+
+    // // ENTER
+    // lines
+    //   .enter()
+    //   .append('line')
+    //   .on('mouseover', mouseover)
+    //   .on('mouseout', mouseout)
+    //   .attr('x1', function (d) {
+    //     return x(d.country);
+    //   })
+    //   .attr('x2', function (d) {
+    //     return x(d.country);
+    //   })
+    //   .attr('y1', function (d) {
+    //     return y(d.moderate);
+    //   })
+    //   .attr('y2', function (d) {
+    //     return y(d.moderate);
+    //   })
+    //   .transition()
+    //   .duration(1000)
+    //   .transition()
+    //   .duration(800)
+    //   .ease(d3.easeCubicOut)
+    //   .attr('y1', function (d) {
+    //     return y(d.moderate);
+    //   })
+    //   .attr('y2', function (d) {
+    //     return y(d.severe);
+    //   })
+    //   .attr('stroke', '#bcbcbc')
+    //   .attr('stroke-width', (d) => {
+    //     return COUNTRIES.includes(d.country) ? LINE.SELECT : LINE.REGULAR;
+    //   });
+
+    // circleModerate
+    //   .enter()
+    //   .append('circle')
+    //   .on('mouseover', mouseover)
+    //   .on('mouseout', mouseout)
+    //   .attr('cx', function (d) {
+    //     return x(d.country);
+    //   })
+    //   .attr('cy', function (d) {
+    //     return y(d.moderate);
+    //   })
+    //   .attr('r', '0')
+    //   .style('fill', '#6bbaad')
+    //   .transition()
+    //   .ease(d3.easeCubicIn)
+    //   .duration(500)
+    //   .attr('r', CIRCLE.REGULAR)
+    //   .attr('opacity', (d) => {
+    //     return COUNTRIES.includes(d.country) ? OPACITY.SELECT : OPACITY.REGULAR;
+    //   });
+
+    // circleSevere
+    //   .enter()
+    //   .append('circle')
+    //   .on('mouseover', mouseover)
+    //   .on('mouseout', mouseout)
+    //   .attr('cx', function (d) {
+    //     return x(d.country);
+    //   })
+    //   .attr('cy', function (d) {
+    //     return y(d.severe);
+    //   })
+    //   .attr('r', '0')
+    //   .style('fill', '#eb5832')
+    //   .transition()
+    //   .duration(1500)
+    //   .transition()
+    //   .ease(d3.easeCubicIn)
+    //   .duration(500)
+    //   .attr('r', CIRCLE.REGULAR)
+    //   .attr('opacity', (d) => {
+    //     return COUNTRIES.includes(d.country) ? OPACITY.SELECT : OPACITY.REGULAR;
+    //   });
 
     // // EXIT
     // rects
