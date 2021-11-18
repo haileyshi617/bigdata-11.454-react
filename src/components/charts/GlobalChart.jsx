@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 import data from '../../data/food-global.csv';
 
-const MARGIN = { TOP: 10, BOTTOM: 50, LEFT: 20, RIGHT: 10 };
+const MARGIN = { TOP: 10, BOTTOM: 50, LEFT: 30, RIGHT: 10 };
 const WIDTH = 800 - MARGIN.LEFT - MARGIN.RIGHT;
 const HEIGHT = 500 - MARGIN.TOP - MARGIN.BOTTOM;
 
@@ -51,6 +51,7 @@ export default class D3Chart {
         d3.min(vis.data, (d) => d.severe),
         d3.max(vis.data, (d) => d.moderate),
       ])
+      .nice()
       .range([HEIGHT, 0]);
 
     const x = d3
@@ -59,7 +60,11 @@ export default class D3Chart {
       .range([0, WIDTH])
       .padding(0.4);
 
-    const yAxisCall = d3.axisLeft(y);
+    const yAxisCall = d3.axisLeft(y).tickFormat((d, i) => {
+      if (i % 2 == 0) {
+        return `${d}%`;
+      }
+    });
     vis.yAxisGroup.transition().duration(500).call(yAxisCall);
 
     // DATA JOIN
