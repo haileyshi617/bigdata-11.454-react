@@ -16,7 +16,7 @@ const CIRCLE = { REGULAR: 5, SELECT: 10 };
 const OPACITY = { REGULAR: 0.2, SELECT: 1 };
 const LINE = { REGULAR: 0.4, SELECT: 2 };
 
-export default class GlobalChart {
+export default class FoodAndMigrationChart {
   constructor(element) {
     const vis = this;
 

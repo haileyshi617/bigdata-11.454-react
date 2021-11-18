@@ -1,18 +1,18 @@
 import React, { useRef, useState, useEffect } from 'react';
-import GlobalChart from './GlobalChart';
+import FoodAndMigrationChart from './FoodAndMigrationChart';
 
-const GlobalWrapper = ({ gender }) => {
+const FoodAndMigrationWrapper = ({}) => {
   const chartArea = useRef(null);
   const [chart, setChart] = useState(null);
 
   useEffect(() => {
     if (!chart) {
-      setChart(new GlobalChart(chartArea.current));
+      setChart(new FoodAndMigrationChart(chartArea.current));
     }
-    // skip the loading state, when data is still a pending promise
-    else if (chart.menData) {
-      chart.update();
-    }
+    // // skip the loading state, when data is still a pending promise
+    // else if (chart.menData) {
+    //   chart.update();
+    // }
   }, [chart]);
 
   return (
@@ -24,4 +24,4 @@ const GlobalWrapper = ({ gender }) => {
   );
 };
 
-export default GlobalWrapper;
+export default FoodAndMigrationWrapper;
