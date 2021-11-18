@@ -6,7 +6,12 @@ const WIDTH = 800 - MARGIN.LEFT - MARGIN.RIGHT;
 const HEIGHT = 500 - MARGIN.TOP - MARGIN.BOTTOM;
 
 // conditional rendering
-const COUNTRIES = ['Honduras', 'El Salvador', 'Guatemala'];
+const COUNTRIES = [
+  'Honduras',
+  'El Salvador',
+  'Guatemala',
+  'United States of America',
+];
 const CIRCLE = { REGULAR: 5, SELECT: 10 };
 const OPACITY = { REGULAR: 0.2, SELECT: 1 };
 const LINE = { REGULAR: 0.4, SELECT: 2 };
@@ -65,7 +70,11 @@ export default class D3Chart {
         return `${d}%`;
       }
     });
-    vis.yAxisGroup.transition().duration(500).call(yAxisCall);
+    vis.yAxisGroup
+      .style('stroke-width', '0')
+      .transition()
+      .duration(500)
+      .call(yAxisCall);
 
     // DATA JOIN
     const lines = vis.svg.selectAll('myLine').data(vis.data);
