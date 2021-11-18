@@ -1,0 +1,25 @@
+.food-chart-area {
+  .enter {
+    fill: #edca3a;
+  }
+
+  .update {
+    fill: #1fbad6;
+  }
+
+  .exit {
+    fill: #f25754;
+  }
+
+  .selected {
+    fill: #e6b0f1;
+  }
+
+  .tooltip {
+    position: absolute;
+    padding: 5px;
+    background: #fff;
+    border: solid gray 1px;
+    z-index: 1;
+  }
+}
