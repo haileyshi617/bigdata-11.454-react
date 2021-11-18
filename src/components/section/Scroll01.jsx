@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
 import CardScroll from '../ui/CardScroll';
+import SurveyChart from '../charts/SurveyChart'
 
 function Scroll01() {
   const imgs = [
@@ -27,6 +28,7 @@ function Scroll01() {
       <div className="main">
         <div className="main__graphic">
           <img src={img} id="myImg" />
+          <SurveyChart steps={steps} />
           {/* <d3 class='a' step={steps}></d3> */}
         </div>
         <div className="scroller">
