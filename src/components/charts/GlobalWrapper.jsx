@@ -17,8 +17,9 @@ const ChartWrapper = ({ gender }) => {
 
   return (
     <div>
-      <div className="chart-area" ref={chartArea}></div>
-      <div id="tooltip" class="hidden"></div>
+      <div className="chart-area" ref={chartArea}>
+        <div id="tooltip" className="hidden"></div>
+      </div>
     </div>
   );
 };
