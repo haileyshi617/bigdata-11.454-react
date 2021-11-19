@@ -2,7 +2,7 @@ import * as d3 from 'd3';
 import data from '../../data/food-global.csv';
 
 const MARGIN = { TOP: 10, BOTTOM: 50, LEFT: 30, RIGHT: 10 };
-const WIDTH = 800 - MARGIN.LEFT - MARGIN.RIGHT;
+const WIDTH = 1000 - MARGIN.LEFT - MARGIN.RIGHT;
 const HEIGHT = 500 - MARGIN.TOP - MARGIN.BOTTOM;
 
 // conditional rendering

@@ -5,6 +5,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  h1 {
+    max-width: 45vw;
+  }
 }
 
 .red {

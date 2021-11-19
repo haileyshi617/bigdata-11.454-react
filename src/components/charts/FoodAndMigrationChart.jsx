@@ -2,7 +2,7 @@ import * as d3 from 'd3';
 import data from '../../data/roster.csv';
 
 const MARGIN = { TOP: 10, BOTTOM: 50, LEFT: 30, RIGHT: 10 };
-const WIDTH = 800 - MARGIN.LEFT - MARGIN.RIGHT;
+const WIDTH = 1000 - MARGIN.LEFT - MARGIN.RIGHT;
 const HEIGHT = 500 - MARGIN.TOP - MARGIN.BOTTOM;
 
 // // conditional rendering
@@ -56,7 +56,7 @@ export default class FoodAndMigrationChart {
 
     // Set the ranges
     const x = d3.scaleLinear().rangeRound([0, WIDTH]).domain([2, 11]);
-    const y = d3.scaleLinear().range([HEIGHT, 0]).domain([0, vis.data.length]);
+    // const y = d3.scaleLinear().range([HEIGHT, 0]).domain([0, vis.data.length]);
 
     // Set up the binning parameters for the histogram
     const nbins = vis.data.length;
@@ -152,7 +152,7 @@ export default class FoodAndMigrationChart {
         return d.length == 0 ? 0 : d.radius;
       });
 
-    function tooltipOn(d) {
+    function tooltipOn(event, d) {
       //x position of parent g element
       let gParent = d3.select(this.parentElement);
       let translateValue = gParent.attr('transform');
@@ -168,7 +168,7 @@ export default class FoodAndMigrationChart {
         .style('top', gY + 'px');
     } //tooltipOn
 
-    function tooltipOff(d) {
+    function tooltipOff(event, d) {
       d3.select(this).classed('selected', false);
       tooltip.transition().duration(500).style('opacity', 0);
     } //tooltipOff

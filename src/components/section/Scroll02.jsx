@@ -1,6 +1,8 @@
 import React, { Component, useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
+
 import FoodAndMigrationWrapper from '../charts/FoodAndMigrationWrapper';
+import GridChartWrapper from '../charts/GridChartWrapper';
 
 function Scroll02() {
   const [steps, setSteps] = useState(null);
@@ -19,9 +21,11 @@ function Scroll02() {
 
   return (
     <div>
-      <FoodAndMigrationWrapper />
       <div className="main">
+        <GridChartWrapper />
+        {/* <FoodAndMigrationWrapper /> */}
         <div className="main__graphic">
+          {/* <FoodAndMigrationWrapper /> */}
           {/* <d3 class='a' step={steps}></d3> */}
         </div>
         <div className="scroller">
