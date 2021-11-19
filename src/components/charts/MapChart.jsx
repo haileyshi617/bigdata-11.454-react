@@ -1,11 +1,19 @@
 import * as d3 from 'd3';
 
+// CANVAS SETUP
 const WIDTH = window.innerWidth;
 const HEIGHT = window.innerHeight;
+
+// RENDERING SETTING
+const NT = ['GTM', 'HND', 'SLV'];
+const RED = { REGULAR: '#f8ad96', SELECT: '#eb5832' };
+const GRAY = { REGULAR: '#f0f0f0', SELECT: '#bcbcbc' };
 
 export default class Mapchart {
   constructor(element) {
     const vis = this;
+
+    // CANVAS SETUP
     vis.svg = d3
       .select(element)
       .append('svg')
@@ -20,6 +28,7 @@ export default class Mapchart {
       .scale(WIDTH / 0.6 / Math.PI)
       .translate([WIDTH / 2, HEIGHT / 2]);
 
+    // FETCHING DATA
     Promise.all([
       d3.json(
         'https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson'
@@ -31,45 +40,49 @@ export default class Mapchart {
   }
   update() {
     const vis = this;
-    const NT = ['GTM', 'HND', 'SLV'];
+    vis.data = vis.data;
 
+    // DATA JOIN
     const map = vis.svg.selectAll('path').data(vis.data.features);
 
     // MOUSE EVENT
-    const tooltip = d3.selectAll('.tooltip');
+    const tooltip = d3.select('#tooltip-map');
 
-    const mouseover = (event, d) => {
+    const mouseover = function (event, d) {
       tooltip
         .html(
-          `<p>in ${d.properties.name} around % of the popluation migrates to the US.<p>`
+          `<p>In <span>${d.properties.name}</span>, around <span>(??)%</span> of the population migrate to the US.<p>`
         )
         .style('left', event.pageX + 'px')
         .style('top', event.pageY - HEIGHT + 'px')
         .classed('hidden', false);
-      vis.svg.selectAll('path').style('opacity', 1);
-      vis.svg
-        .selectAll('path')
-        .filter((e) => e === d)
-        .attr('fill', (d) => (NT.includes(d.id) ? '#eb5832' : '#bcbcbc'));
+
+      d3.select(this).attr('fill', (d) =>
+        NT.includes(d.id) ? RED.SELECT : GRAY.SELECT
+      );
     };
 
-    const mouseout = (event, d) => {
+    const mouseout = function (event, d) {
       tooltip.classed('hidden', true);
-      vis.svg
-        .selectAll('path')
-        .style('opacity', 1)
-        .attr('fill', (d) => (NT.includes(d.id) ? '#f8ad96' : '#f0f0f0'));
+
+      d3.select(this).attr('fill', (d) =>
+        NT.includes(d.id) ? RED.REGULAR : GRAY.REGULAR
+      );
     };
 
+    // ENTER
     map
       .enter()
       .append('path')
-      .attr('fill', (d) => (NT.includes(d.id) ? '#f8ad96' : '#f0f0f0'))
+      .on('mouseover', mouseover)
+      .on('mouseout', mouseout)
+      .attr('fill', GRAY.REGULAR)
+      .transition()
+      .duration(1000)
+      .attr('fill', (d) => (NT.includes(d.id) ? RED.REGULAR : GRAY.REGULAR))
       .attr('d', d3.geoPath().projection(vis.projection))
       .style('stroke', '#fff')
       .style('stroke-width', 1)
-      .attr('class', 'Country')
-      .on('mouseover', mouseover)
-      .on('mouseout', mouseout);
+      .attr('class', 'Country');
   }
 }

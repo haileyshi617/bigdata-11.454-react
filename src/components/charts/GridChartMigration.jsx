@@ -1,5 +1,5 @@
 import * as d3 from 'd3';
-import data from '../../data/cari-mig.csv';
+import data from '../../data/sliced1000.csv';
 
 const MARGIN = { TOP: 10, BOTTOM: 50, LEFT: 30, RIGHT: 10 };
 const WIDTH = 1000 - MARGIN.LEFT - MARGIN.RIGHT;
@@ -43,16 +43,15 @@ export default class GridChart {
       const width = WIDTH / NCOL;
       const height = width;
 
+      // keep track of data to collect
       let i = 0;
 
       // iterate for rows
-      for (var row = 0; row < NROW; row++) {
+      for (let row = 0; row < NROW; row++) {
         data.push(new Array());
 
         // iterate for cells/columns inside rows
-        for (var column = 0; column < NCOL; column++) {
-          i++;
-
+        for (let column = 0; column < NCOL; column++) {
           data[row].push({
             x: xpos,
             y: ypos,
@@ -60,12 +59,13 @@ export default class GridChart {
             height: height,
             visData: visData[i],
           });
-          // increment the x position. I.e. move it over by 50 (width variable)
+          // increment the x position
           xpos += width;
+          i++;
         }
         // reset the x position after a row is complete
         xpos = 1;
-        // increment the y position for the next row. Move it down 50 (height variable)
+        // increment the y position for the next row
         ypos += height;
       }
       return data;
@@ -88,7 +88,8 @@ export default class GridChart {
     };
 
     var gridData = gridData(vis.data);
-    // I like to log the data to the console for quick debugging
+
+    // Log the data to the console for quick debugging
     console.log(gridData);
 
     var grid = d3
@@ -125,9 +126,9 @@ export default class GridChart {
         return d.height;
       })
       .style('fill', (d) =>
-        d.visData.ifMigrate === '0' ? '#b0d9d5' : '#eb5832'
+        d.visData.mig_categ === '0.0' ? '#b0d9d5' : '#eb5832'
       )
-      .style('stroke', '#222')
+      .style('stroke', '#fff')
       .on('mouseover', mouseover)
       .on('mouseout', mouseout);
   }

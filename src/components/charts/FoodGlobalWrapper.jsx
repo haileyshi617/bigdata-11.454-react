@@ -17,7 +17,7 @@ const FoodGlobalChartWrapper = ({}) => {
 
   return (
     <>
-      <div className="tooltip hidden"></div>
+      <div id="tooltip-food-global" className="tooltip hidden"></div>
       <div className="chart-area" ref={chartArea}></div>
     </>
   );

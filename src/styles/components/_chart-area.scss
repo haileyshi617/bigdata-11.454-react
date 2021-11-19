@@ -3,17 +3,25 @@
   height: 100vh;
 }
 
+.hidden {
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
 .tooltip {
   position: absolute;
-  width: 10vw;
+  width: 15vw;
   padding: 5px 10px;
   border: $c-primary-dark solid 1px;
   background: white;
   color: $c-primary-dark;
   z-index: 100;
 
-  &.hidden {
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  .header {
+    padding-bottom: 6px;
+  }
+
+  span {
+    font-weight: bold;
   }
 }

@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import GridChart from './GridChart';
+import GridChart from './GridChartMigration';
 
 const GridChartWrapper = ({}) => {
   const chartArea = useRef(null);
@@ -17,7 +17,7 @@ const GridChartWrapper = ({}) => {
 
   return (
     <div>
-      <div className="grid" ref={chartArea}>
+      <div className="grid" rsef={chartArea}>
         {/* <div id="tooltip" className="hidden"></div> */}
       </div>
     </div>

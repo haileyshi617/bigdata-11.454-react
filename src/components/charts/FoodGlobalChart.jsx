@@ -1,25 +1,31 @@
 import * as d3 from 'd3';
 import data from '../../data/food-global.csv';
 
-const MARGIN = { TOP: 10, BOTTOM: 50, LEFT: 30, RIGHT: 10 };
+// CANVAS SETUP
+const MARGIN = { TOP: 10, BOTTOM: 300, LEFT: 100, RIGHT: 100 };
 const WIDTH = window.innerWidth - MARGIN.LEFT - MARGIN.RIGHT;
 const HEIGHT = window.innerHeight - MARGIN.TOP - MARGIN.BOTTOM;
 
-// conditional rendering
+// RENDERING SETUP
 const COUNTRIES = [
   'Honduras',
   'El Salvador',
   'Guatemala',
   'United States of America',
 ];
-const CIRCLE = { REGULAR: 5, SELECT: 10 };
+const CIRCLE = { REGULAR: 4, SELECT: 5 };
 const OPACITY = { REGULAR: 0.2, SELECT: 1 };
-const LINE = { REGULAR: 0.4, SELECT: 2 };
+const LINE = { REGULAR: 0.8, SELECT: 1 };
+const COLOR = { MODERATE: '#6bbaad', SEVERE: '#eb5832', GRAY: '#bcbcbc' };
+
+// TRANSITION SETUP
+const TRANS = d3.transition().ease(d3.easeCubicIn).duration(1000);
 
 export default class FoodGlobalChart {
   constructor(element) {
     const vis = this;
 
+    // CANVAS SETUP
     vis.svg = d3
       .select(element)
       .append('svg')
@@ -28,6 +34,7 @@ export default class FoodGlobalChart {
       .append('g')
       .attr('transform', `translate(${MARGIN.LEFT}, ${MARGIN.TOP})`);
 
+    // AXIS SETUP
     vis.xLabel = vis.svg
       .append('text')
       .attr('x', WIDTH / 2)
@@ -40,6 +47,7 @@ export default class FoodGlobalChart {
 
     vis.yAxisGroup = vis.svg.append('g').attr('id', 'y-axis');
 
+    // FETCHING DATA
     Promise.all([d3.csv(data)]).then((datasets) => {
       vis.data = datasets[0];
       vis.update();
@@ -50,31 +58,47 @@ export default class FoodGlobalChart {
     const vis = this;
     vis.data = vis.data;
 
+    // DATA JOIN
+    const lines = vis.svg.selectAll('myLine').data(vis.data);
+    const circleModerate = vis.svg.selectAll('myCircle').data(vis.data);
+    const circleSevere = vis.svg.selectAll('myCircle').data(vis.data);
+
     // MOUSE EVENT
-    const tooltip = d3.selectAll('.tooltip');
+    const tooltip = d3.select('#tooltip-food-global');
+    console.log(tooltip);
     const mouseover = function (event, d) {
       tooltip
         .html(
-          `<p> ${d.country} </p>
+          `<p class="header"><span> ${d.country} </span></p>
       <p> Severe Hunger: ${d.severe} </p>
       <p> Moderate Hunger: ${d.moderate} </p>`
         )
-        .style('left', event.pageX + 'px')
-        .style('top', event.pageY - window.innerHeight + 'px')
+        .style('left', event.pageX - 300 + 'px')
+        .style('top', event.pageY - 1700 + 'px')
         .classed('hidden', false);
-      console.log(tooltip);
-      d3.select(this).style('r', CIRCLE.SELECT);
-      d3.select(this).attr('stroke-width', LINE.SELECT);
+      vis.svg
+        .selectAll(`.bellchart-${d.index}`)
+        .style('r', CIRCLE.SELECT)
+        .attr('stroke-width', LINE.SELECT)
+        .attr('opacity', OPACITY.SELECT);
     };
 
     const mouseout = function (event, d) {
-      d3.select(this).style('r', CIRCLE.REGULAR);
-      d3.select(this).attr('stroke-width', (d) => {
-        return COUNTRIES.includes(d.country) ? LINE.SELECT : LINE.REGULAR;
-      });
       tooltip.classed('hidden', true);
+      vis.svg
+        .selectAll(`.bellchart-${d.index}`)
+        .style('r', CIRCLE.REGULAR)
+        .attr('stroke-width', (d) =>
+          COUNTRIES.includes(d.country) ? LINE.SELECT : LINE.REGULAR
+        )
+        .attr('opacity', (d) => {
+          return COUNTRIES.includes(d.country)
+            ? OPACITY.SELECT
+            : OPACITY.REGULAR;
+        });
     };
 
+    // SCALES
     const y = d3
       .scaleLinear()
       .domain([
@@ -95,21 +119,13 @@ export default class FoodGlobalChart {
         return `${d}%`;
       }
     });
-    vis.yAxisGroup
-      .style('stroke-width', '0')
-      .transition()
-      .duration(500)
-      .call(yAxisCall);
-
-    // DATA JOIN
-    const lines = vis.svg.selectAll('myLine').data(vis.data);
-    const circleModerate = vis.svg.selectAll('myCircle').data(vis.data);
-    const circleSevere = vis.svg.selectAll('myCircle').data(vis.data);
+    vis.yAxisGroup.style('stroke-width', '0').transition(TRANS).call(yAxisCall);
 
     // ENTER
     lines
       .enter()
       .append('line')
+      .attr('class', (d) => `bellchart-${d.index}`)
       .on('mouseover', mouseover)
       .on('mouseout', mouseout)
       .attr('x1', function (d) {
@@ -124,10 +140,8 @@ export default class FoodGlobalChart {
       .attr('y2', function (d) {
         return y(d.moderate);
       })
-      .transition()
-      .duration(1000)
-      .transition()
-      .duration(800)
+      .transition(TRANS)
+      .transition(TRANS)
       .ease(d3.easeCubicOut)
       .attr('y1', function (d) {
         return y(d.moderate);
@@ -135,9 +149,12 @@ export default class FoodGlobalChart {
       .attr('y2', function (d) {
         return y(d.severe);
       })
-      .attr('stroke', '#bcbcbc')
+      .attr('stroke', COLOR.GRAY)
       .attr('stroke-width', (d) => {
         return COUNTRIES.includes(d.country) ? LINE.SELECT : LINE.REGULAR;
+      })
+      .attr('opacity', (d) => {
+        return COUNTRIES.includes(d.country) ? OPACITY.SELECT : OPACITY.REGULAR;
       });
 
     circleModerate
@@ -151,11 +168,10 @@ export default class FoodGlobalChart {
       .attr('cy', function (d) {
         return y(d.moderate);
       })
+      .attr('class', (d) => `bellchart-${d.index}`)
       .attr('r', '0')
-      .style('fill', '#6bbaad')
-      .transition()
-      .ease(d3.easeCubicIn)
-      .duration(500)
+      .style('fill', COLOR.MODERATE)
+      .transition(TRANS)
       .attr('r', CIRCLE.REGULAR)
       .attr('opacity', (d) => {
         return COUNTRIES.includes(d.country) ? OPACITY.SELECT : OPACITY.REGULAR;
@@ -172,13 +188,11 @@ export default class FoodGlobalChart {
       .attr('cy', function (d) {
         return y(d.severe);
       })
+      .attr('class', (d) => `bellchart-${d.index}`)
       .attr('r', '0')
-      .style('fill', '#eb5832')
-      .transition()
-      .duration(1500)
-      .transition()
-      .ease(d3.easeCubicIn)
-      .duration(500)
+      .style('fill', COLOR.SEVERE)
+      .transition(TRANS)
+      .transition(TRANS)
       .attr('r', CIRCLE.REGULAR)
       .attr('opacity', (d) => {
         return COUNTRIES.includes(d.country) ? OPACITY.SELECT : OPACITY.REGULAR;
@@ -201,18 +215,5 @@ export default class FoodGlobalChart {
     //   .attr('y', (d) => y(d.moderate))
     //   .attr('width', x.bandwidth)
     //   .attr('height', (d) => HEIGHT - y(d.moderate));
-
-    // // ENTER
-    // rects
-    //   .enter()
-    //   .append('rect')
-    //   .attr('x', (d) => x(d.country))
-    //   .attr('width', x.bandwidth)
-    //   .attr('fill', 'grey')
-    //   .attr('y', HEIGHT)
-    //   .transition()
-    //   .duration(500)
-    //   .attr('height', (d) => HEIGHT - y(d.moderate))
-    //   .attr('y', (d) => y(d.moderate));
   }
 }
