@@ -1,21 +1,25 @@
 // === SETUP ===
 @import 'setup/typography';
 @import 'setup/variables';
-// @import 'setup/normalize';
 
 // === LAYOUT ===
 @import 'basics/layout';
 
 // === SECTIONS ===
-@import 'section/intro';
-@import 'section/food-global';
+@import 'section/section';
 
+@import 'section/intro';
 @import 'section/outro';
-@import 'section/section-break';
+
+@import 'section/food-global';
+@import 'section/migration';
+
 @import 'section/scroll';
 @import 'section/footer';
 
-@import 'section/food-migration';
+// === COMPONENTS ===
+@import 'components/chart-area';
+@import 'components/progress-bar';
 
 *,
 *::before,
@@ -43,7 +47,7 @@ button {
 html {
   width: 100%;
   height: 100%;
-  // overflow-x: hidden;
+  overflow-x: hidden;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -54,6 +58,6 @@ html {
   }
 }
 
-// .mapboxgl-control-container {
-//   display: none;
-// }
+.no-hover {
+  pointer-events: none;
+}

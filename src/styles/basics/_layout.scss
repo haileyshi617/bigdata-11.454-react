@@ -1,19 +1,20 @@
 #root {
-    width: $content-width-pc;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: $content-width-pc;
 
-@media (max-width: 600px) {
-    #root {
-        width: $content-width-mobile;
-        // background-color: beige;
-    }
+  @media (max-width: 600px) {
+    overflow-x: hidden;
+    width: $content-width-mobile;
+  }
 }
 
 body {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    // margin-top: $header-height;
-    // margin-bottom: $footer-height;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  // margin-top: $header-height;
+  // margin-bottom: $footer-height;
 }

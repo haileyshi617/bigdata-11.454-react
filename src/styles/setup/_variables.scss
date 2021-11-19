@@ -28,10 +28,12 @@ $color-success: $c-accent-light;
 
 // SIZES
 // -----------------
-$content-width-pc: 80vw;
-$content-width-mobile: 90vw;
+$content-width-pc: 1200px;
+$content-width-mobile: 100vw;
 
 $header-height: 60px;
 $footer-height: 480px;
 $card-width: 350px;
+
 $section-card-width: 692px;
+$section-card-width-mobile: 96vw;

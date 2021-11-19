@@ -2,7 +2,7 @@ import React from 'react';
 
 function Intro() {
   return (
-    <div className="intro">
+    <div className="section intro">
       <div className="header-container">
         <h1>Food Security and Migration</h1>
         <p className="subtitle">
