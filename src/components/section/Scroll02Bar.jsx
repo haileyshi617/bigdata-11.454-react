@@ -1,10 +1,9 @@
 import React, { Component, useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
 
-import FoodAndMigrationWrapper from '../charts/FoodAndMigrationWrapper';
 import GridChartWrapper from '../charts/GridChartWrapper';
 
-function Scroll02() {
+function Scroll02Bar() {
   const [steps, setSteps] = useState(null);
   const [progress, setProgress] = useState(null);
   //   const [img, setImg] = useState(imgs[0]);
@@ -21,14 +20,12 @@ function Scroll02() {
 
   return (
     <div>
-      <div className="main">
+      <div className="main ">
         <GridChartWrapper />
-        {/* <FoodAndMigrationWrapper /> */}
         <div className="main__graphic">
-          {/* <FoodAndMigrationWrapper /> */}
           {/* <d3 class='a' step={steps}></d3> */}
         </div>
-        <div className="scroller">
+        <div className="scroller no-hover">
           <Scrollama
             onStepEnter={onStepEnter}
             progress
@@ -70,4 +67,4 @@ function Scroll02() {
   );
 }
 
-export default Scroll02;
+export default Scroll02Bar;

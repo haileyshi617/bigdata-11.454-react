@@ -1,7 +1,7 @@
 import React from 'react';
 import CardSection from '../ui/CardSection';
 
-const SectionBreak03 = () => {
+const Section05Pie = () => {
   const text = {
     header: `For those who suffer food insecurity tend to make solid plan and preparation to migrate than those don’t have food issue. 
     To answer this, we need to study the how many people have to work to ensure food security and understand how economic status impact migration plan and action. `,
@@ -10,10 +10,10 @@ const SectionBreak03 = () => {
   };
 
   return (
-    <div className="section-break">
+    <div className="section">
       <CardSection header={text.header} main={text.main} />
     </div>
   );
 };
 
-export default SectionBreak03;
+export default Section05Pie;

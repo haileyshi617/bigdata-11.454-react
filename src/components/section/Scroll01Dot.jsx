@@ -1,8 +1,8 @@
 import React, { Component, useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
-import CardScroll from '../ui/CardScroll';
+// import CardScroll from '../ui/CardScroll';
 
-function Scroll01() {
+function Scroll01Dot() {
   const imgs = [
     'https://images.unsplash.com/photo-1636335287146-a22df22cafe2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1632&q=80',
     'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80',
@@ -29,16 +29,16 @@ function Scroll01() {
           <img src={img} id="myImg" />
           {/* <d3 class='a' step={steps}></d3> */}
         </div>
-        <div className="scroller">
+        <div className="scroller disabled no-hover">
           <Scrollama
             onStepEnter={onStepEnter}
             progress
             onStepProgress={onStepProgress}
             offset="0.5"
-          // debug
+            // debug
           >
-            <Step data={1} value={1} >
-              <div className='step'>
+            <Step data={1} value={1}>
+              <div className="step">
                 <h2>I. Migration Desire</h2>
                 <p>
                   The probability of experiencing moderate or severe food
@@ -71,4 +71,4 @@ function Scroll01() {
   );
 }
 
-export default Scroll01;
+export default Scroll01Dot;

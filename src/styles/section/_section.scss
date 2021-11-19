@@ -1,0 +1,26 @@
+@import '../components/section-card';
+
+.section {
+  // background-color: pink;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.start {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.section-card {
+  margin-left: 10vw;
+  padding-top: 20vh;
+}

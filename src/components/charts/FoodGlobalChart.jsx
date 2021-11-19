@@ -2,8 +2,8 @@ import * as d3 from 'd3';
 import data from '../../data/food-global.csv';
 
 const MARGIN = { TOP: 10, BOTTOM: 50, LEFT: 30, RIGHT: 10 };
-const WIDTH = 1000 - MARGIN.LEFT - MARGIN.RIGHT;
-const HEIGHT = 500 - MARGIN.TOP - MARGIN.BOTTOM;
+const WIDTH = window.innerWidth - MARGIN.LEFT - MARGIN.RIGHT;
+const HEIGHT = window.innerHeight - MARGIN.TOP - MARGIN.BOTTOM;
 
 // conditional rendering
 const COUNTRIES = [
@@ -16,7 +16,7 @@ const CIRCLE = { REGULAR: 5, SELECT: 10 };
 const OPACITY = { REGULAR: 0.2, SELECT: 1 };
 const LINE = { REGULAR: 0.4, SELECT: 2 };
 
-export default class GlobalChart {
+export default class FoodGlobalChart {
   constructor(element) {
     const vis = this;
 
@@ -50,6 +50,31 @@ export default class GlobalChart {
     const vis = this;
     vis.data = vis.data;
 
+    // MOUSE EVENT
+    const tooltip = d3.selectAll('.tooltip');
+    const mouseover = function (event, d) {
+      tooltip
+        .html(
+          `<p> ${d.country} </p>
+      <p> Severe Hunger: ${d.severe} </p>
+      <p> Moderate Hunger: ${d.moderate} </p>`
+        )
+        .style('left', event.pageX + 'px')
+        .style('top', event.pageY - window.innerHeight + 'px')
+        .classed('hidden', false);
+      console.log(tooltip);
+      d3.select(this).style('r', CIRCLE.SELECT);
+      d3.select(this).attr('stroke-width', LINE.SELECT);
+    };
+
+    const mouseout = function (event, d) {
+      d3.select(this).style('r', CIRCLE.REGULAR);
+      d3.select(this).attr('stroke-width', (d) => {
+        return COUNTRIES.includes(d.country) ? LINE.SELECT : LINE.REGULAR;
+      });
+      tooltip.classed('hidden', true);
+    };
+
     const y = d3
       .scaleLinear()
       .domain([
@@ -80,27 +105,6 @@ export default class GlobalChart {
     const lines = vis.svg.selectAll('myLine').data(vis.data);
     const circleModerate = vis.svg.selectAll('myCircle').data(vis.data);
     const circleSevere = vis.svg.selectAll('myCircle').data(vis.data);
-
-    // MOUSE EVENT
-    const mouseover = function (event, d) {
-      d3.select(this).style('r', CIRCLE.SELECT);
-      d3.select(this).attr('stroke-width', LINE.SELECT);
-      d3
-        .select('#tooltip')
-        .style('left', event.pageX - 100 + 'px')
-        .style('top', event.pageY - 100 + 'px').html(`<p> ${d.country} </p>
-        <p> Severe Hunger: ${d.severe} </p>
-        <p> Moderate Hunger: ${d.moderate} </p>`);
-      d3.select('#tooltip').classed('hidden', false);
-    };
-
-    const mouseout = function (event, d) {
-      d3.select(this).style('r', CIRCLE.REGULAR);
-      d3.select(this).attr('stroke-width', (d) => {
-        return COUNTRIES.includes(d.country) ? LINE.SELECT : LINE.REGULAR;
-      });
-      d3.select('#tooltip').classed('hidden', true);
-    };
 
     // ENTER
     lines

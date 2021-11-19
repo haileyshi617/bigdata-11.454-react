@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import MapChart from './MapChart';
 
-const MapWrapper = ({ }) => {
+const MapWrapper = ({}) => {
   const chartArea = useRef(null);
   const [chart, setChart] = useState(null);
 
@@ -17,11 +17,10 @@ const MapWrapper = ({ }) => {
 
   return (
     <>
-      <div className="map-tooltip hidden"></div>
-      <div className="map-chart" ref={chartArea}></div>
-    </>)
-
-
+      <div className="tooltip hidden"></div>
+      <div className="chart-area map-chart" ref={chartArea}></div>
+    </>
+  );
 };
 
 export default MapWrapper;

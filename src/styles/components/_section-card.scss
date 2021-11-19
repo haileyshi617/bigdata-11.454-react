@@ -1,17 +1,19 @@
-@import '../setup/variables';
-
 .section-card {
-    width: $section-card-width;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: left;
+  width: $section-card-width;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
 
-    h1 {
-        margin-bottom: 30px;
-    }
+  @media (max-width: 600px) {
+    width: $section-card-width-mobile;
+  }
 
-    p {
-        padding-left: 72px;
-    }
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  p {
+    padding-left: 72px;
+  }
 }
