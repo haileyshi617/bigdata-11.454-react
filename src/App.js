@@ -4,19 +4,23 @@ import FoodGlobal from './components/section/FoodGlobal';
 import Outro from './components/section/Outro';
 
 import SectionBreak01 from './components/section/SectionBreak01';
+import SectionBreak02 from './components/section/SectionBreak02';
 
 import Scroll01 from './components/section/Scroll01';
+import Scroll02 from './components/section/Scroll02';
 
 function App() {
-    return (
-        <Layout>
-            <Intro />
-            <SectionBreak01 />
-            <FoodGlobal />
-            <Scroll01 />
-            <Outro />
-        </Layout>
-    );
+  return (
+    <Layout>
+      <Intro />
+      <SectionBreak01 />
+      <FoodGlobal />
+      <Scroll01 />
+      <SectionBreak02 />
+      <Scroll02 />
+      <Outro />
+    </Layout>
+  );
 }
 
 export default App;

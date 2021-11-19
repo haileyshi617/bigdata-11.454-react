@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import GlobalChart from './GlobalChart';
 
-const ChartWrapper = ({ gender }) => {
+const GlobalWrapper = ({ gender }) => {
   const chartArea = useRef(null);
   const [chart, setChart] = useState(null);
 
@@ -24,4 +24,4 @@ const ChartWrapper = ({ gender }) => {
   );
 };
 
-export default ChartWrapper;
+export default GlobalWrapper;
