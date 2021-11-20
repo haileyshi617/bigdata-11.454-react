@@ -9,7 +9,7 @@ const Section02FoodGlobal = () => {
   };
 
   return (
-    <div className="section start">
+    <div className="section">
       <CardSection header={text.header} main={text.main} />
       <GlobalWrapper />
     </div>

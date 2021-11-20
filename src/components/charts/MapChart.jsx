@@ -20,7 +20,7 @@ export default class Mapchart {
       .attr('width', WIDTH)
       .attr('height', HEIGHT)
       .append('g')
-      .attr('transform', `translate(${(WIDTH * 5) / 6}, ${HEIGHT / 6})`);
+      .attr('transform', `translate(${(WIDTH * 7) / 8}, ${HEIGHT / 6})`);
 
     // Map and projection
     vis.projection = d3

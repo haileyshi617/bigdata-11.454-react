@@ -16,7 +16,7 @@ const COUNTRIES = [
 const CIRCLE = { REGULAR: 4, SELECT: 5 };
 const OPACITY = { REGULAR: 0.2, SELECT: 1 };
 const LINE = { REGULAR: 0.8, SELECT: 1 };
-const COLOR = { MODERATE: '#6bbaad', SEVERE: '#eb5832', GRAY: '#bcbcbc' };
+const COLOR = { MODERATE: '#6bbaad', SEVERE: '#eb5832', GRAY: '#bcbcbc',TEXT: '#808080' };
 
 // TRANSITION SETUP
 const TRANS = d3.transition().ease(d3.easeCubicIn).duration(1000);
@@ -45,7 +45,7 @@ export default class FoodGlobalChart {
       .append('g')
       .attr('transform', `translate(0, ${HEIGHT})`);
 
-    vis.yAxisGroup = vis.svg.append('g').attr('id', 'y-axis');
+    vis.yAxisGroup = vis.svg.append('g').attr('id', 'y-axis').style('color',COLOR.TEXT).style('font-size','12px');
 
     // FETCHING DATA
     Promise.all([d3.csv(data)]).then((datasets) => {
@@ -70,8 +70,8 @@ export default class FoodGlobalChart {
       tooltip
         .html(
           `<p class="header"><span> ${d.country} </span></p>
-      <p> Severe Hunger: ${d.severe} </p>
-      <p> Moderate Hunger: ${d.moderate} </p>`
+      <p> Severe Hunger: ${d.severe}% </p>
+      <p> Moderate Hunger: ${d.moderate}% </p>`
         )
         .style('left', event.pageX - 300 + 'px')
         .style('top', event.pageY - 1700 + 'px')

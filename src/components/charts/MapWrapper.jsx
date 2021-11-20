@@ -18,7 +18,7 @@ const MapWrapper = ({}) => {
   return (
     <>
       <div id="tooltip-map" className="tooltip hidden"></div>
-      <div className="chart-area map-chart" ref={chartArea}></div>
+      <div className="map-chart" ref={chartArea}></div>
     </>
   );
 };
