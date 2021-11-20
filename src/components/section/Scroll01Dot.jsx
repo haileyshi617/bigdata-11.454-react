@@ -26,10 +26,11 @@ function Scroll01Dot() {
 
   return (
     <div>
+      
       <div className="main">
         <div className="main__graphic">
           <img src={img} id="myImg" />
-          <SurveyChart steps={steps} />
+          <SurveyChart steps={steps} className='survey'/>
           {/* <d3 class='a' step={steps}></d3> */}
         </div>
         <div className="scroller disabled no-hover">
