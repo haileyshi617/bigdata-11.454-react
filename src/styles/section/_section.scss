@@ -1,13 +1,20 @@
 @import '../components/section-card';
 
 .section {
-  // background-color: pink;
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  left: 50%;
+  right: 50%;
+
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
+
+  padding-left: 150px;
+  padding-right: 150px;
 
   &.center {
     justify-content: center;
@@ -21,7 +28,6 @@
 }
 
 .section-card {
-  margin-left: 10vw;
   padding-top: 20vh;
   z-index:2;
 }
