@@ -1,6 +1,10 @@
 .intro {
-  height: 100vh;
-  align-items: centers;
+  // TIMES
+  // -----------------
+  $title-load-time: 300ms;
+  $subtitle-delay-time: 350ms;
+  $subtitle-load-time: 300ms;
+  $scroll-load-delay: 800ms;
 
   .header-container {
     height: 100vh;
@@ -11,12 +15,17 @@
     align-items: center;
 
     h1 {
+      animation: article-load $title-load-time ease-in;
+      animation-fill-mode: forwards;
       font-size: 60px;
       padding-bottom: 20px;
       line-height: 60px;
     }
 
     .subtitle {
+      opacity: 0;
+      animation: article-load $subtitle-load-time ease-in $subtitle-delay-time;
+      animation-fill-mode: forwards;
       font-family: $font-main;
       font-size: 24px;
       font-weight: 100;
@@ -26,6 +35,9 @@
   }
 
   small {
+    opacity: 0;
+    animation: article-load 300ms ease-in $scroll-load-delay;
+    animation-fill-mode: forwards;
     position: absolute;
     bottom: 40px;
     left: 0;
@@ -49,5 +61,17 @@
       padding-bottom: 30px;
       line-height: 30px;
     }
+  }
+}
+
+@keyframes article-load {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }

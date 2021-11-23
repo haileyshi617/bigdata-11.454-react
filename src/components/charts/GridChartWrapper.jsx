@@ -9,16 +9,12 @@ const GridChartWrapper = ({}) => {
     if (!chart) {
       setChart(new GridChart(chartArea.current));
     }
-    // // skip the loading state, when data is still a pending promise
-    // else if (chart.menData) {
-    //   chart.update();
-    // }
   }, [chart]);
 
   return (
     <div>
-      <div className="grid" rsef={chartArea}>
-        {/* <div id="tooltip" className="hidden"></div> */}
+      <div className="grid chart-area" rsef={chartArea}>
+        <div id="tooltip-grid" className="tooltip hidden"></div>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ const COUNTRIES = [
 ];
 const CIRCLE = { REGULAR: 4, SELECT: 5 };
 const OPACITY = { REGULAR: 0.2, SELECT: 1 };
-const LINE = { REGULAR: 0.8, SELECT: 1 };
+const LINE = { REGULAR: 1, SELECT: 2 };
 const COLOR = {
   MODERATE: '#6bbaad',
   SEVERE: '#eb5832',
@@ -41,16 +41,9 @@ export default class FoodGlobalChart {
           HEIGHT + MARGIN.TOP + MARGIN.BOTTOM
         }`
       )
-      .attr('preserveAspectRatio', 'xMaxYM meet')
+      .attr('preserveAspectRatio', 'xMaxYMin meet')
       .append('g')
       .attr('transform', `translate(${MARGIN.LEFT}, ${MARGIN.TOP})`);
-
-    // AXIS SETUP
-    // vis.xLabel = vis.svg
-    //   .append('text')
-    //   .attr('x', WIDTH / 2)
-    //   .attr('y', HEIGHT + 50)
-    //   .attr('text-anchor', 'middle');
 
     vis.xAxisGroup = vis.svg
       .append('g')
@@ -65,12 +58,9 @@ export default class FoodGlobalChart {
 
   update() {
     const vis = this;
-    vis.data = vis.data;
 
     // DATA JOIN
-    const hightlightData = vis.data.filter((d) =>
-      COUNTRIES.includes(d.country)
-    );
+    const highlightData = vis.data.filter((d) => COUNTRIES.includes(d.country));
     const lines = vis.svg
       .append('g')
       .attr('class', 'lines')
@@ -90,7 +80,7 @@ export default class FoodGlobalChart {
       .append('g')
       .attr('class', 'NTlabel')
       .selectAll('text')
-      .data(hightlightData);
+      .data(highlightData);
 
     // MOUSE EVENT
     const tooltip = d3.select('#tooltip-food-global');
@@ -102,8 +92,8 @@ export default class FoodGlobalChart {
             <p class="moderate"> Moderate Hunger: ${d.moderate}% </p>
             <p> Severe Hunger: ${d.severe}% </p>`
         )
-        .style('left', event.pageX + 'px')
-        .style('top', event.pageY - 2 * window.innerHeight + 'px')
+        .style('left', `${event.clientX * 0.8}px`)
+        .style('top', `${event.clientY * 0.8}px`)
         .classed('hidden', false);
       vis.svg
         .selectAll(`.bellchart-${d.index}`)

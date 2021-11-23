@@ -53,8 +53,12 @@ export default class Mapchart {
         .html(
           `<p>In <span>${d.properties.name}</span>, around <span>(??)%</span> of the population migrate to the US.<p>`
         )
-        .style('left', event.pageX + 'px')
-        .style('top', event.pageY - HEIGHT + 'px')
+        .style('left', `${event.clientX * 0.8}px`)
+        .style('top', () => {
+          if (event.clientY - window.innerHeight / 2 > 0)
+            return `${event.clientY * 0.8}px`;
+          return `${event.clientY}px`;
+        })
         .classed('hidden', false);
 
       d3.select(this).attr('fill', (d) =>

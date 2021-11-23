@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import CardSection from '../ui/CardSection';
 import MapWrapper from '../charts/MapWrapper';
+import { ScrollAnimation } from 'animate-on-scroll';
 
 const Section01Migration = () => {
   return (
