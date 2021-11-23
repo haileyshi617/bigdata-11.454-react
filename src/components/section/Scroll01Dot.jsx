@@ -1,23 +1,15 @@
 import React, { Component, useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
 import CardScroll from '../ui/CardScroll';
-import SurveyChart from '../charts/SurveyChart'
+import SurveyChart from '../charts/SurveyChart';
 // import CardScroll from '../ui/CardScroll';
 
 function Scroll01Dot() {
-  const imgs = [
-    'https://images.unsplash.com/photo-1636335287146-a22df22cafe2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1632&q=80',
-    'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80',
-  ];
-
   const [steps, setSteps] = useState(null);
   const [progress, setProgress] = useState(null);
-  const [img, setImg] = useState(imgs[0]);
-  // const imgRef = React.useRef(img);
 
   const onStepEnter = ({ data, entry, direction }) => {
     setSteps(data);
-    setImg(imgs[Math.min(data - 1, imgs.length - 1)]);
   };
 
   const onStepProgress = ({ progress }) => {
@@ -26,12 +18,9 @@ function Scroll01Dot() {
 
   return (
     <div>
-      
       <div className="main">
         <div className="main__graphic">
-          <img src={img} id="myImg" />
-          <SurveyChart steps={steps} className='survey'/>
-          {/* <d3 class='a' step={steps}></d3> */}
+          <SurveyChart steps={steps} className="survey" />
         </div>
         <div className="scroller disabled no-hover">
           <Scrollama

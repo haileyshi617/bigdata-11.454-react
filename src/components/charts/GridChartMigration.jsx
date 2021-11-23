@@ -147,7 +147,9 @@ export default class GridChart {
       })
       .on('mouseover', mouseover)
       .on('mouseout', mouseout)
-      .style('fill', COLOR.GRAY)
+      .style('fill', COLOR.GRAY);
+
+    column
       .transition()
       .ease(d3.easeCubicIn)
       .duration(3000)
