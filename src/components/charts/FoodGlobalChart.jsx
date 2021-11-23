@@ -15,8 +15,13 @@ const COUNTRIES = [
 ];
 const CIRCLE = { REGULAR: 4, SELECT: 5 };
 const OPACITY = { REGULAR: 0.2, SELECT: 1 };
-const LINE = { REGULAR: 0.8, SELECT: 1 };
-const COLOR = { MODERATE: '#6bbaad', SEVERE: '#eb5832', GRAY: '#e0e0e0',TEXT: '#808080' };
+const LINE = { REGULAR: 1, SELECT: 2 };
+const COLOR = {
+  MODERATE: '#6bbaad',
+  SEVERE: '#eb5832',
+  GRAY: '#e0e0e0',
+  TEXT: '#808080',
+};
 
 // TRANSITION SETUP
 const TRANS = d3.transition().ease(d3.easeCubicIn).duration(1000);
@@ -30,17 +35,15 @@ export default class FoodGlobalChart {
       .select(element)
       .append('svg')
       .attr('width', '100%')
-      .attr("viewBox", `0 0 ${WIDTH + MARGIN.LEFT + MARGIN.RIGHT} ${HEIGHT + MARGIN.TOP + MARGIN.BOTTOM}`)
-      .attr("preserveAspectRatio", "xMaxYM meet")
+      .attr(
+        'viewBox',
+        `0 0 ${WIDTH + MARGIN.LEFT + MARGIN.RIGHT} ${
+          HEIGHT + MARGIN.TOP + MARGIN.BOTTOM
+        }`
+      )
+      .attr('preserveAspectRatio', 'xMaxYMin meet')
       .append('g')
       .attr('transform', `translate(${MARGIN.LEFT}, ${MARGIN.TOP})`);
-
-    // AXIS SETUP
-    // vis.xLabel = vis.svg
-    //   .append('text')
-    //   .attr('x', WIDTH / 2)
-    //   .attr('y', HEIGHT + 50)
-    //   .attr('text-anchor', 'middle');
 
     vis.xAxisGroup = vis.svg
       .append('g')
@@ -55,14 +58,29 @@ export default class FoodGlobalChart {
 
   update() {
     const vis = this;
-    vis.data = vis.data;
 
     // DATA JOIN
-    const hightlightData = vis.data.filter(d=>COUNTRIES.includes(d.country))
-    const lines = vis.svg.append('g').attr("class", "lines").selectAll('myLine').data(vis.data);
-    const circleModerate = vis.svg.append('g').attr("class", "circleModerate").selectAll('myCircle').data(vis.data);
-    const circleSevere = vis.svg.append('g').attr("class", "circleSevere").selectAll('myCircle').data(vis.data);
-    const NTlabel = vis.svg.append('g').attr("class", "NTlabel").selectAll('text').data(hightlightData);
+    const highlightData = vis.data.filter((d) => COUNTRIES.includes(d.country));
+    const lines = vis.svg
+      .append('g')
+      .attr('class', 'lines')
+      .selectAll('myLine')
+      .data(vis.data);
+    const circleModerate = vis.svg
+      .append('g')
+      .attr('class', 'circleModerate')
+      .selectAll('myCircle')
+      .data(vis.data);
+    const circleSevere = vis.svg
+      .append('g')
+      .attr('class', 'circleSevere')
+      .selectAll('myCircle')
+      .data(vis.data);
+    const NTlabel = vis.svg
+      .append('g')
+      .attr('class', 'NTlabel')
+      .selectAll('text')
+      .data(highlightData);
 
     // MOUSE EVENT
     const tooltip = d3.select('#tooltip-food-global');
@@ -74,8 +92,8 @@ export default class FoodGlobalChart {
             <p class="moderate"> Moderate Hunger: ${d.moderate}% </p>
             <p> Severe Hunger: ${d.severe}% </p>`
         )
-        .style('left', event.pageX + 'px')
-        .style('top', event.pageY - 2*window.innerHeight + 'px')
+        .style('left', `${event.clientX * 0.8}px`)
+        .style('top', `${event.clientY * 0.8}px`)
         .classed('hidden', false);
       vis.svg
         .selectAll(`.bellchart-${d.index}`)
@@ -115,10 +133,15 @@ export default class FoodGlobalChart {
       .range([0, WIDTH])
       .padding(0.4);
 
-    const yAxis = g => g
-        .call(d3.axisLeft(y).ticks(5).tickFormat((d,i)=> `${d}%`))
-        .style('color', COLOR.TEXT)
-        
+    const yAxis = (g) =>
+      g
+        .call(
+          d3
+            .axisLeft(y)
+            .ticks(5)
+            .tickFormat((d, i) => `${d}%`)
+        )
+        .style('color', COLOR.TEXT);
 
     // ENTER
     lines
@@ -197,20 +220,23 @@ export default class FoodGlobalChart {
         return COUNTRIES.includes(d.country) ? OPACITY.SELECT : OPACITY.REGULAR;
       });
 
-    vis.svg.append("g")
-        .transition(TRANS)
-        .call(yAxis);
+    vis.svg.append('g').transition(TRANS).call(yAxis);
 
-    NTlabel
-      .enter()
+    NTlabel.enter()
       .append('text')
-      .attr('y',(d) => d.country === 'El Salvador' ? y(d.moderate)-30 : d.country === 'Guatemala' ? y(d.moderate)-35 : y(d.moderate)-20)
+      .attr('y', (d) =>
+        d.country === 'El Salvador'
+          ? y(d.moderate) - 30
+          : d.country === 'Guatemala'
+          ? y(d.moderate) - 35
+          : y(d.moderate) - 20
+      )
       .attr('x', (d) => x(d.country))
       .attr('text-anchor', 'middle')
-      .attr('fill',COLOR.TEXT)
-      .attr('font-size','12px')
+      .attr('fill', COLOR.TEXT)
+      .attr('font-size', '12px')
       .text((d) => d.country);
-      
+
     // // EXIT
     // rects
     //   .exit()

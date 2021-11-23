@@ -1,21 +1,37 @@
 import * as d3 from 'd3';
 import data from '../../data/sliced1000.csv';
 
-const MARGIN = { TOP: 10, BOTTOM: 50, LEFT: 30, RIGHT: 10 };
-const WIDTH = 1000 - MARGIN.LEFT - MARGIN.RIGHT;
-const HEIGHT = 200 - MARGIN.TOP - MARGIN.BOTTOM;
+// CANVAS SETUP
+const MARGIN = { TOP: 0, BOTTOM: 0, LEFT: 0, RIGHT: 0 };
+const WIDTH = 960 - MARGIN.LEFT - MARGIN.RIGHT;
+const HEIGHT = window.innerHeight - MARGIN.TOP - MARGIN.BOTTOM;
+
+// GRID SETUP
 const NCOL = 100;
 const NROW = 10;
+
+// RENDERING SETUP
+const COLOR = {
+  MIGRATE_NO: '#6bbaad',
+  MIGRATE_YES: '#eb5832',
+  GRAY: '#e0e0e0',
+};
 
 export default class GridChart {
   constructor(element) {
     const vis = this;
 
+    // CANVAS SETUP
     vis.svg = d3
       .select(element)
       .append('svg')
-      .attr('width', WIDTH + MARGIN.LEFT + MARGIN.RIGHT)
-      .attr('height', HEIGHT + MARGIN.TOP + MARGIN.BOTTOM)
+      .attr(
+        'viewBox',
+        `0 0 ${WIDTH + MARGIN.LEFT + MARGIN.RIGHT} ${
+          HEIGHT + MARGIN.TOP + MARGIN.BOTTOM
+        }`
+      )
+      .attr('preserveAspectRatio', 'xMinYMin meet')
       .append('g')
       .attr('transform', `translate(${MARGIN.LEFT}, ${MARGIN.TOP})`);
 
@@ -34,83 +50,87 @@ export default class GridChart {
 
   update() {
     const vis = this;
-    vis.data = vis.data;
 
-    function gridData(visData) {
-      let data = new Array();
-      let xpos = 1; //starting xpos and ypos at 1 so the stroke will show when we make the grid below
+    function setGridData(visData) {
+      //starting xpos and ypos at 1 so the stroke will show when we make the grid below
+      let xpos = 1;
       let ypos = 1;
       const width = WIDTH / NCOL;
       const height = width;
 
+      // setting up the array for the grid
+      let data = new Array();
       // keep track of data to collect
       let i = 0;
 
-      // iterate for rows
-      for (let row = 0; row < NROW; row++) {
+      // iterate for cols
+      for (let column = 0; column < NCOL; column++) {
         data.push(new Array());
 
-        // iterate for cells/columns inside rows
-        for (let column = 0; column < NCOL; column++) {
-          data[row].push({
+        // iterate for cells/rows inside cols
+        for (let row = 0; row < NROW; row++) {
+          data[column].push({
             x: xpos,
             y: ypos,
             width: width,
             height: height,
             visData: visData[i],
           });
-          // increment the x position
-          xpos += width;
+          // increment the y position
+          ypos += height;
           i++;
         }
-        // reset the x position after a row is complete
-        xpos = 1;
-        // increment the y position for the next row
-        ypos += height;
+        // reset the y position after a row is complete
+        ypos = 1;
+        // increment the x position for the next col
+        xpos += width;
       }
       return data;
     }
 
     // MOUSE EVENT
+    const tooltip = d3.select('#tooltip-grid');
+
     const mouseover = function (event, d) {
-      d3
-        .select('#tooltip')
-        .style('left', event.pageX - 100 + 'px')
-        .style('top', event.pageY - 100 + 'px')
-        .html(`<p>Interviewee ID: ${d.visData._id} </p>
-          <p> cari: ${d.visData.cari} </p>
-          <p> CARI: ${d.visData.CARI} </p>`);
-      d3.select('#tooltip').classed('hidden', false);
+      tooltip
+        .style('left', `${event.clientX}px`)
+        .style('top', `${event.clientY * 0.1}px`)
+        .html(
+          `<p class="header"><span>${d.visData.sex}, ${d.visData.age}</span></p>
+          <p> Living in ${d.visData.rural_urban} area in ${d.visData.country}, with a family size of ${d.visData.fam_size} which is ${d.visData.fam_type} </p>`
+        )
+        .classed('hidden', false);
     };
 
     const mouseout = function (event, d) {
-      d3.select('#tooltip').classed('hidden', true);
+      tooltip.classed('hidden', true);
     };
 
-    var gridData = gridData(vis.data);
+    const gridData = setGridData(vis.data);
 
     // Log the data to the console for quick debugging
-    console.log(gridData);
+    // console.log(gridData);
 
-    var grid = d3
+    const grid = d3
       .select('.grid')
       .append('svg')
       .attr('width', WIDTH + MARGIN.LEFT + MARGIN.RIGHT)
       .attr('height', HEIGHT + MARGIN.TOP + MARGIN.BOTTOM);
 
-    var row = grid
+    const row = grid
       .selectAll('.row')
       .data(gridData)
       .enter()
       .append('g')
       .attr('class', 'row');
 
-    var column = row
+    const column = row
       .selectAll('.square')
       .data(function (d) {
         return d;
       })
       .enter()
+
       .append('rect')
       .attr('class', 'square')
       .attr('x', function (d) {
@@ -125,11 +145,15 @@ export default class GridChart {
       .attr('height', function (d) {
         return d.height;
       })
-      .style('fill', (d) =>
-        d.visData.mig_categ === '0.0' ? '#b0d9d5' : '#eb5832'
-      )
-      .style('stroke', '#fff')
       .on('mouseover', mouseover)
-      .on('mouseout', mouseout);
+      .on('mouseout', mouseout)
+      .style('fill', COLOR.GRAY)
+      .transition()
+      .ease(d3.easeCubicIn)
+      .duration(3000)
+      .style('fill', (d) =>
+        d.visData.mig_categ === '0.0' ? COLOR.MIGRATE_NO : COLOR.MIGRATE_YES
+      )
+      .style('stroke', '#fff');
   }
 }

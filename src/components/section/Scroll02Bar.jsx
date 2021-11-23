@@ -1,17 +1,20 @@
 import React, { Component, useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
 
+import CardSection from '../ui/CardSection';
 import GridChartWrapper from '../charts/GridChartWrapper';
 
 function Scroll02Bar() {
   const [steps, setSteps] = useState(null);
   const [progress, setProgress] = useState(null);
-  //   const [img, setImg] = useState(imgs[0]);
-  // const imgRef = React.useRef(img);
+
+  const text = {
+    header: `Food security and migration intention.`,
+    main: '',
+  };
 
   const onStepEnter = ({ data, entry, direction }) => {
     setSteps(data);
-    // setImg(imgs[Math.min(data - 1, imgs.length - 1)]);
   };
 
   const onStepProgress = ({ progress }) => {
@@ -21,9 +24,9 @@ function Scroll02Bar() {
   return (
     <div>
       <div className="main ">
-        <GridChartWrapper />
         <div className="main__graphic">
-          {/* <d3 class='a' step={steps}></d3> */}
+          <CardSection header={text.header} main={text.main} />
+          <GridChartWrapper />
         </div>
         <div className="scroller no-hover">
           <Scrollama
@@ -58,6 +61,17 @@ function Scroll02Bar() {
               </div>
             </Step>
             <Step data={3} key={3}>
+              <div className="step">
+                <h2>II. Migration Preparation</h2>
+                <p>
+                  The probability of experiencing moderate or severe food
+                  insecurity varies widely across countries—from less than 2
+                  percent in Liberia.
+                </p>
+                <p>{Math.round(progress * 1000) / 10 + '%'}</p>
+              </div>
+            </Step>
+            <Step data={4} key={4}>
               <div className="step"></div>
             </Step>
           </Scrollama>

@@ -1,3 +1,5 @@
+import { Transition, animated } from 'react-spring';
+
 import Layout from './components/layout/Layout';
 import Intro from './components/section/Intro';
 import Outro from './components/section/Outro';
@@ -11,7 +13,7 @@ import Section05Pie from './components/section/Section05Pie';
 import Scroll01Dot from './components/section/Scroll01Dot';
 import Scroll02Bar from './components/section/Scroll02Bar';
 
-function App() {
+export default function App() {
   return (
     <Layout>
       <Intro />
@@ -26,5 +28,3 @@ function App() {
     </Layout>
   );
 }
-
-export default App;

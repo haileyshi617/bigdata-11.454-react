@@ -2,38 +2,40 @@
 
 .main {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   .main__graphic {
     top: 10vh;
     min-height: 80vh;
+    max-width: $content-width-pc;
     position: sticky;
     z-index: -1;
-    height: 100%;
-    width: 100%;
     border: 1px solid $c-grey-dark;
     // background-color: $c-grey-light;
     // opacity: 0.5;
     font-size: 10rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
-
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 
     #map-container {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-    }
-    #myImg {
-        height: 100%;
-        min-width: 100%;
-        position: absolute;
-        background: center center/cover;
-        display: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
     }
 
-    
+    #myImg {
+      height: 100%;
+      min-width: 100%;
+      position: absolute;
+      background: center center/cover;
+      display: none;
+    }
   }
 }

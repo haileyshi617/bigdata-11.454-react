@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: flex-start;
+  padding-left: 10vw;
 
   h1 {
     padding-bottom: 36px;
