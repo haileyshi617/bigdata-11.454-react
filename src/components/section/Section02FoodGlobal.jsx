@@ -3,14 +3,14 @@ import GlobalWrapper from '../charts/FoodGlobalWrapper';
 import CardSection from '../ui/CardSection';
 
 const Section02FoodGlobal = () => {
-  const text = {
-    header: `Food security of the Northern Triangle Region in the global context.`,
-    main: '',
-  };
-
   return (
     <div className="section">
-      <CardSection header={text.header} main={text.main} />
+      <div className="section-card no-hover">
+        <h1>
+          <span className="red">Food security</span>
+          <br /> in the Northern Triangle Region
+        </h1>
+      </div>
       <GlobalWrapper />
     </div>
   );
