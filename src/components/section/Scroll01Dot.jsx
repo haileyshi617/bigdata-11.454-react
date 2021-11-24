@@ -34,30 +34,33 @@ function Scroll01Dot() {
           >
             <Step data={1} value={1}>
               <div className="step">
-                <h2>I. Migration Desire</h2>
+                <h2>4996 Survey response</h2>
                 <p>
-                  The probability of experiencing moderate or severe food
-                  insecurity varies widely across countries—from{' '}
-                  <span className="red">less than 2 percent</span> in
-                  Switzerland to <span className="blue">85 percent</span> in
-                  Liberia.
+                  In an ??-month investigation, the World Food Programme (WFP)
+                  has conducted a survey of civilians in the Northern Triangle
+                  region, compiling a database of 4996 responses with
+                  information on a number of dimensions.
                 </p>
-                <p>{Math.round(progress * 1000) / 10 + '%'}</p>
+                {/* <p>{Math.round(progress * 1000) / 10 + '%'}</p> */}
               </div>
             </Step>
             <Step data={2} key={2}>
               <div className="step">
-                <h2>II. Migration Preparation</h2>
+                <h2>The majority are suffering from food insecurity</h2>
                 <p>
-                  The probability of experiencing moderate or severe food
-                  insecurity varies widely across countries—from less than 2
-                  percent in Liberia.
+                  In terms of
+                  <span className="red"> food insecurity level</span>, the
+                  participants are classified into 4 groups based on CARI food
+                  security indicators given from WFP.
                 </p>
-                <p>{Math.round(progress * 1000) / 10 + '%'}</p>
+                {/* <p>{Math.round(progress * 1000) / 10 + '%'}</p> */}
               </div>
             </Step>
             <Step data={3} key={3}>
-              <div className="step">blabla</div>
+              <div className="step">
+                <h2>Around half have migration desire</h2>
+                <p>Of all the participants, 43% have migration desire.</p>
+              </div>
             </Step>
             <Step data={4} key={4}>
               <div className="step"></div>
