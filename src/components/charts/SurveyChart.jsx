@@ -3,28 +3,36 @@ import React, { useRef, useState, useEffect } from 'react';
 import rawdata from '../../data/cari-mig.csv';
 
 const COLOR = {
-  MODERATE: '#6bbaad',
-  SEVERE: '#eb5832',
+  MARGIN: '#B0D9D5',
+  MODERATE: '#F8AD96',
+  SEVERE: '#EB5832',
   GRAY: '#e0e0e0',
   TEXT: '#808080',
 };
 
-const SurveyChart = ({ steps }) => {
+const SurveyChart = ({ steps, direction }) => {
+  console.log(steps);
   const tooltipRef = React.useRef(null);
   const svgRef = React.useRef(null);
 
   const [data, setData] = useState(null);
+  const [nodes, setNodes] = useState(null);
 
   // when step updates, update data
   useEffect(() => {
     d3.csv(rawdata).then((data) => {
-      setData(data);
+      setData(data.slice(0, 200));
     });
-  }, [steps]);
+  }, []);
 
   //d3 chart update according to steps
   let width = '932';
   let height = '800';
+  let center = { x: width / 2, y: height / 2 };
+  let forceStrength = 0.02;
+  let r = 2;
+  let xCenter = [width / 4, width / 2, (width * 3) / 4, width];
+  let cariCenter = [width / 4, width / 2, (width * 3) / 4, width];
 
   const svg = d3
     .select(svgRef.current)
@@ -32,28 +40,28 @@ const SurveyChart = ({ steps }) => {
     .style('height', '800px')
     .attr('text-anchor', 'middle');
 
+  function charge(d) {
+    return -Math.pow(d.radius, 2.0) * forceStrength;
+  }
+
   // when data updates, update charts
   useEffect(() => {
     // when not scroll to page, there will be no data loading
     if (data) {
-      var nodes = d3.range(data.length / 2).map(function (d) {
-        return { radius: 2 };
+      const nodes = data.map(function (d) {
+        return { ...d, radius: r };
       });
 
       const simulation = d3
         .forceSimulation(nodes)
-        .force('charge', d3.forceManyBody().strength(0.6))
-        .force('center', d3.forceCenter(width / 2, height / 2))
-        .force(
-          'collision',
-          d3.forceCollide().radius(function (d) {
-            return d.radius;
-          })
-        )
+        .velocityDecay(0.2)
+        .force('x', d3.forceX().strength(forceStrength).x(center.x))
+        .force('y', d3.forceY().strength(forceStrength).y(center.y))
+        .force('charge', d3.forceManyBody().strength(charge))
         .on('tick', ticked);
 
       function ticked() {
-        var u = svg
+        const u = svg
           .selectAll('circle')
           .data(nodes)
           .join('circle')
@@ -66,10 +74,40 @@ const SurveyChart = ({ steps }) => {
           .attr('cy', function (d) {
             return d.y;
           })
-          .attr('fill', COLOR.MODERATE);
+          .attr('fill', function (d) {
+            if (d.cari == '2') {
+              return COLOR.MARGIN;
+            } else if (d.cari == '3') {
+              return COLOR.MODERATE;
+            } else if (d.cari == '4') {
+              return COLOR.SEVERE;
+            } else {
+              return COLOR.GRAY;
+            }
+          });
+      }
+
+      if (steps == 1 && direction == 'down') {
+        simulation.force('x', d3.forceX().strength(forceStrength).x(center.x));
+      } else if (steps == 2) {
+        simulation.force(
+          'x',
+          d3
+            .forceX()
+            .strength(forceStrength)
+            .x((d) => cariCenter[+d.cari - 1])
+        );
+      } else if (steps == 3 || steps == 4) {
+        simulation.force(
+          'x',
+          d3
+            .forceX()
+            .strength(forceStrength)
+            .x((d) => xCenter[+d.ifMig])
+        );
       }
     }
-  }, [data]);
+  }, [steps, data]);
 
   return (
     <>
