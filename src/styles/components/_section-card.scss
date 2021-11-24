@@ -4,6 +4,8 @@
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
+  padding-top: 20vh;
+  z-index: 2;
 
   @media (max-width: 600px) {
     width: $section-card-width-mobile;

@@ -52,8 +52,8 @@ export default function Intro() {
       <div className="header-container">
         <h1>Food Security and Migration</h1>
         <p className="subtitle">
-          A Data Visualization Story on Food Security and Migration in Northern
-          Triangle Region
+          A Data Visualization Story in Northern Triangle Region of Central
+          America
         </p>
       </div>
       <small>SCROLL TO CONTINUE</small>
