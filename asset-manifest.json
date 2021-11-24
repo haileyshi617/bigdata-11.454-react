@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/bigdata-11.454-react/static/css/main.ce8dc454.chunk.css",
+    "main.js": "/bigdata-11.454-react/static/js/main.7cd2516a.chunk.js",
+    "main.js.map": "/bigdata-11.454-react/static/js/main.7cd2516a.chunk.js.map",
+    "runtime-main.js": "/bigdata-11.454-react/static/js/runtime-main.86023fc2.js",
+    "runtime-main.js.map": "/bigdata-11.454-react/static/js/runtime-main.86023fc2.js.map",
+    "static/js/2.ad66c698.chunk.js": "/bigdata-11.454-react/static/js/2.ad66c698.chunk.js",
+    "static/js/2.ad66c698.chunk.js.map": "/bigdata-11.454-react/static/js/2.ad66c698.chunk.js.map",
+    "index.html": "/bigdata-11.454-react/index.html",
+    "static/css/main.ce8dc454.chunk.css.map": "/bigdata-11.454-react/static/css/main.ce8dc454.chunk.css.map",
+    "static/js/2.ad66c698.chunk.js.LICENSE.txt": "/bigdata-11.454-react/static/js/2.ad66c698.chunk.js.LICENSE.txt",
+    "static/media/cari-mig.9035924e.csv": "/bigdata-11.454-react/static/media/cari-mig.9035924e.csv",
+    "static/media/food-global.2b92dcb9.csv": "/bigdata-11.454-react/static/media/food-global.2b92dcb9.csv",
+    "static/media/sliced1000.f97036a9.csv": "/bigdata-11.454-react/static/media/sliced1000.f97036a9.csv"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.86023fc2.js",
+    "static/js/2.ad66c698.chunk.js",
+    "static/css/main.ce8dc454.chunk.css",
+    "static/js/main.7cd2516a.chunk.js"
+  ]
+}
