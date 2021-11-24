@@ -7,8 +7,10 @@ import SurveyChart from '../charts/SurveyChart';
 function Scroll01Dot() {
   const [steps, setSteps] = useState(null);
   const [progress, setProgress] = useState(null);
+  const [direction, setDirection] = useState(null);
 
   const onStepEnter = ({ data, entry, direction }) => {
+    setDirection(direction);
     setSteps(data);
   };
 

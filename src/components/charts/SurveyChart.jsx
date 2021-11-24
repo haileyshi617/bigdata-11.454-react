@@ -10,7 +10,7 @@ const COLOR = {
   TEXT: '#808080',
 };
 
-const SurveyChart = ({ steps }) => {
+const SurveyChart = ({ steps, direction }) => {
   console.log(steps);
   const tooltipRef = React.useRef(null);
   const svgRef = React.useRef(null);
@@ -20,7 +20,11 @@ const SurveyChart = ({ steps }) => {
   // when step updates, update data
   useEffect(() => {
     d3.csv(rawdata).then((data) => {
-      setData(data.slice(0, 4000));
+      setData(
+        data.slice(0, 2000).map(function (d) {
+          return { ...d, radius: r };
+        })
+      );
     });
   }, []);
 
@@ -28,7 +32,7 @@ const SurveyChart = ({ steps }) => {
   let width = '932';
   let height = '800';
   let center = { x: width / 2, y: height / 2 };
-  let forceStrength = 5;
+  let forceStrength = 0.02;
   let r = 2;
   let xCenter = [width / 4, width / 2, (width * 3) / 4, width];
   let cariCenter = [width / 4, width / 2, (width * 3) / 4, width];
@@ -40,44 +44,20 @@ const SurveyChart = ({ steps }) => {
     .attr('text-anchor', 'middle');
 
   function charge(d) {
-    return -Math.pow(d.radius, 4.0) * forceStrength;
+    return -Math.pow(d.radius, 2.0) * forceStrength;
   }
 
   // when data updates, update charts
   useEffect(() => {
     // when not scroll to page, there will be no data loading
     if (data) {
-      console.log(data.length);
-      const nodes = data
-        .map(function (d) {
-          return { ...d, radius: r };
-        })
-        .sort(function (a, b) {
-          return b.ifMig - a.ifMig;
-        });
+      const nodes = data;
 
       const simulation = d3
         .forceSimulation(nodes)
-        .velocityDecay(0.8)
-        .force(
-          'x',
-          d3
-            .forceX()
-            .strength(forceStrength)
-            .x((d) => {
-              return center.x;
-              //   return xCenter[+d.ifMig];
-            })
-        )
-        .force(
-          'y',
-          d3
-            .forceY()
-            .strength(forceStrength)
-            .y((d) => {
-              return center.y;
-            })
-        )
+        .velocityDecay(0.2)
+        .force('x', d3.forceX().strength(forceStrength).x(center.x))
+        .force('y', d3.forceY().strength(forceStrength).y(center.y))
         .force('charge', d3.forceManyBody().strength(charge))
         .on('tick', ticked);
 
@@ -86,8 +66,6 @@ const SurveyChart = ({ steps }) => {
           .selectAll('circle')
           .data(nodes)
           .join('circle')
-          //   .transition()
-          //   .duration(2000)
           .attr('r', function (d) {
             return d.radius;
           })
@@ -98,11 +76,11 @@ const SurveyChart = ({ steps }) => {
             return d.y;
           })
           .attr('fill', function (d) {
-            if (d.ifMig == '1') {
+            if (d.cari == '2') {
               return COLOR.MARGIN;
-            } else if (d.ifMig == '2') {
+            } else if (d.cari == '3') {
               return COLOR.MODERATE;
-            } else if (d.ifMig == '3') {
+            } else if (d.cari == '4') {
               return COLOR.SEVERE;
             } else {
               return COLOR.GRAY;
@@ -110,13 +88,15 @@ const SurveyChart = ({ steps }) => {
           });
       }
 
-      if (steps == 2) {
+      if (steps == 1 && direction == 'down') {
+        simulation.force('x', d3.forceX().strength(forceStrength).x(center.x));
+      } else if (steps == 2) {
         simulation.force(
           'x',
           d3
             .forceX()
             .strength(forceStrength)
-            .x((d) => xCenter[+d.ifMig])
+            .x((d) => cariCenter[+d.cari - 1])
         );
       } else if (steps == 3) {
         simulation.force(
@@ -124,13 +104,11 @@ const SurveyChart = ({ steps }) => {
           d3
             .forceX()
             .strength(forceStrength)
-            .x((d) => cariCenter[+d.cari])
+            .x((d) => xCenter[+d.ifMig])
         );
-      } else if (steps == 1) {
-        simulation.force('x', d3.forceX().strength(forceStrength).x(center.x));
       }
     }
-  }, [data, steps]);
+  }, [steps]);
 
   return (
     <>
