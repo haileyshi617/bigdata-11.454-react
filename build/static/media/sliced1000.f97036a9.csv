@@ -1,0 +1,1006 @@
+,id,mig_categ,cari,cari_yn,country,neighborhood,rural_urban,sex,age,fam_type,fam_size
+795,176166039,1.0,1,0,El Salvador,Colonia el carmen,Urban,Man,19,Biparental,10
+635,176189502,1.0,2,0,El Salvador,Azacualpa,Rural,Man,20,Biparental,7
+3270,174618559,1.0,1,0,El Salvador,Regalo de dios 2 etapa ,Urban,Man,30,Biparental,3
+3929,174017399,1.0,1,0,El Salvador,Paniagua,Rural,Man,30,else,2
+2917,174897024,1.0,2,0,El Salvador,El Rosario,Rural,Man,31,Biparental,4
+76,177567702,1.0,2,0,El Salvador,Via Altamira,Urban,Man,31,else,2
+694,176182518,1.0,2,0,El Salvador,Argain,Rural,Man,31,Biparental,4
+404,176464970,1.0,1,0,El Salvador,Jardines de san bartolo ,Urban,Man,32,Biparental,3
+3479,174327894,1.0,1,0,El Salvador,La limonera,Rural,Man,33,else,6
+748,176174946,1.0,1,0,El Salvador,"Maquilishuat, San Vicente",Rural,Man,34,Biparental,4
+4000,174010687,1.0,1,0,El Salvador,Canron analco,Rural,Man,34,Biparental,8
+459,176454493,1.0,2,0,El Salvador,Cerron grande,Rural,Man,35,Biparental,3
+247,176644827,1.0,2,0,El Salvador,Santo Domingo,Rural,Man,35,else,8
+2390,175111308,1.0,2,0,El Salvador,"Ataco, colonia santa lucia",Urban,Man,36,Biparental,8
+3969,174013288,1.0,2,0,El Salvador,El cerrito,Rural,Man,38,Biparental,3
+124,177561056,1.0,1,0,El Salvador,"Urbanizaci_n Roma, T_cnico Industrial",Urban,Man,39,else,4
+62,177567901,1.0,2,0,El Salvador,El carmen,Urban,Man,39,Biparental,4
+1345,175673149,1.0,2,0,El Salvador,"Guayapa arriba, guayapa arriba ",Rural,Man,42,Biparental,4
+791,176166180,1.0,1,0,El Salvador,Colonia miranda 1,Urban,Man,42,Biparental,3
+3646,174311319,1.0,2,0,El Salvador,El tercio,Rural,Man,44,Biparental,4
+470,176453794,1.0,1,0,El Salvador,Cerron grande,Rural,Man,44,Biparental,4
+3246,174620820,1.0,2,0,El Salvador,Canton buenos aires ,Rural,Man,45,Biparental,5
+2364,175123009,1.0,2,0,El Salvador,Santa cruz,Rural,Man,46,else,4
+1497,175665581,1.0,2,0,El Salvador,Los Najarro,Rural,Man,46,Biparental,3
+4938,174911614,1.0,2,0,El Salvador,CANTO TULAPA ,Rural,Man,48,Biparental,1
+3961,174015411,1.0,2,0,El Salvador,Cant_n El Cerrito,Rural,Man,49,Biparental,6
+525,176441220,1.0,1,0,El Salvador,Altavista,Urban,Man,50,Biparental,3
+2396,175111287,1.0,2,0,El Salvador,Barrio el angel,Urban,Man,51,Biparental,2
+2910,174897618,1.0,1,0,El Salvador,"Cant_n El rosario, Caser_o Las cuevitas sur",Rural,Man,51,Biparental,5
+2387,175111316,1.0,2,0,El Salvador,"La Hermosa, San Juan",Rural,Man,51,else,3
+1530,175662591,1.0,2,0,El Salvador,Hacienda Nueva york,Rural,Man,52,Biparental,3
+1454,175667674,1.0,1,0,El Salvador,Caserio,Rural,Man,53,Biparental,7
+3247,174620817,1.0,2,0,El Salvador,Canton buenos aire ,Rural,Man,54,Biparental,4
+2386,175111318,1.0,1,0,El Salvador,"Izcaquilio, Paniagua",Rural,Man,54,Biparental,3
+1073,175917103,1.0,2,0,El Salvador,Tempisque,Rural,Man,55,Biparental,5
+3665,174305159,1.0,2,0,El Salvador,Tierra blanca,Rural,Man,56,Biparental,2
+3161,174636970,1.0,1,0,El Salvador,La Anchila,Rural,Man,58,Biparental,4
+3295,174597986,1.0,2,0,El Salvador,San cristobal,Rural,Man,59,else,6
+2400,175111255,1.0,2,0,El Salvador,Barrio el angel,Urban,Man,63,Biparental,1
+501,176451848,1.0,2,0,El Salvador,Conacaste,Urban,Man,64,else,3
+2961,174894516,1.0,1,0,El Salvador,El rodeo 2,Rural,Man,70,Biparental,5
+1076,175917039,1.0,2,0,El Salvador,Tempisque,Rural,Man,77,Biparental,1
+1641,175652495,1.0,1,0,El Salvador,Guayabo,Rural,Woman,18,Biparental,3
+376,176469173,1.0,1,0,El Salvador,San Benito,Rural,Woman,19,Biparental,2
+3475,174327899,1.0,2,0,El Salvador,La limonera,Rural,Woman,20,else,6
+2252,175135933,1.0,2,0,El Salvador,Los Magueyes,Rural,Woman,21,Biparental,3
+3541,174319032,1.0,1,0,El Salvador,La limonera,Rural,Woman,21,Biparental,2
+3232,174622218,1.0,2,0,El Salvador,Santa Gema,Rural,Woman,21,Biparental,4
+3546,174317763,1.0,1,0,El Salvador,San Francisco Javier,Urban,Woman,21,else,5
+1094,175912670,1.0,2,0,El Salvador,Argain,Rural,Woman,21,Biparental,3
+280,176635021,1.0,2,0,El Salvador,Colonia 10 de octubre,Urban,Woman,22,Biparental,4
+2385,175111321,1.0,2,0,El Salvador,"Izcaquilio, Paniagua",Rural,Woman,22,Biparental,3
+3271,174618554,1.0,2,0,El Salvador,Colonia regalo de dios,Urban,Woman,22,Biparental,7
+214,176655947,1.0,1,0,El Salvador,Colinia Su Casa,Urban,Woman,22,else,3
+2298,175132558,1.0,1,0,El Salvador,Palo pique,Rural,Woman,22,Biparental,3
+3198,174627285,1.0,1,0,El Salvador,Barrio Concepci_n ,Urban,Woman,23,else,7
+1576,175657872,1.0,1,0,El Salvador,El Corozo,Rural,Woman,23,Biparental,7
+52,177568373,1.0,1,0,El Salvador,Comunidad la Asunci_n ,Urban,Woman,23,else,5
+3478,174327895,1.0,2,0,El Salvador,La limonera,Rural,Woman,24,Biparental,3
+3935,174017341,1.0,2,0,El Salvador,Comunidad Paniagua,Rural,Woman,24,Biparental,8
+3899,174025587,1.0,1,0,El Salvador,Cacerio la escuela,Rural,Woman,24,Biparental,5
+2880,174903855,1.0,1,0,El Salvador,El calvario,Urban,Woman,24,else,5
+39,177568536,1.0,2,0,El Salvador,COMUNIFDAD AZUNCION,Urban,Woman,25,Biparental,2
+435,176457425,1.0,2,0,El Salvador,San Benito,Rural,Woman,25,Biparental,3
+3272,174618549,1.0,1,0,El Salvador,Colonia regalo de dios,Urban,Woman,25,Biparental,4
+1131,175909478,1.0,2,0,El Salvador,Cunchique,Rural,Woman,25,Biparental,4
+1611,175654672,1.0,2,0,El Salvador,El mango,Rural,Woman,26,Biparental,3
+670,176184281,1.0,1,0,El Salvador,Danta,Rural,Woman,26,else,4
+439,176455604,1.0,2,0,El Salvador,"Distrito Italia, brisas del norte",Urban,Woman,27,Biparental,4
+1137,175909276,1.0,2,0,El Salvador,Cunchique,Rural,Woman,27,Biparental,4
+222,176649640,1.0,2,0,El Salvador,San jose,Urban,Woman,27,Biparental,3
+3298,174596075,1.0,2,0,El Salvador,Caserio san cristobal,Rural,Woman,27,Biparental,3
+217,176655939,1.0,1,0,El Salvador,Col. Su casa,Urban,Woman,27,Biparental,5
+2965,174894507,1.0,1,0,El Salvador,Canton el rodeo 2,Rural,Woman,28,Biparental,3
+1194,175902314,1.0,2,0,El Salvador,Caser_o guachipilin,Rural,Woman,28,Biparental,4
+3557,174317020,1.0,2,0,El Salvador,Barrio Candelaria ,Urban,Woman,28,Biparental,3
+1133,175909369,1.0,1,0,El Salvador,Konchique,Rural,Woman,28,else,8
+370,176469190,1.0,2,0,El Salvador,San benito,Rural,Woman,29,Biparental,4
+1622,175654437,1.0,2,0,El Salvador,Guayapa abajo comunidad el mangito ,Rural,Woman,29,Biparental,6
+3980,174010978,1.0,1,0,El Salvador,Analco linea ferria,Rural,Woman,30,else,10
+1153,175905197,1.0,2,0,El Salvador,Arga_n,Rural,Woman,30,Biparental,5
+2367,175122636,1.0,1,0,El Salvador,Santa Cruz,Rural,Woman,31,Biparental,4
+2909,174897658,1.0,2,0,El Salvador,"Cant_n El rosario, las cuevitas sur",Rural,Woman,31,Biparental,5
+1155,175904864,1.0,2,0,El Salvador,Caserio Argain,Rural,Woman,31,Biparental,5
+2296,175132572,1.0,2,0,El Salvador,Palo pique,Rural,Woman,31,Biparental,5
+2936,174895929,1.0,2,0,El Salvador,El rodeo 2,Rural,Woman,31,Biparental,4
+2874,174903971,1.0,2,0,El Salvador,"Canton el valle, palo verde",Urban,Woman,32,Biparental,5
+1426,175668518,1.0,2,0,El Salvador,Los najarros,Rural,Woman,34,else,7
+4960,174314990,1.0,2,0,El Salvador,Las Palmeras,Rural,Woman,35,Biparental,7
+417,176463876,1.0,1,0,El Salvador,Alta vista,Urban,Woman,35,Biparental,3
+1584,175657094,1.0,1,0,El Salvador,El corozo,Rural,Woman,35,Biparental,5
+248,176644821,1.0,1,0,El Salvador,Santo Domingo,Rural,Woman,36,Biparental,3
+21,177572660,1.0,1,0,El Salvador,San cristobal,Urban,Woman,36,else,6
+2357,175123277,1.0,1,0,El Salvador,Santa cruz,Rural,Woman,36,Biparental,4
+226,176649500,1.0,1,0,El Salvador,San jose,Urban,Woman,36,Biparental,4
+1354,175673088,1.0,1,0,El Salvador,"Guayapa arriba, el triunfo",Rural,Woman,36,Biparental,5
+1139,175909261,1.0,1,0,El Salvador,Cunchique,Rural,Woman,36,Biparental,5
+3274,174618195,1.0,1,0,El Salvador,Nisperal,Rural,Woman,36,Biparental,6
+2313,175128033,1.0,1,0,El Salvador,"Izcaquilio, Comunidad Los Paniagua",Rural,Woman,36,Biparental,4
+291,176631374,1.0,1,0,El Salvador,Colonia 10 de octubre,Urban,Woman,37,Biparental,4
+1181,175902739,1.0,2,0,El Salvador,"LOS JIMENEZ, GUACHIPILIN ",Rural,Woman,37,Biparental,4
+2281,175132859,1.0,2,0,El Salvador,Palo pique ,Rural,Woman,37,Biparental,5
+1433,175668154,1.0,1,0,El Salvador,Los Najarro,Rural,Woman,38,else,2
+4026,174001796,1.0,2,0,El Salvador,Barrio el calvario,Urban,Woman,38,Biparental,5
+3941,174016645,1.0,2,0,El Salvador,San Marcos Lempa,Rural,Woman,39,Biparental,3
+2913,174897210,1.0,2,0,El Salvador,Cuevitas norte,Rural,Woman,40,Biparental,6
+2929,174896576,1.0,2,0,El Salvador,Barrio el calvario,Urban,Woman,40,Biparental,4
+3617,174315217,1.0,1,0,El Salvador,El tercio,Rural,Woman,40,else,7
+4006,174611554,1.0,1,0,El Salvador,El nisperal,Rural,Woman,40,Biparental,2
+480,176452994,1.0,2,0,El Salvador,CASER_O cerr_ grande,Rural,Woman,40,Biparental,5
+1175,175904070,1.0,2,0,El Salvador,San Francisco echeverria,Rural,Woman,40,Biparental,5
+3647,174311316,1.0,1,0,El Salvador,Las palmeras,Rural,Woman,41,else,5
+2652,174923490,1.0,2,0,El Salvador,El Tigre 4,Rural,Woman,41,Biparental,4
+1101,175912533,1.0,2,0,El Salvador,Argain,Rural,Woman,41,else,8
+44,177568504,1.0,1,0,El Salvador,Comunidad asuncion,Urban,Woman,42,Biparental,4
+794,176166041,1.0,2,0,El Salvador,Colonia el milan ,Urban,Woman,44,Biparental,6
+3866,174029893,1.0,2,0,El Salvador,La Escuela,Rural,Woman,44,Biparental,3
+3552,174317389,1.0,1,0,El Salvador,Ozatlan,Urban,Woman,44,Biparental,4
+3233,174621942,1.0,2,0,El Salvador,Santa Gema,Rural,Woman,45,else,3
+3520,174321241,1.0,1,0,El Salvador,San Francisco Javier,Urban,Woman,46,else,5
+294,176631365,1.0,1,0,El Salvador,Colonia 10 de octubre,Urban,Woman,47,Biparental,4
+3599,174315974,1.0,2,0,El Salvador,Canton isla de mendez,Rural,Woman,47,Biparental,2
+2334,175124358,1.0,2,0,El Salvador,Canton Santa Cruz ,Rural,Woman,47,Biparental,10
+3550,174317418,1.0,2,0,El Salvador,Barrio san antonio,Urban,Woman,49,Biparental,4
+757,176174667,1.0,1,0,El Salvador,Santa Marta,Rural,Woman,49,else,7
+2824,174909281,1.0,2,0,El Salvador,Santa Luisa,Rural,Woman,49,Biparental,3
+1130,175909484,1.0,1,0,El Salvador,Cunchique,Rural,Woman,50,Biparental,2
+3668,174304886,1.0,2,0,El Salvador,Tierra blsnca,Rural,Woman,50,else,2
+41,177568534,1.0,1,0,El Salvador,COMUNIDAD AZUNCION,Urban,Woman,50,Biparental,3
+2905,174898881,1.0,1,0,El Salvador,San Jos_,Rural,Woman,50,else,8
+54,177568367,1.0,2,0,El Salvador,Comunidad La Asunci_n ,Urban,Woman,50,Biparental,3
+196,176657276,1.0,2,0,El Salvador,Canton cerco de piedra,Rural,Woman,50,Biparental,3
+3937,174017255,1.0,2,0,El Salvador,Puerto Parada,Urban,Woman,51,else,18
+105,177561190,1.0,1,0,El Salvador,La Cima1,Urban,Woman,51,Biparental,4
+83,177566405,1.0,2,0,El Salvador,Comunidad la asuncion,Urban,Woman,52,Biparental,5
+3611,174315481,1.0,1,0,El Salvador,Candelaria,Urban,Woman,55,Biparental,2
+279,176635027,1.0,2,0,El Salvador,Comunidad 10 de octubre,Urban,Woman,55,else,5
+669,176184387,1.0,2,0,El Salvador,San Antonio,Rural,Woman,56,Biparental,6
+224,176649636,1.0,1,0,El Salvador,San jose,Urban,Woman,56,Biparental,6
+195,176657293,1.0,2,0,El Salvador,PLAN DEL MANGO,Rural,Woman,56,Biparental,2
+395,176465860,1.0,2,0,El Salvador,San Benito,Rural,Woman,56,else,6
+2,177681078,1.0,2,0,El Salvador,Condominios santa maria,Urban,Woman,57,else,4
+69,177567816,1.0,1,0,El Salvador,Canton el carmen,Urban,Woman,57,Biparental,4
+665,176184614,1.0,1,0,El Salvador,San pedro,Rural,Woman,58,else,4
+3581,174316187,1.0,2,0,El Salvador,Candelaria,Urban,Woman,59,Biparental,3
+399,176465069,1.0,1,0,El Salvador,Jardines de san bartolo,Urban,Woman,59,Biparental,3
+3250,174620523,1.0,2,0,El Salvador,Buenos Aires,Rural,Woman,59,Biparental,3
+1084,175916296,1.0,1,0,El Salvador,Tempisque ,Rural,Woman,60,else,4
+431,176457439,1.0,2,0,El Salvador,San Benito,Rural,Woman,60,else,6
+990,175925081,1.0,1,0,El Salvador,El pepeto,Rural,Woman,60,Biparental,2
+441,176455516,1.0,1,0,El Salvador,las brisas del norte,Urban,Woman,61,Biparental,5
+3531,174319490,1.0,2,0,El Salvador,Salinas de sisiguayo,Rural,Woman,63,Biparental,3
+3614,174315225,1.0,1,0,El Salvador,San Antonio ,Urban,Woman,65,Biparental,2
+1086,175916259,1.0,1,0,El Salvador,Tempisque,Rural,Woman,65,else,5
+475,176453560,1.0,2,0,El Salvador,Urbanizaci_n los conacastes,Urban,Woman,67,Biparental,1
+1452,175667678,1.0,1,0,El Salvador,Barrio,Urban,Woman,70,Biparental,3
+24,177572593,1.0,1,0,El Salvador,San Cristobal ,Rural,Woman,71,Biparental,4
+2856,174904733,1.0,2,0,El Salvador,San jose ,Rural,Woman,75,Biparental,4
+3634,174312775,1.0,1,0,El Salvador,Barrio La Playa,Urban,Woman,78,Biparental,4
+1938,175288161,1.0,1,0,Guatemala,Calle conde,Urban,Man,18,Biparental,4
+3334,174364319,1.0,2,0,Guatemala,San ildefonso,Urban,Man,18,else,5
+4345,173565302,1.0,1,0,Guatemala,Las flores,Rural,Man,20,else,6
+4422,173422976,1.0,2,0,Guatemala,El Platanar,Rural,Man,23,Biparental,4
+4064,173767219,1.0,2,0,Guatemala,Quixal,Rural,Man,25,Biparental,4
+1692,175443297,1.0,1,0,Guatemala,TEJUTLA,Urban,Man,26,Biparental,3
+4077,173754775,1.0,1,0,Guatemala,Aldea Tzala Chiquito,Rural,Man,27,else,5
+1312,175677472,1.0,1,0,Guatemala,Barrio la providencia,Urban,Man,27,Biparental,7
+4335,173566337,1.0,2,0,Guatemala,Aldea olopita,Rural,Man,29,Biparental,4
+3352,174358920,1.0,1,0,Guatemala,TEMUX GRANDE,Rural,Man,30,Biparental,5
+4409,173425678,1.0,1,0,Guatemala,El Platanal,Rural,Man,30,Biparental,2
+2602,174925489,1.0,1,0,Guatemala,San Juan Ermita,Urban,Man,31,Biparental,6
+4439,173420216,1.0,1,0,Guatemala,Aldea Bulej,Rural,Man,31,Biparental,5
+315,176497587,1.0,1,0,Guatemala,Chirretzaaj zona 6,Urban,Man,34,Biparental,3
+2600,174925495,1.0,2,0,Guatemala,San Juan Ermita,Urban,Man,38,Biparental,7
+4191,173736772,1.0,2,0,Guatemala,Caparja,Rural,Man,40,Biparental,5
+891,175938340,1.0,1,0,Guatemala,Aldea Tuila,Rural,Man,44,Biparental,5
+4069,173760996,1.0,1,0,Guatemala,Quixal,Rural,Man,49,else,8
+4434,173420230,1.0,2,0,Guatemala,Aldea Chacula colonia nueva esperanza,Rural,Man,49,else,4
+2519,174937773,1.0,2,0,Guatemala,Aldea Chicol,Urban,Man,49,else,9
+3394,174348543,1.0,2,0,Guatemala,Nahuatan,Rural,Man,61,Biparental,10
+1679,175443400,1.0,2,0,Guatemala,Vado hondo,Rural,Man,63,else,4
+3804,174039405,1.0,1,0,Guatemala,Nuevo Progreso,Urban,Woman,15,else,4
+2090,175149462,1.0,2,0,Guatemala,SACCH_N,Rural,Woman,18,Biparental,4
+4945,172949870,1.0,1,0,Guatemala,MONAJIL,Rural,Woman,18,Biparental,5
+3389,174349371,1.0,2,0,Guatemala,TEMUX GRANDE,Rural,Woman,19,Biparental,4
+4098,173746920,1.0,1,0,Guatemala,San jacinto,Urban,Woman,20,Biparental,6
+3084,174657402,1.0,1,0,Guatemala,INC_,Rural,Woman,20,Biparental,4
+3079,174657409,1.0,1,0,Guatemala,SAN SEBASTIAN COATAN,Urban,Woman,21,Biparental,4
+2697,174919794,1.0,2,0,Guatemala,San jose la colonia,Urban,Woman,22,Biparental,5
+4693,173220266,1.0,2,0,Guatemala,PEB'IL PAM,Rural,Woman,23,Biparental,3
+2061,175152747,1.0,1,0,Guatemala,IXMULCA,Rural,Woman,24,Biparental,3
+314,176497590,1.0,1,0,Guatemala,Zona 6 Chirretzaaj,Urban,Woman,27,Biparental,2
+3868,174029764,1.0,2,0,Guatemala,El quetzal,Urban,Woman,27,Biparental,7
+3793,174040185,1.0,1,0,Guatemala,SAN JUAN IXCOY,Urban,Woman,27,Biparental,4
+3065,174658309,1.0,2,0,Guatemala,SAN SEBASTIAN COATAN,Urban,Woman,27,else,6
+2972,174894158,1.0,2,0,Guatemala,Ojechejel,Rural,Woman,28,else,5
+4062,173767233,1.0,2,0,Guatemala,Tzala chiquito,Rural,Woman,28,Biparental,6
+4680,173221400,1.0,1,0,Guatemala,EL CARMEN BUXUP,Rural,Woman,28,else,8
+4729,173215471,1.0,2,0,Guatemala, Canton Tonina,Rural,Woman,28,Biparental,4
+4599,173405466,1.0,2,0,Guatemala,"Tajumulco, ",Urban,Woman,29,Biparental,4
+3701,174087440,1.0,2,0,Guatemala,Tzal_ Chuiquito,Rural,Woman,29,Biparental,4
+3493,174327320,1.0,2,0,Guatemala,FRATERNIDAD,Rural,Woman,29,Biparental,3
+3056,174667794,1.0,2,0,Guatemala,Chicol,Rural,Woman,29,Biparental,5
+2532,174933876,1.0,1,0,Guatemala,HERMON,Rural,Woman,30,Biparental,3
+4169,173737733,1.0,1,0,Guatemala,San Rafael Sochi,Urban,Woman,30,Biparental,4
+1900,175292878,1.0,1,0,Guatemala,San esteban,Rural,Woman,31,Biparental,11
+4544,173408947,1.0,1,0,Guatemala,CASA GRANDE,Rural,Woman,31,else,7
+4580,173405920,1.0,2,0,Guatemala,Caserio lo espinos,Rural,Woman,34,Biparental,7
+4724,173215668,1.0,1,0,Guatemala,Nueva reforma majadas,Rural,Woman,35,Biparental,5
+268,176641639,1.0,1,0,Guatemala,El Esfuerzo Zona 12,Urban,Woman,35,Biparental,5
+1248,175684869,1.0,1,0,Guatemala,Lanquin,Urban,Woman,37,Biparental,4
+4329,173566347,1.0,1,0,Guatemala,Aldea olopita,Rural,Woman,37,Biparental,5
+4674,173221412,1.0,2,0,Guatemala,EL CARMEN BUXUP,Rural,Woman,37,Biparental,7
+2687,174920865,1.0,2,0,Guatemala,San Jose La Colonia,Urban,Woman,38,Biparental,5
+304,176497733,1.0,1,0,Guatemala,Chirretzaaj zona 6,Urban,Woman,39,Biparental,3
+894,175938200,1.0,2,0,Guatemala,Aldea Tuila,Rural,Woman,39,Biparental,3
+3354,174358917,1.0,1,0,Guatemala,TEMUX GRANDE,Rural,Woman,39,Biparental,6
+4361,173564749,1.0,2,0,Guatemala,CONCEPCION HUISTA,Urban,Woman,41,else,10
+3429,174347871,1.0,1,0,Guatemala,Aldea la coronada arriba,Rural,Woman,45,else,6
+4314,173567339,1.0,2,0,Guatemala,TOJUCHOC,Rural,Woman,46,Biparental,4
+3440,174347850,1.0,2,0,Guatemala,Aldea la coronada,Rural,Woman,47,Biparental,4
+2103,175149190,1.0,2,0,Guatemala,Chiquimula,Urban,Woman,47,Biparental,5
+4990,174925761,1.0,1,0,Guatemala,San juan ermita,Urban,Woman,48,Biparental,3
+3319,174372705,1.0,2,0,Guatemala,Aldea Mojaito,Rural,Woman,50,Biparental,4
+4349,173565297,1.0,1,0,Guatemala,Las flores,Rural,Woman,50,Biparental,7
+4992,174926562,1.0,1,0,Guatemala,Barrio canton zona 8,Urban,Woman,52,Biparental,3
+3817,174039195,1.0,1,0,Guatemala,Quezaltepeque,Urban,Woman,53,else,5
+857,175940919,1.0,1,0,Guatemala,Las Veguitas,Rural,Woman,59,Biparental,3
+3829,174039165,1.0,2,0,Guatemala,Quetzaltepeque,Urban,Woman,60,Biparental,3
+1873,175293171,1.0,1,0,Guatemala,Sabana Grande,Rural,Woman,74,Biparental,3
+4238,173651176,1.0,2,0,Honduras,Macro Albergue de Campana,Rural,Man,20,Biparental,3
+2197,175142522,1.0,1,0,Honduras,El zapotillo,Rural,Man,20,Biparental,6
+879,175939523,1.0,1,0,Honduras,Centro ,Rural,Man,22,Biparental,5
+1970,175284072,1.0,2,0,Honduras,Barrio el centro,Urban,Man,22,else,6
+765,176174215,1.0,1,0,Honduras,Sabanagrande ,Urban,Man,23,Biparental,1
+1931,175290699,1.0,1,0,Honduras,Las Hormigas,Rural,Man,25,Biparental,3
+2759,174916332,1.0,1,0,Honduras,Malpaso,Rural,Man,27,Biparental,3
+3009,174851899,1.0,2,0,Honduras,La Pita,Urban,Man,27,Biparental,6
+2306,175131635,1.0,1,0,Honduras,Malpaso,Rural,Man,28,Biparental,2
+2191,175142543,1.0,2,0,Honduras,El zapotillo,Rural,Man,29,Biparental,3
+2639,174923942,1.0,1,0,Honduras,Olanchito,Urban,Man,31,Biparental,2
+1400,175669215,1.0,1,0,Honduras,Dulce nombre,Rural,Man,32,Biparental,4
+573,176209257,1.0,1,0,Honduras,Comunidad ,Rural,Man,33,Biparental,4
+3157,174637369,1.0,1,0,Honduras,Pueblo Nuevo,Urban,Man,34,Biparental,4
+3310,174572395,1.0,1,0,Honduras,Lando Burgos,Urban,Man,34,Biparental,3
+4699,173216370,1.0,1,0,Honduras,Col. La mora,Urban,Man,35,else,2
+874,175939804,1.0,1,0,Honduras,Col. Santa Fe,Urban,Man,35,else,4
+993,175924420,1.0,1,0,Honduras,7 de mayo,Rural,Man,40,Biparental,1
+4618,173403851,1.0,1,0,Honduras,El sapote san francisco d yojoa,Rural,Man,42,Biparental,4
+1656,175643988,1.0,2,0,Honduras,Malpaso,Rural,Man,42,Biparental,4
+898,175937993,1.0,1,0,Honduras,Comunidad ,Rural,Man,43,else,4
+1440,175668048,1.0,2,0,Honduras,La Danta,Rural,Man,43,else,5
+1954,175286588,1.0,2,0,Honduras,Zarabanda ,Rural,Man,46,Biparental,8
+3814,174039204,1.0,1,0,Honduras,San Jorge,Urban,Man,47,else,7
+2789,174914205,1.0,1,0,Honduras,Caserio san jose,Rural,Man,47,Biparental,2
+1487,175665810,1.0,1,0,Honduras,El lim_n,Rural,Man,48,Biparental,4
+2614,174925052,1.0,1,0,Honduras,Sn Lorenzo Abajo,Rural,Man,50,Biparental,6
+1387,175670722,1.0,1,0,Honduras,Los charcos ,Rural,Man,53,Biparental,3
+2213,175138066,1.0,1,0,Honduras,Comunidad San Jos_ de la Landa ,Rural,Man,55,Biparental,6
+816,176140052,1.0,2,0,Honduras,La Ermita,Rural,Man,58,Biparental,6
+2496,175077366,1.0,2,0,Honduras,Barrio Las Arenas,Urban,Man,59,Biparental,6
+4129,173739515,1.0,2,0,Honduras,La guama santa cruz,Rural,Man,60,Biparental,6
+1234,175688031,1.0,2,0,Honduras,Toyos,Rural,Man,65,Biparental,1
+2707,174919247,1.0,2,0,Honduras,Calpules,Rural,Man,66,Biparental,3
+4640,173397943,1.0,2,0,Honduras,El zapote San Francisco de Yojoa,Rural,Man,74,Biparental,7
+1040,175920145,1.0,2,0,Honduras,Palmira,Rural,Woman,18,Biparental,7
+2017,175265900,1.0,1,0,Honduras,Aldea San Jose de la Landa,Urban,Woman,19,Biparental,4
+3463,174335701,1.0,1,0,Honduras,Colonia Lando Burgos,Urban,Woman,20,else,4
+4983,175700852,1.0,2,0,Honduras,Comunidad ,Rural,Woman,20,Biparental,3
+1053,175919670,1.0,1,0,Honduras,Mandasta,Rural,Woman,20,Biparental,3
+1039,175920149,1.0,1,0,Honduras,Palmira,Rural,Woman,21,else,5
+2030,175254802,1.0,2,0,Honduras,San Lorenzo Abajo,Rural,Woman,22,Biparental,4
+1865,175293834,1.0,2,0,Honduras,La Ermita,Rural,Woman,23,Biparental,4
+1696,175442584,1.0,1,0,Honduras,caserio,Rural,Woman,24,Biparental,3
+1237,175685808,1.0,2,0,Honduras,Los Llanos,Urban,Woman,24,Biparental,4
+3710,174069021,1.0,1,0,Honduras,La Meseta,Urban,Woman,25,else,5
+3512,174323664,1.0,2,0,Honduras,Colonia la altamira,Urban,Woman,25,Biparental,3
+4838,173199421,1.0,2,0,Honduras,Barrio Jerusal_n ,Rural,Woman,26,Biparental,5
+978,175927673,1.0,1,0,Honduras,Barrio Arriba,Urban,Woman,26,Biparental,3
+958,175932446,1.0,1,0,Honduras,Zarabanda ,Rural,Woman,26,Biparental,4
+2320,175127429,1.0,2,0,Honduras,Luquigue,Rural,Woman,26,Biparental,5
+1043,175920133,1.0,2,0,Honduras,Palmira,Rural,Woman,27,Biparental,3
+2442,175100503,1.0,1,0,Honduras,Ayapa,Rural,Woman,28,Biparental,3
+1227,175690308,1.0,2,0,Honduras,Col. La alemania,Urban,Woman,29,Biparental,6
+1385,175670724,1.0,2,0,Honduras,Los charcos ,Rural,Woman,29,Biparental,5
+3536,174319358,1.0,1,0,Honduras,El Palmar,Rural,Woman,29,else,9
+1862,175293837,1.0,2,0,Honduras,La Ermita,Rural,Woman,30,Biparental,6
+2002,175281504,1.0,2,0,Honduras,El zapotillo,Rural,Woman,30,Biparental,3
+837,175941640,1.0,1,0,Honduras,Barrio el ocote ,Urban,Woman,32,Biparental,3
+2708,174919245,1.0,2,0,Honduras,Calpules,Rural,Woman,33,Biparental,3
+4211,173711804,1.0,1,0,Honduras,"El Eden, Pe_a Blanca ",Urban,Woman,33,Biparental,3
+4975,175692880,1.0,2,0,Honduras,Toyos,Rural,Woman,33,Biparental,1
+4224,173703696,1.0,1,0,Honduras,Pe_a Blanca ,Rural,Woman,34,Biparental,3
+4684,173220360,1.0,2,0,Honduras,General Madrid ,Rural,Woman,35,else,5
+2168,175145484,1.0,2,0,Honduras,Tegucigalpita ,Rural,Woman,35,Biparental,5
+2657,174923436,1.0,2,0,Honduras,Coyoles Central,Rural,Woman,35,else,7
+3939,174017248,1.0,2,0,Honduras,Tejeras,Rural,Woman,36,else,6
+4914,172966036,1.0,2,0,Honduras,Colonia municipal,Rural,Woman,37,Biparental,3
+2735,174917165,1.0,2,0,Honduras,El Guanijiquil,Rural,Woman,37,Biparental,4
+1561,175658615,1.0,2,0,Honduras,Los llanos ,Rural,Woman,37,Biparental,9
+825,175954066,1.0,1,0,Honduras,Barrio San Francisco,Urban,Woman,38,Biparental,3
+2725,174918142,1.0,2,0,Honduras,San Jose,Rural,Woman,38,Biparental,5
+3511,174323668,1.0,1,0,Honduras,Barrio santiago,Urban,Woman,38,else,5
+4469,173414065,1.0,1,0,Honduras,La Bomba,Urban,Woman,39,Biparental,4
+4638,173398070,1.0,2,0,Honduras,"Centro, Santa Cruz ",Urban,Woman,40,Biparental,4
+961,175932440,1.0,2,0,Honduras,Zarabanda ,Rural,Woman,40,Biparental,7
+4855,172995786,1.0,2,0,Honduras,"Las Brisas, San Isidro ",Rural,Woman,41,Biparental,5
+1811,175424678,1.0,1,0,Honduras,Agua Caliente,Rural,Woman,42,Biparental,3
+1384,175670725,1.0,1,0,Honduras,Los charcos ,Rural,Woman,43,else,6
+2898,174901537,1.0,2,0,Honduras,La Meseta,Urban,Woman,43,Biparental,6
+1455,175667292,1.0,2,0,Honduras,Jicarito ,Rural,Woman,44,Biparental,3
+2214,175138062,1.0,2,0,Honduras,Comunidad San Jos_ de la Landa ,Rural,Woman,44,Biparental,4
+1026,175921873,1.0,2,0,Honduras,El Vertiente,Rural,Woman,44,else,4
+3706,174069030,1.0,1,0,Honduras,Barrio Bella vista,Urban,Woman,46,Biparental,2
+2631,174924369,1.0,2,0,Honduras,Coyoles Central,Rural,Woman,47,Biparental,5
+4567,173407467,1.0,2,0,Honduras,"Comunidad, San Isidro",Rural,Woman,48,else,9
+339,176475748,1.0,1,0,Honduras,Barrio abajo,Rural,Woman,48,Biparental,5
+2020,175265524,1.0,1,0,Honduras,Comunidad San Jos_ de la Landa ,Rural,Woman,48,else,7
+3177,174630976,1.0,2,0,Honduras,Yorito,Urban,Woman,50,Biparental,3
+4247,173651160,1.0,2,0,Honduras,Chivana,Rural,Woman,50,Biparental,11
+876,175939528,1.0,2,0,Honduras,Centro ,Rural,Woman,50,else,8
+3254,174620407,1.0,2,0,Honduras,Barrio sinahi,Urban,Woman,50,Biparental,6
+4052,173914443,1.0,1,0,Honduras,Corinto,Rural,Woman,50,Biparental,2
+1817,175417173,1.0,2,0,Honduras,Las Minas,Rural,Woman,50,else,4
+1869,175293738,1.0,1,0,Honduras,Aldea rio abajo,Rural,Woman,51,Biparental,3
+4905,172970565,1.0,2,0,Honduras,Las flores santavrus,Rural,Woman,51,Biparental,9
+4556,173407494,1.0,2,0,Honduras,"Aldea Santa Elena, Santa Cruz de Yojoa",Rural,Woman,52,else,7
+2492,175082364,1.0,2,0,Honduras,Guangolola 2,Rural,Woman,52,Biparental,7
+2703,174919255,1.0,1,0,Honduras,Los Calpules,Rural,Woman,53,else,6
+3020,174826773,1.0,2,0,Honduras,Guangolola 2,Rural,Woman,53,Biparental,7
+2003,175281503,1.0,2,0,Honduras,El zapotillo,Rural,Woman,54,Biparental,3
+564,176211142,1.0,1,0,Honduras,Zambrano,Rural,Woman,55,Biparental,5
+4903,172970567,1.0,1,0,Honduras,Las flores santa crus,Rural,Woman,55,Biparental,2
+2184,175143479,1.0,1,0,Honduras,Los Calpules,Rural,Woman,57,Biparental,6
+975,175930353,1.0,2,0,Honduras,Agua caliente,Rural,Woman,58,else,4
+4643,173397932,1.0,1,0,Honduras,El zapote San Francisco de Yojoa,Rural,Woman,59,Biparental,4
+2748,174916492,1.0,2,0,Honduras,Las Ca_as ,Rural,Woman,59,Biparental,6
+2889,174901589,1.0,2,0,Honduras,Guangolola N2,Rural,Woman,71,else,12
+3582,174316183,2.0,2,0,El Salvador,Canton salinas de sisiguayo,Rural,Man,25,Biparental,3
+3926,174017421,2.0,2,0,El Salvador,San marcos lempa,Rural,Woman,18,Biparental,3
+73,177567760,2.0,1,0,El Salvador,Villas de altamira,Urban,Woman,22,else,4
+630,176195573,2.0,2,0,El Salvador,El Palomar,Rural,Woman,22,Biparental,8
+1436,175668070,2.0,1,0,El Salvador,Los najarros,Rural,Woman,26,else,5
+293,176631369,2.0,2,0,El Salvador,Colonia 10 de octubre,Urban,Woman,38,Biparental,3
+3640,174312745,2.0,2,0,El Salvador,Barrio La Playa,Urban,Woman,49,Biparental,6
+2998,174888092,2.0,2,0,El Salvador,Colonia San Francisco,Urban,Woman,68,Biparental,7
+1260,175684771,2.0,1,0,Guatemala,Lanquin Barrio seputix,Urban,Man,19,else,3
+4407,173425683,2.0,1,0,Guatemala,Bulej,Rural,Man,24,Biparental,4
+3342,174364220,2.0,1,0,Guatemala,Sector urbano,Urban,Man,70,Biparental,1
+2683,174920877,2.0,2,0,Guatemala,San Jose la Colonia,Urban,Woman,18,Biparental,6
+4275,173570074,2.0,1,0,Guatemala,Las flores,Rural,Woman,25,Biparental,8
+4400,173425694,2.0,2,0,Guatemala,Chacul_,Urban,Woman,30,Biparental,4
+3318,174372709,2.0,2,0,Guatemala,Aldea Camojaito,Rural,Woman,42,Biparental,3
+4462,173414073,2.0,1,0,Guatemala,QUIPAMBE,Rural,Woman,54,Biparental,3
+316,176497585,2.0,2,0,Guatemala,Chirretzaaj zona 6,Urban,Woman,65,Biparental,4
+1510,175663668,2.0,2,0,Honduras,Las Hormigas,Rural,Man,32,Biparental,4
+1383,175670726,2.0,2,0,Honduras,Los charcos ,Rural,Man,40,else,5
+569,176209276,2.0,1,0,Honduras,Comunidad ,Rural,Man,41,Biparental,5
+4039,173984747,2.0,1,0,Honduras,Arenal,Urban,Woman,22,Biparental,3
+809,176140408,2.0,2,0,Honduras,La ermita ,Rural,Woman,29,Biparental,4
+4921,172965800,2.0,2,0,Honduras,Los laureles ,Rural,Woman,29,Biparental,4
+2166,175145486,2.0,1,0,Honduras,Tegucigalpita,Rural,Woman,34,Biparental,4
+3830,174033801,2.0,1,0,Honduras,Bajamar,Rural,Woman,36,Biparental,3
+3016,174835349,2.0,2,0,Honduras,Guangolola 2,Rural,Woman,40,else,2
+3879,174029605,2.0,1,0,Honduras,Victoria,Urban,Woman,40,Biparental,2
+828,175953932,2.0,1,0,Honduras,El Hato,Rural,Woman,63,else,2
+1643,175651988,3.0,2,0,El Salvador,EL guayabo,Rural,Man,38,else,2
+2431,175104235,3.0,1,0,El Salvador,La Hermosa. Cant_n San Juan,Rural,Woman,21,Biparental,4
+3621,174314415,3.0,1,0,El Salvador,Tierra blanca,Urban,Woman,29,Biparental,5
+419,176463686,3.0,1,0,El Salvador,Altavista,Urban,Woman,35,Biparental,8
+2882,174903852,3.0,2,0,El Salvador,Calvario,Urban,Woman,41,Biparental,4
+3627,174313008,3.0,1,0,El Salvador,Barrio la playa,Urban,Woman,48,Biparental,4
+3598,174315979,3.0,2,0,El Salvador,Isla de mendez,Rural,Woman,50,Biparental,4
+32,177571284,3.0,2,0,El Salvador,San cristobal 1,Urban,Woman,51,Biparental,5
+461,176454485,3.0,1,0,El Salvador,Cerron grande,Rural,Woman,53,else,6
+711,176181757,3.0,1,0,El Salvador,Maquilishuat,Rural,Woman,58,Biparental,4
+3660,174305384,3.0,2,0,El Salvador,Comunidad,Urban,Woman,72,else,7
+273,176641241,3.0,1,0,El Salvador,Santa lucia,Rural,Woman,80,Biparental,4
+4420,173422981,3.0,2,0,Guatemala,Bulej,Rural,Man,44,Biparental,9
+4942,172951899,3.0,1,0,Guatemala,MONAJIL,Rural,Woman,23,Biparental,5
+4777,173214659,3.0,2,0,Guatemala,Canton las tablas,Rural,Woman,30,Biparental,8
+4584,173405916,3.0,2,0,Guatemala,Caserio los espinos,Rural,Woman,33,Biparental,3
+4357,173564758,3.0,2,0,Guatemala,CONCEPCION HUISTA,Urban,Woman,35,else,9
+1705,175440664,3.0,2,0,Guatemala,Los planes,Rural,Woman,37,Biparental,4
+3126,174645582,3.0,1,0,Honduras,Punta Ocote,Rural,Man,25,else,4
+3690,174251945,3.0,1,0,Honduras,Col. Las Brisa de Uchapa,Urban,Man,33,else,7
+2993,174890934,3.0,2,0,Honduras,las vegas,Rural,Woman,20,Biparental,4
+1009,175923822,3.0,2,0,Honduras,Palmira ,Rural,Woman,21,Biparental,4
+4141,173738529,3.0,1,0,Honduras,La betel ,Rural,Woman,21,Biparental,2
+1787,175432551,3.0,2,0,Honduras,Pavana ,Rural,Woman,26,Biparental,3
+2620,174924813,3.0,1,0,Honduras,Coyoles Central ,Rural,Woman,36,else,10
+2983,174890973,3.0,1,0,Honduras,las vegas,Rural,Woman,42,Biparental,6
+3384,174349610,3.0,2,0,Honduras,La Libertad Sur,Urban,Woman,42,else,5
+1218,175886538,3.0,2,0,Honduras,Villa vista,Rural,Woman,42,Biparental,3
+3180,174630914,3.0,2,0,Honduras,Yorito,Urban,Woman,52,Biparental,4
+4042,173980253,3.0,1,0,Honduras,La Ceibita Chamelecon,Urban,Woman,56,Biparental,1
+1236,175685815,3.0,2,0,Honduras,Los Llanos,Urban,Woman,60,Biparental,1
+2926,174896768,1.0,3,1,El Salvador,Caton elRosario,Rural,Man,51,Biparental,9
+264,176641929,1.0,3,1,El Salvador,Caserio Santo Domingo,Rural,Woman,27,Biparental,4
+254,176642108,1.0,3,1,El Salvador,Santa lucia,Rural,Woman,28,Biparental,3
+3064,174658312,1.0,3,1,Guatemala,SAN SEBASTIAN COATAN,Urban,Man,30,Biparental,5
+3029,174700550,1.0,3,1,Guatemala,La Trinidad,Rural,Man,42,Biparental,5
+4590,173405563,1.0,3,1,Guatemala,Tajumulco,Urban,Man,60,Biparental,3
+3778,174040868,1.0,3,1,Guatemala,SAN JUAN IXCOY,Urban,Woman,18,else,7
+4610,173404036,1.0,3,1,Guatemala,CASA GRANDE,Urban,Woman,30,Biparental,3
+1602,175656282,1.0,3,1,Guatemala,La Isla,Rural,Woman,35,Biparental,8
+4254,173575263,1.0,3,1,Guatemala,Aldea Chacaj,Rural,Woman,35,Biparental,4
+3757,174047527,1.0,3,1,Guatemala,San jose el rodeo,Urban,Woman,38,Biparental,7
+305,176497730,1.0,3,1,Guatemala,Chirretzaaj zona 6,Urban,Woman,39,Biparental,5
+4977,176212260,1.0,3,1,Guatemala,Aldea Sequixquib,Rural,Woman,44,Biparental,3
+957,175934274,1.0,3,1,Guatemala,Barrio san Jos_,Urban,Woman,58,Biparental,3
+1962,175284419,1.0,3,1,Honduras,La Pabellona,Rural,Man,30,Biparental,5
+1229,175690301,1.0,3,1,Honduras,Col villa franca,Urban,Woman,33,Biparental,4
+4625,173402735,1.0,3,1,Honduras,Colonia la paz bloque 3,Rural,Woman,48,Biparental,7
+1657,175641351,1.0,4,1,Honduras,El Pedernal,Rural,Woman,49,else,6
+3894,174025837,1.0,3,1,Honduras,Las Ca_as,Rural,Woman,50,Biparental,5
+1404,175669186,1.0,3,1,Honduras,Dulce nombre,Rural,Woman,55,Biparental,6
+1916,175291580,1.0,3,1,Honduras,"Yorito
+
+",Urban,Woman,66,Biparental,2
+1856,175294607,1.0,3,1,Honduras,R_o abajo ,Rural,Woman,68,Biparental,4
+4591,173405559,2.0,3,1,Guatemala,Tajumulco,Urban,Man,24,Biparental,5
+4322,173566379,2.0,3,1,Guatemala,CONCEPCION HUISTA,Urban,Woman,43,Biparental,6
+2505,174954847,2.0,3,1,Guatemala,Caserio el Basurero,Rural,Woman,52,else,10
+1855,175294608,3.0,3,1,Honduras,R_o abajo ,Rural,Man,24,Biparental,7
+906,175937607,3.0,3,1,Honduras,El pedernal,Rural,Man,27,Biparental,5
+2437,175101963,3.0,3,1,Honduras,Bajamar,Rural,Woman,28,Biparental,3
+513,176449390,0.0,3,1,El Salvador,Brisas del norte,Urban,Man,21,Biparental,2
+1178,175902764,0.0,3,1,El Salvador,Canton Guachipilin,Rural,Man,50,Biparental,5
+2883,174903753,0.0,3,1,El Salvador,El Calvario,Urban,Man,60,Biparental,11
+2939,174895828,0.0,3,1,El Salvador,La Garrasposa,Rural,Woman,20,Biparental,3
+2264,175135886,0.0,3,1,El Salvador,Los maguelles,Rural,Woman,26,Biparental,3
+2840,174905119,0.0,3,1,El Salvador,Caserio,Rural,Woman,27,else,8
+2906,174897956,0.0,3,1,El Salvador,Rosario ,Rural,Woman,59,Biparental,2
+482,176452907,0.0,3,1,El Salvador,Cerron grande,Rural,Woman,66,Biparental,2
+3396,174348434,0.0,3,1,Guatemala,Aldea Nahuatan,Rural,Man,27,Biparental,3
+4063,173767227,0.0,3,1,Guatemala,Quixal,Rural,Man,31,Biparental,5
+288,176631818,0.0,3,1,Guatemala,Chimolon,Rural,Man,35,Biparental,5
+1770,175434207,0.0,3,1,Guatemala,San Agustin Viejo Chahal,Rural,Man,66,Biparental,4
+4691,173220273,0.0,3,1,Guatemala,PEB'IL PAM,Rural,Man,69,Biparental,2
+586,176201709,0.0,3,1,Guatemala,Aldea Canaan sector 3,Rural,Man,70,Biparental,8
+542,176222158,0.0,3,1,Guatemala,Yalpemech,Rural,Woman,21,else,10
+331,176485137,0.0,3,1,Guatemala,Aldea cooperativa,Rural,Woman,21,Biparental,8
+3764,174046675,0.0,3,1,Guatemala,San jose el rodeo ,Urban,Woman,25,Biparental,4
+4423,173422975,0.0,3,1,Guatemala,El platanal,Rural,Woman,31,else,6
+563,176211143,0.0,3,1,Guatemala,Aldea Yalpemech,Rural,Woman,32,Biparental,5
+2054,175154234,0.0,3,1,Guatemala,SACCH_N,Rural,Woman,32,Biparental,3
+2152,175147881,0.0,3,1,Guatemala,Aldea Cahaboncito,Rural,Woman,33,Biparental,8
+567,176211137,0.0,3,1,Guatemala,Aldea Yalpemech,Rural,Woman,35,Biparental,7
+3119,174650195,0.0,3,1,Guatemala,LAS MINAS,Rural,Woman,38,Biparental,3
+3776,174040879,0.0,3,1,Guatemala,SAN JUAN IXCOY,Urban,Woman,38,Biparental,8
+327,176485398,0.0,3,1,Guatemala,Aldea Cooperativa Sechaj,Rural,Woman,38,Biparental,9
+1836,175300966,0.0,3,1,Guatemala,Aldea las conchas,Rural,Woman,40,Biparental,7
+1599,175656288,0.0,3,1,Guatemala,La Isla,Rural,Woman,41,Biparental,3
+4164,173737762,0.0,3,1,Guatemala,San Rafael Soche,Rural,Woman,41,Biparental,5
+4506,173410497,0.0,3,1,Guatemala,Caserio Ixmoco,Rural,Woman,44,Biparental,2
+3763,174046680,0.0,3,1,Guatemala,San jos_ el rodeo,Urban,Woman,46,Biparental,0
+2671,174921096,0.0,3,1,Guatemala,Colonia san jos_ la  olonia,Urban,Woman,47,Biparental,4
+4410,173425677,0.0,3,1,Guatemala,El Platanar,Rural,Woman,47,Biparental,5
+1410,175669004,0.0,3,1,Guatemala,Camotan,Urban,Woman,49,else,11
+2601,174925491,0.0,3,1,Guatemala,San Juan Ermita,Urban,Woman,57,Biparental,4
+541,176222160,0.0,3,1,Guatemala,Aldea Yepemech,Rural,Woman,58,Biparental,6
+4798,173213658,0.0,3,1,Guatemala,El bueyero,Rural,Woman,66,Biparental,7
+954,175934279,0.0,3,1,Guatemala,Barrio San Jos_,Urban,Woman,72,else,10
+3767,174046632,0.0,3,1,Guatemala,Nuevo san Jose el Rodeo,Urban,Woman,73,Biparental,3
+328,176485397,0.0,3,1,Guatemala,Aldea Cooperativa Sechaj,Rural,Woman,76,Biparental,2
+619,176196575,0.0,3,1,Honduras,Caserio Agua Caliente,Rural,Man,21,Biparental,3
+808,176140413,0.0,3,1,Honduras,La ermita ,Rural,Man,58,Biparental,4
+1660,175641344,0.0,3,1,Honduras,El pedernal,Rural,Woman,24,Biparental,4
+729,176176834,0.0,3,1,Honduras,Sabanagrande,Urban,Woman,35,Biparental,6
+557,176211156,0.0,3,1,Honduras,Zambrano,Rural,Woman,38,Biparental,6
+911,175936387,0.0,3,1,Honduras,Barrio san Antonio ,Rural,Woman,45,Biparental,6
+4837,173199425,0.0,3,1,Honduras,Barrio la torre ,Rural,Woman,45,Biparental,6
+615,176199887,0.0,4,1,Honduras,El Porvenir,Rural,Woman,46,Biparental,5
+2730,174917307,0.0,3,1,Honduras,Guanijiquil,Rural,Woman,46,else,7
+1379,175671860,0.0,4,1,Honduras,"Caserio, Santa Ines",Rural,Woman,60,Biparental,2
+2186,175142724,0.0,3,1,Honduras,"Sulaco, Barrio San Ignacio de Loyola",Urban,Woman,65,Biparental,8
+2241,175136193,0.0,3,1,Honduras,Los limones ,Rural,Woman,74,Biparental,5
+617,176199885,0.0,4,1,Honduras,El pedernal,Rural,Woman,79,Biparental,2
+2402,175111249,0.0,1,0,El Salvador,Barrio santa Luc_a ,Urban,Man,20,Biparental,10
+481,176452910,0.0,2,0,El Salvador,Urbanizacion los conacaste,Urban,Man,22,else,4
+2646,174923616,0.0,2,0,El Salvador,Tigre 4,Rural,Man,23,Biparental,3
+2232,175137331,0.0,1,0,El Salvador,Junquillo,Rural,Man,24,Biparental,2
+1158,175904783,0.0,2,0,El Salvador,Potrero de Batres,Rural,Man,31,Biparental,4
+519,176449374,0.0,2,0,El Salvador,Distrito Italia,Urban,Man,37,Biparental,4
+2287,175132760,0.0,2,0,El Salvador,Palo pique,Rural,Man,39,Biparental,4
+3949,174016151,0.0,1,0,El Salvador,La Escuela,Rural,Man,40,else,8
+1529,175662604,0.0,2,0,El Salvador,Hacienda nueva york,Rural,Man,41,Biparental,5
+1150,175905222,0.0,2,0,El Salvador,"Caserio ladillera, cant_n potrero Batres",Rural,Man,45,else,3
+626,176195903,0.0,1,0,El Salvador,CASERRILLO EL PALOMAR ,Rural,Man,47,Biparental,3
+458,176454496,0.0,2,0,El Salvador,Cerron grande,Rural,Man,52,Biparental,6
+754,176174828,0.0,2,0,El Salvador,"Maquilishuat, san vicente ",Rural,Man,54,Biparental,8
+1533,175662335,0.0,1,0,El Salvador,Hacienda Nueva York,Rural,Man,55,else,5
+677,176183169,0.0,2,0,El Salvador,"
+Azacualpa",Rural,Man,55,Biparental,4
+495,176452585,0.0,1,0,El Salvador,Casta_os,Urban,Man,56,else,3
+4022,174002697,0.0,1,0,El Salvador,Barrio el Calvario,Urban,Man,57,Biparental,5
+2933,174896255,0.0,1,0,El Salvador,El Rodeo 2,Rural,Man,57,Biparental,8
+3633,174312790,0.0,2,0,El Salvador,Barrio La Playa,Urban,Man,57,Biparental,3
+2336,175124354,0.0,2,0,El Salvador,Cantan Santa Cruz ,Rural,Man,58,Biparental,4
+71,177567765,0.0,1,0,El Salvador,Altamira,Urban,Man,59,else,7
+500,176451858,0.0,2,0,El Salvador,Conacaste,Urban,Man,59,Biparental,1
+3297,174596079,0.0,2,0,El Salvador,Caserio san cristobal,Rural,Man,59,Biparental,6
+2903,174898962,0.0,2,0,El Salvador,Los Silvas,Rural,Man,62,else,6
+3944,174016316,0.0,2,0,El Salvador,"Ojo de agua, los miranda",Rural,Man,65,Biparental,5
+1014,175922893,0.0,2,0,El Salvador,"San Pedro Puxtla, Barrio San Pablo",Rural,Man,66,else,5
+159,176662319,0.0,1,0,El Salvador,Hacienda Mapilapa,Rural,Man,66,Biparental,6
+128,177560882,0.0,1,0,El Salvador,La cima1,Urban,Man,67,else,6
+2335,175124356,0.0,2,0,El Salvador, Canton santa cruz,Rural,Man,67,Biparental,4
+1203,175894751,0.0,1,0,El Salvador,San pablo,Urban,Man,67,Biparental,8
+492,176452594,0.0,1,0,El Salvador,Conacaste,Urban,Man,68,else,6
+2946,174894665,0.0,1,0,El Salvador,La lima,Rural,Man,70,Biparental,1
+3993,174010825,0.0,2,0,El Salvador,Caserio,Rural,Man,72,else,2
+723,176180468,0.0,2,0,El Salvador,San antonio,Rural,Man,72,Biparental,5
+3975,174011152,0.0,1,0,El Salvador,La escuela canton el cerrito,Rural,Man,75,Biparental,1
+3904,174020782,0.0,1,0,El Salvador,CASERIO LA pe_a ,Rural,Man,76,Biparental,2
+686,176182954,0.0,2,0,El Salvador,San Antonio ,Rural,Man,77,Biparental,8
+2969,174894468,0.0,1,0,El Salvador,Rodeo dos,Rural,Man,79,else,4
+426,176457736,0.0,2,0,El Salvador,San benito,Rural,Man,79,else,3
+59,177567924,0.0,1,0,El Salvador,Canton el carmen,Urban,Man,80,Biparental,7
+1209,175893500,0.0,2,0,El Salvador,San Pablo ,Urban,Man,89,Biparental,2
+2800,174911904,0.0,2,0,El Salvador,Tulapa,Rural,Woman,18,Biparental,3
+3542,174319031,0.0,2,0,El Salvador,La limonera ,Rural,Woman,20,Biparental,2
+2300,175132328,0.0,1,0,El Salvador,CANTON PALOPIQUE ,Rural,Woman,20,Biparental,3
+1023,175922501,0.0,1,0,El Salvador,Barrio san pablo,Urban,Woman,21,Biparental,5
+1645,175647718,0.0,1,0,El Salvador,San Juan Buena Vista,Rural,Woman,21,Biparental,5
+2658,174923420,0.0,2,0,El Salvador,Tigre 4,Rural,Woman,21,Biparental,4
+714,176181644,0.0,2,0,El Salvador,Caserio san vicente,Rural,Woman,23,Biparental,3
+3152,174637569,0.0,1,0,El Salvador,El congo,Rural,Woman,23,Biparental,4
+9,177680761,0.0,1,0,El Salvador,Condominio santa maria,Urban,Woman,23,else,5
+623,176196092,0.0,2,0,El Salvador,Comunidad el palomar,Rural,Woman,23,else,4
+1522,175662971,0.0,2,0,El Salvador,Hacienda nueva York ,Rural,Woman,23,Biparental,3
+633,176195527,0.0,1,0,El Salvador,Caser_o  el palomar,Rural,Woman,24,Biparental,4
+783,176166191,0.0,1,0,El Salvador,Colonia el Carmen,Urban,Woman,25,Biparental,3
+1204,175894750,0.0,1,0,El Salvador,San pablo ,Urban,Woman,26,Biparental,3
+512,176449392,0.0,2,0,El Salvador,distrito Italia,Urban,Woman,26,Biparental,4
+427,176457734,0.0,2,0,El Salvador,San benito,Rural,Woman,27,else,4
+2401,175111250,0.0,1,0,El Salvador,Barrio Santa lucia,Urban,Woman,27,Biparental,3
+3591,174316051,0.0,1,0,El Salvador,Isla de mendez,Rural,Woman,28,else,5
+4028,174001728,0.0,2,0,El Salvador,Barrio el calvario,Urban,Woman,28,Biparental,5
+682,176183150,0.0,1,0,El Salvador,Azacualpa,Rural,Woman,30,Biparental,4
+82,177567520,0.0,1,0,El Salvador,Villas de altamira,Urban,Woman,30,else,4
+3613,174315228,0.0,1,0,El Salvador,San Antonio ,Urban,Woman,31,Biparental,3
+3559,174317008,0.0,1,0,El Salvador,San francisco javier,Urban,Woman,31,Biparental,4
+1424,175668524,0.0,1,0,El Salvador,Los grijalbas,Rural,Woman,31,else,3
+239,176648621,0.0,2,0,El Salvador,Barrio San Jos_ ,Urban,Woman,31,else,7
+391,176467907,0.0,1,0,El Salvador,San marcos,Rural,Woman,32,Biparental,5
+1151,175905209,0.0,1,0,El Salvador,Arga_n,Rural,Woman,32,Biparental,4
+99,177561222,0.0,1,0,El Salvador,Cima 1,Urban,Woman,32,else,5
+2227,175137713,0.0,2,0,El Salvador,Junquillo,Rural,Woman,32,Biparental,4
+428,176457464,0.0,2,0,El Salvador,San Benito,Rural,Woman,35,Biparental,4
+742,176174994,0.0,2,0,El Salvador,Santa Marta,Rural,Woman,35,else,4
+1129,175909641,0.0,2,0,El Salvador,Canton cunchique,Rural,Woman,36,Biparental,3
+1173,175904080,0.0,2,0,El Salvador,San francisco echeverria,Rural,Woman,37,Biparental,5
+471,176453792,0.0,2,0,El Salvador,Cerron Grande,Rural,Woman,40,Biparental,6
+1578,175657357,0.0,2,0,El Salvador,San Juan buena vista,Rural,Woman,40,Biparental,2
+685,176182958,0.0,1,0,El Salvador,SAN Antonio ,Rural,Woman,40,Biparental,6
+2954,174894597,0.0,2,0,El Salvador,Zapotillo,Rural,Woman,40,Biparental,4
+166,176660606,0.0,2,0,El Salvador,Hacienda Mapilapa,Rural,Woman,42,Biparental,5
+1207,175893509,0.0,2,0,El Salvador,San Pablo ,Urban,Woman,42,Biparental,2
+1191,175902571,0.0,1,0,El Salvador,Guachipilin,Rural,Woman,42,else,10
+2394,175111294,0.0,1,0,El Salvador,SANTA LUCIA,Urban,Woman,42,Biparental,3
+518,176449376,0.0,2,0,El Salvador,Brisas del norte,Urban,Woman,43,Biparental,3
+3564,174316613,0.0,1,0,El Salvador,San Francisco Javier,Urban,Woman,44,Biparental,4
+430,176457450,0.0,1,0,El Salvador,San Benito,Rural,Woman,44,else,9
+133,177570823,0.0,1,0,El Salvador,Colonia San Francisco,Urban,Woman,45,Biparental,5
+2433,175103946,0.0,2,0,El Salvador,"Canton izcaquilio, comunidad los paniagua",Rural,Woman,45,Biparental,5
+624,176196084,0.0,2,0,El Salvador,Caserio el palomas,Rural,Woman,47,Biparental,7
+387,176468029,0.0,2,0,El Salvador,San Marcos,Rural,Woman,47,Biparental,7
+712,176181755,0.0,1,0,El Salvador,Maquilishuat,Rural,Woman,48,Biparental,5
+1081,175916385,0.0,2,0,El Salvador,Tempisque,Rural,Woman,49,Biparental,4
+64,177567895,0.0,2,0,El Salvador,El carmen,Urban,Woman,50,Biparental,5
+3903,174020979,0.0,2,0,El Salvador,Caserio la escuelita,Rural,Woman,50,Biparental,7
+3843,174030925,0.0,1,0,El Salvador,"Ojo de agua, caserio los granados",Rural,Woman,50,else,8
+718,176181451,0.0,2,0,El Salvador,"Maquilishuat,",Rural,Woman,51,Biparental,6
+3579,174316193,0.0,1,0,El Salvador,Candelaria,Urban,Woman,51,Biparental,3
+393,176467904,0.0,1,0,El Salvador,San marcos,Rural,Woman,52,Biparental,6
+2644,174923619,0.0,2,0,El Salvador,Tigre 4,Rural,Woman,52,Biparental,4
+721,176180519,0.0,2,0,El Salvador,San Antonio ,Rural,Woman,52,else,6
+1089,175916237,0.0,1,0,El Salvador,Tempisque,Rural,Woman,52,Biparental,3
+20,177572661,0.0,1,0,El Salvador,San cristobal,Urban,Woman,54,else,7
+2955,174894593,0.0,2,0,El Salvador,Zapotilllo,Rural,Woman,54,else,3
+493,176452590,0.0,2,0,El Salvador,Conacaste,Urban,Woman,54,Biparental,3
+664,176184617,0.0,2,0,El Salvador,San pedro,Rural,Woman,54,else,4
+3230,174622267,0.0,1,0,El Salvador,La Gema ,Rural,Woman,55,else,6
+1614,175654631,0.0,1,0,El Salvador,EL MANGO,Rural,Woman,55,Biparental,8
+265,176641927,0.0,2,0,El Salvador,Caserio Santo Domingo,Rural,Woman,55,Biparental,4
+1100,175912538,0.0,2,0,El Salvador,Argain,Rural,Woman,56,else,3
+0,177681082,0.0,2,0,El Salvador,Condominios delgado,Urban,Woman,56,else,3
+3900,174021001,0.0,1,0,El Salvador,Caserio la escuelita,Rural,Woman,56,Biparental,4
+411,176464699,0.0,1,0,El Salvador,COLONIA JARDINES ,Urban,Woman,56,Biparental,2
+3923,174017468,0.0,2,0,El Salvador,Paniagua,Rural,Woman,58,else,7
+130,177570958,0.0,1,0,El Salvador,Residencial Carolina,Urban,Woman,60,else,5
+2361,175123013,0.0,1,0,El Salvador,Santa cruz,Rural,Woman,60,Biparental,2
+2406,175110365,0.0,2,0,El Salvador,"Izcaquilio, Paniagua",Rural,Woman,60,Biparental,2
+2283,175132845,0.0,1,0,El Salvador,Palo pique,Rural,Woman,61,Biparental,2
+3934,174017344,0.0,1,0,El Salvador,Colinia Paniagua,Rural,Woman,61,Biparental,2
+716,176181639,0.0,1,0,El Salvador,"Maquilishuat, caser_o san vicente",Rural,Woman,61,Biparental,3
+2275,175133642,0.0,2,0,El Salvador,Los magueyes,Rural,Woman,62,else,4
+2294,175132630,0.0,1,0,El Salvador,SAN FRANCISCO LOS TOLES,Rural,Woman,62,else,4
+2802,174911893,0.0,2,0,El Salvador,Tulapa,Rural,Woman,62,Biparental,4
+3220,174622724,0.0,2,0,El Salvador,Regale de Dios,Urban,Woman,63,Biparental,2
+3229,174622283,0.0,2,0,El Salvador,La Gema,Rural,Woman,63,Biparental,3
+2928,174896580,0.0,1,0,El Salvador,Barrio el calvario,Urban,Woman,64,Biparental,3
+2828,174909270,0.0,1,0,El Salvador,San Jose,Rural,Woman,64,else,4
+2425,175105326,0.0,2,0,El Salvador,Lomas de Alarc_n  ,Rural,Woman,64,Biparental,2
+402,176464981,0.0,1,0,El Salvador,Jardines de san bartolo ,Urban,Woman,65,else,5
+2311,175128150,0.0,2,0,El Salvador, canton san juan san esteban,Rural,Woman,65,else,5
+2278,175133206,0.0,2,0,El Salvador,Caserio,Rural,Woman,65,else,6
+259,176641991,0.0,1,0,El Salvador,Santo domingo,Rural,Woman,66,Biparental,2
+193,176657297,0.0,2,0,El Salvador,CERCO DE PIEDRA,Rural,Woman,68,Biparental,3
+2257,175135918,0.0,2,0,El Salvador,SAN Antonio 2,Rural,Woman,68,Biparental,3
+3656,174309643,0.0,1,0,El Salvador,Barrio la Playa,Urban,Woman,70,Biparental,4
+2869,174903977,0.0,1,0,El Salvador,El Calvario,Urban,Woman,70,Biparental,2
+2867,174904038,0.0,2,0,El Salvador,Palo verde ,Rural,Woman,70,else,4
+2330,175124731,0.0,2,0,El Salvador,CANTON santa cruz ,Rural,Woman,71,else,3
+658,176184959,0.0,1,0,El Salvador,Azacualpa,Rural,Woman,71,Biparental,5
+672,176184182,0.0,2,0,El Salvador,Comunidad las dantas,Rural,Woman,71,Biparental,3
+2312,175128034,0.0,2,0,El Salvador,"Izcaquilio, Comunidad Los Paniagua",Rural,Woman,72,else,6
+3845,174030881,0.0,2,0,El Salvador,"Ojo de agua,los granados",Rural,Woman,72,Biparental,3
+3192,174628487,0.0,1,0,El Salvador,El Porvenir,Rural,Woman,73,else,4
+3678,174299228,0.0,1,0,El Salvador,Salinas de sisiguayo,Rural,Woman,74,Biparental,1
+659,176184953,0.0,1,0,El Salvador,Azacualpa,Rural,Woman,74,else,5
+3487,174327879,0.0,1,0,El Salvador,La limonera,Rural,Woman,74,Biparental,2
+4031,174001369,0.0,2,0,El Salvador,Barrio el calvario ,Urban,Woman,76,Biparental,3
+1363,175672655,0.0,1,0,El Salvador,"Guayapa Arriba, El Triunfo",Rural,Woman,76,Biparental,2
+760,176174619,0.0,1,0,El Salvador,Santa Marta,Rural,Woman,77,else,5
+1069,175917397,0.0,1,0,El Salvador,Canton tenpisque centro,Rural,Woman,77,Biparental,1
+444,176455475,0.0,2,0,El Salvador,DISTRITO ITALIA,Urban,Woman,77,Biparental,3
+3001,174861245,0.0,1,0,El Salvador,El nisperal,Rural,Woman,78,Biparental,6
+788,176166185,0.0,1,0,El Salvador,Miranda 1,Urban,Woman,78,Biparental,6
+727,176180380,0.0,2,0,El Salvador,San Antonio,Rural,Woman,79,Biparental,2
+2844,174905100,0.0,2,0,El Salvador,Los silvas,Urban,Woman,80,Biparental,2
+1015,175922890,0.0,2,0,El Salvador,"San Pedro Puxtla, Barrio San Pablo",Urban,Woman,83,Biparental,3
+2472,175090210,0.0,1,0,El Salvador,Lomas de Alarc_n,Rural,Woman,83,Biparental,5
+3675,174299259,0.0,1,0,El Salvador,Salinas de Sisiguayo,Rural,Woman,85,Biparental,1
+434,176457430,0.0,1,0,El Salvador,San Benito,Rural,Woman,86,Biparental,1
+4351,173564808,0.0,1,0,Guatemala,SAN MARTIN CUCHUMATAN,Rural,Man,18,Biparental,9
+2796,174913132,0.0,1,0,Guatemala,Ojechejel,Urban,Man,19,Biparental,5
+3747,174047840,0.0,2,0,Guatemala,JULEN,Rural,Man,21,Biparental,3
+3117,174650589,0.0,1,0,Guatemala,Ipala,Urban,Man,22,Biparental,4
+1712,175440598,0.0,2,0,Guatemala,Los planes,Rural,Man,26,Biparental,4
+3697,174096695,0.0,1,0,Guatemala,Chacaj,Rural,Man,26,Biparental,4
+3719,174052588,0.0,1,0,Guatemala,Olopa,Urban,Man,27,Biparental,3
+1689,175443304,0.0,1,0,Guatemala,TEJUTLA,Urban,Man,27,Biparental,3
+4171,173737726,0.0,1,0,Guatemala,San Rafael Sochi calle el Quetzal,Urban,Man,27,Biparental,4
+3103,174655695,0.0,2,0,Guatemala,LAS MINAS,Rural,Man,30,Biparental,3
+4089,173748716,0.0,2,0,Guatemala,LOS LAURELES,Rural,Man,32,Biparental,3
+4189,173736774,0.0,1,0,Guatemala,Caparja,Rural,Man,32,Biparental,7
+3335,174364316,0.0,2,0,Guatemala,San Ildefonso,Urban,Man,33,Biparental,3
+4181,173736788,0.0,1,0,Guatemala,Caparja,Rural,Man,33,Biparental,5
+4419,173422983,0.0,1,0,Guatemala,Bulej,Rural,Man,34,else,5
+349,176475526,0.0,2,0,Guatemala,Canlech,Rural,Man,35,Biparental,8
+2457,175094436,0.0,1,0,Guatemala,Ojechen,Rural,Man,35,Biparental,3
+1597,175656313,0.0,2,0,Guatemala,Aldea La Isla,Rural,Man,36,else,8
+3694,174171829,0.0,2,0,Guatemala,Camojallito,Rural,Man,39,else,5
+3748,174047839,0.0,2,0,Guatemala,JULEN,Rural,Man,40,Biparental,4
+3375,174350324,0.0,2,0,Guatemala,FRATERNIDAD,Rural,Man,40,Biparental,3
+922,175935362,0.0,2,0,Guatemala,Florida chisec,Urban,Man,42,Biparental,6
+1311,175677473,0.0,1,0,Guatemala,Barrio la providencia,Urban,Man,43,Biparental,4
+4115,173742928,0.0,1,0,Guatemala,LOS LAURELES,Rural,Man,43,Biparental,4
+4464,173414071,0.0,2,0,Guatemala,QUIPAMBE,Rural,Man,44,Biparental,2
+4804,173212939,0.0,2,0,Guatemala,CULVILLA,Rural,Man,45,Biparental,3
+1350,175673120,0.0,2,0,Guatemala,SIPACAPA,Urban,Man,48,Biparental,4
+4235,173674209,0.0,1,0,Guatemala,Quixal,Rural,Man,48,Biparental,5
+3801,174039634,0.0,2,0,Guatemala,Nuevo progreso,Urban,Man,48,Biparental,3
+4068,173760998,0.0,1,0,Guatemala,Quixal ,Rural,Man,48,Biparental,6
+2112,175149128,0.0,2,0,Guatemala,IXMULCA,Rural,Man,50,Biparental,3
+4286,173569138,0.0,1,0,Guatemala,TOJUCHOC,Rural,Man,50,Biparental,2
+3362,174357516,0.0,1,0,Guatemala,TEMUX GRANDE,Rural,Man,50,Biparental,5
+1731,175438689,0.0,1,0,Guatemala,Caserio nuevo san julian,Rural,Man,52,Biparental,8
+3144,174644223,0.0,1,0,Guatemala,Aldea cacahutepeque,Rural,Man,54,Biparental,6
+3038,174681475,0.0,2,0,Guatemala,Aldea Chicol Centro,Rural,Man,54,Biparental,3
+853,175940963,0.0,1,0,Guatemala,Jocotan,Urban,Man,54,Biparental,2
+2075,175150895,0.0,2,0,Guatemala,IXMULCA,Rural,Man,54,Biparental,4
+2464,175091920,0.0,2,0,Guatemala,Aldea Majadita,Urban,Man,56,Biparental,3
+2605,174925484,0.0,1,0,Guatemala,San Juan Ermita,Urban,Man,57,Biparental,3
+3703,174087433,0.0,2,0,Guatemala,Quixal,Rural,Man,58,Biparental,4
+956,175934276,0.0,2,0,Guatemala,Barrio San Jos_,Urban,Man,59,Biparental,6
+2515,174937780,0.0,1,0,Guatemala,Aldea Ojechejel,Urban,Man,60,else,5
+4972,175692597,0.0,2,0,Guatemala,SIPACAPA,Urban,Man,62,Biparental,5
+4740,173215396,0.0,1,0,Guatemala,Canton Tonina,Rural,Man,62,Biparental,5
+3350,174363504,0.0,2,0,Guatemala,FRATERNIDAD,Rural,Man,63,Biparental,2
+4737,173215401,0.0,2,0,Guatemala,Conton Tonina,Rural,Man,63,Biparental,6
+3414,174348271,0.0,2,0,Guatemala,San rafael pie de la cuesta,Urban,Man,63,Biparental,4
+4262,173570850,0.0,1,0,Guatemala,Tuiquimamel,Rural,Man,65,Biparental,8
+4198,173730919,0.0,1,0,Guatemala,Caserio los bujes,Rural,Man,65,Biparental,8
+1729,175438691,0.0,2,0,Guatemala,Caserio nuevo san julian,Rural,Man,66,Biparental,2
+3055,174667798,0.0,2,0,Guatemala,Chicol,Rural,Man,66,Biparental,3
+4704,173216320,0.0,2,0,Guatemala,PEB'IL MAP,Rural,Man,66,Biparental,2
+4543,173408952,0.0,1,0,Guatemala,CASA GRANDE,Urban,Man,67,else,13
+330,176485143,0.0,1,0,Guatemala,Aldea cooperativa sechaj,Rural,Man,68,Biparental,1
+3371,174350424,0.0,1,0,Guatemala,San rafael pie de la cuesta,Urban,Man,68,Biparental,7
+4061,173767236,0.0,1,0,Guatemala,Tzala chiquito,Rural,Man,68,Biparental,2
+2521,174937770,0.0,1,0,Guatemala,Caser_o Semuc,Urban,Man,70,Biparental,4
+332,176485132,0.0,2,0,Guatemala,Aldea cooperativa sechay,Rural,Man,71,Biparental,3
+3419,174348246,0.0,1,0,Guatemala,Urbano,Urban,Man,71,Biparental,2
+3751,174047761,0.0,1,0,Guatemala,JULEN,Rural,Man,72,Biparental,2
+1883,175293151,0.0,1,0,Guatemala,Sabana Grande,Rural,Man,72,Biparental,3
+3888,174029457,0.0,2,0,Guatemala,Canton  canada el quetzal san marcos ,Urban,Man,74,Biparental,7
+4954,172944310,0.0,2,0,Guatemala,MONAJIL,Rural,Man,74,Biparental,1
+944,175934439,0.0,2,0,Guatemala,San Jose,Urban,Man,74,Biparental,3
+3705,174087423,0.0,1,0,Guatemala,Socbal,Rural,Man,75,Biparental,2
+2500,174954870,0.0,2,0,Guatemala,Aldea san lorenzo,Urban,Man,76,Biparental,2
+1803,175424789,0.0,2,0,Guatemala,TEJUTLA,Urban,Man,79,Biparental,1
+2130,175148277,0.0,1,0,Guatemala,El obraje,Rural,Man,80,Biparental,3
+2720,174918925,0.0,2,0,Guatemala,HERMON,Rural,Man,84,Biparental,2
+4679,173221401,0.0,1,0,Guatemala,EL CARMEN BUXUP,Rural,Woman,16,Biparental,4
+4734,173215407,0.0,1,0,Guatemala,Canton tonina,Rural,Woman,18,Biparental,3
+935,175935154,0.0,1,0,Guatemala,Barrio la florida,Urban,Woman,18,Biparental,4
+341,176475565,0.0,2,0,Guatemala,Aldea canlech,Rural,Woman,19,Biparental,3
+942,175935139,0.0,1,0,Guatemala,Barrio La Florida,Urban,Woman,19,Biparental,9
+4441,173420211,0.0,1,0,Guatemala,Ladea Bulej,Rural,Woman,20,else,4
+4170,173737730,0.0,1,0,Guatemala,San Rafael Soche,Urban,Woman,20,Biparental,6
+2553,174932313,0.0,2,0,Guatemala,HERMON,Rural,Woman,21,Biparental,2
+4597,173405471,0.0,1,0,Guatemala,Tajumulco,Urban,Woman,22,else,5
+4382,173561242,0.0,1,0,Guatemala,Barrio san Antonio,Urban,Woman,22,Biparental,5
+1875,175293168,0.0,2,0,Guatemala,Sabana Grande,Rural,Woman,22,Biparental,3
+2535,174933871,0.0,1,0,Guatemala,HERMON,Rural,Woman,23,Biparental,4
+4792,173213782,0.0,2,0,Guatemala,El bueyero,Rural,Woman,23,Biparental,4
+178,176660479,0.0,2,0,Guatemala,Aldea sejux xuctzul,Rural,Woman,23,Biparental,15
+3415,174348268,0.0,2,0,Guatemala,San Rafael pie de la cuesta,Urban,Woman,23,Biparental,3
+4395,173525120,0.0,1,0,Guatemala,Chacaj,Rural,Woman,23,Biparental,6
+4328,173566349,0.0,2,0,Guatemala,Aldea olopita,Rural,Woman,23,Biparental,4
+287,176631822,0.0,2,0,Guatemala,Chimolon,Rural,Woman,24,Biparental,4
+4984,176475540,0.0,1,0,Guatemala,Aldea canlech,Rural,Woman,24,Biparental,6
+920,175935365,0.0,2,0,Guatemala,Sentro 2 chisec,Urban,Woman,24,Biparental,5
+4991,174926561,0.0,2,0,Guatemala,Barrio canton zona 8,Urban,Woman,24,Biparental,7
+3409,174348317,0.0,1,0,Guatemala,Aldea nahutan,Rural,Woman,25,Biparental,3
+3398,174348408,0.0,2,0,Guatemala,Aldea Nahuatan,Rural,Woman,25,else,2
+4776,173214662,0.0,2,0,Guatemala,Canton las tablas,Rural,Woman,25,Biparental,5
+3032,174693891,0.0,2,0,Guatemala,Sector urbano,Rural,Woman,25,Biparental,3
+4790,173213785,0.0,2,0,Guatemala,El bueyero,Rural,Woman,25,Biparental,4
+4291,173568850,0.0,1,0,Guatemala,SAN MARTIN CUCHUMATAN,Rural,Woman,25,Biparental,4
+4806,173212934,0.0,2,0,Guatemala,CULVILLA,Rural,Woman,25,Biparental,2
+1254,175684783,0.0,1,0,Guatemala,Urbano,Urban,Woman,26,Biparental,4
+1852,175297029,0.0,2,0,Guatemala,Las conchas,Rural,Woman,26,Biparental,4
+3115,174650593,0.0,1,0,Guatemala,Ipala,Urban,Woman,26,Biparental,3
+2468,175091631,0.0,2,0,Guatemala,Las majaditas,Urban,Woman,26,Biparental,4
+1280,175681499,0.0,1,0,Guatemala,SIPACAPA,Urban,Woman,27,Biparental,3
+4969,175692593,0.0,2,0,Guatemala,SIPACAPA,Urban,Woman,27,Biparental,3
+3805,174039402,0.0,1,0,Guatemala,Nuevo Progreso,Urban,Woman,27,Biparental,4
+3696,174096702,0.0,1,0,Guatemala,Chacaj,Rural,Woman,27,Biparental,2
+1840,175297413,0.0,1,0,Guatemala,CALIFORNIA,Rural,Woman,28,Biparental,3
+4203,173730910,0.0,2,0,Guatemala,Caserio los bujes,Rural,Woman,28,Biparental,9
+3045,174674867,0.0,2,0,Guatemala,Bo. Ls Flores,Rural,Woman,28,Biparental,3
+3786,174040617,0.0,2,0,Guatemala,SAN JUAN IXCOY,Urban,Woman,28,Biparental,7
+2513,174937782,0.0,2,0,Guatemala,San lorenzo,Urban,Woman,29,Biparental,5
+4802,173213290,0.0,2,0,Guatemala,CULVILLA,Rural,Woman,29,Biparental,4
+282,176631963,0.0,2,0,Guatemala,Aldea Chimolon,Rural,Woman,30,Biparental,9
+4412,173422995,0.0,1,0,Guatemala,Colonia nueva esperanza Chacula,Rural,Woman,30,Biparental,4
+1715,175440154,0.0,2,0,Guatemala,Nueva San julian,Rural,Woman,32,Biparental,6
+4380,173561247,0.0,1,0,Guatemala,Barrio san Antonio,Urban,Woman,32,Biparental,5
+3114,174650594,0.0,1,0,Guatemala,Ipala,Urban,Woman,33,Biparental,5
+1322,175676989,0.0,2,0,Guatemala,Tesoro abajo,Rural,Woman,33,Biparental,5
+593,176201668,0.0,1,0,Guatemala,Sector 3 canaan,Rural,Woman,34,Biparental,5
+553,176211819,0.0,2,0,Guatemala,Aldea Xequixquib,Rural,Woman,34,Biparental,7
+1329,175676921,0.0,2,0,Guatemala,Tesoro abajo,Rural,Woman,35,Biparental,6
+4093,173746926,0.0,1,0,Guatemala,San Jacinto,Urban,Woman,36,Biparental,3
+3077,174657535,0.0,1,0,Guatemala,INC_,Rural,Woman,36,Biparental,5
+271,176641624,0.0,1,0,Guatemala,El esfuerzo zona 12,Urban,Woman,36,Biparental,5
+863,175940882,0.0,1,0,Guatemala,Las Veguitas,Rural,Woman,36,Biparental,7
+4336,173566335,0.0,1,0,Guatemala,Aldea olopita,Rural,Woman,37,Biparental,5
+2470,175091092,0.0,2,0,Guatemala,Las Majaditas,Urban,Woman,37,Biparental,8
+4973,175692599,0.0,2,0,Guatemala,SIPACAPA,Urban,Woman,37,Biparental,4
+3059,174659921,0.0,2,0,Guatemala,LAS MINAS,Rural,Woman,38,Biparental,4
+1801,175424794,0.0,2,0,Guatemala,TEJUTLA,Urban,Woman,38,Biparental,3
+3449,174344850,0.0,2,0,Guatemala,Aldea Rancho Bojon,Rural,Woman,38,Biparental,10
+4766,173215062,0.0,1,0,Guatemala,EL  CARMEN BUXUP,Rural,Woman,38,Biparental,4
+4392,173529184,0.0,2,0,Guatemala,Chacaj,Rural,Woman,38,Biparental,4
+3450,174344775,0.0,2,0,Guatemala,Aldea rancho bojon,Rural,Woman,38,Biparental,5
+1778,175434178,0.0,2,0,Guatemala,San agustin viejo chahal,Rural,Woman,38,Biparental,4
+4281,173569158,0.0,2,0,Guatemala,Aldea Chacaj,Rural,Woman,39,Biparental,3
+3417,174348255,0.0,2,0,Guatemala,Urbano,Urban,Woman,39,Biparental,9
+149,176674257,0.0,2,0,Guatemala,Chimolon,Rural,Woman,39,Biparental,10
+3142,174644225,0.0,1,0,Guatemala,Aldea cacahuatepeque,Rural,Woman,39,Biparental,4
+4403,173425691,0.0,2,0,Guatemala,La Trinidad,Rural,Woman,40,Biparental,3
+601,176200999,0.0,1,0,Guatemala,Aldea yampemech,Rural,Woman,40,Biparental,7
+4577,173405924,0.0,2,0,Guatemala,Aldea los Espinos,Rural,Woman,40,Biparental,6
+4813,173212767,0.0,2,0,Guatemala,CULVILLA,Rural,Woman,40,Biparental,4
+2700,174919780,0.0,1,0,Guatemala,San jose la colonia,Urban,Woman,40,Biparental,6
+4454,173415254,0.0,1,0,Guatemala,QUIPAMBE,Rural,Woman,41,Biparental,3
+1885,175293149,0.0,1,0,Guatemala,Sabana Grande,Rural,Woman,41,else,9
+3102,174655697,0.0,2,0,Guatemala,LAS MINAS,Rural,Woman,41,Biparental,3
+1725,175438700,0.0,2,0,Guatemala,Caserio nuevo san julian,Rural,Woman,41,Biparental,7
+1777,175434182,0.0,2,0,Guatemala,San agustin viejo chahal,Rural,Woman,42,Biparental,2
+1252,175684786,0.0,1,0,Guatemala,Urbano,Urban,Woman,42,Biparental,6
+3453,174344768,0.0,1,0,Guatemala,Aldea rancho bojon,Rural,Woman,42,Biparental,8
+4067,173761003,0.0,2,0,Guatemala,Tzal_ Chiquito,Rural,Woman,42,else,6
+2072,175150941,0.0,1,0,Guatemala,Zona 4,Urban,Woman,43,Biparental,7
+4251,173576259,0.0,2,0,Guatemala,Aldea Tzojbal,Rural,Woman,43,Biparental,6
+2076,175150894,0.0,2,0,Guatemala,IXMULCA,Rural,Woman,43,Biparental,4
+2143,175148054,0.0,2,0,Guatemala,El obraje,Rural,Woman,44,Biparental,5
+4533,173409204,0.0,2,0,Guatemala,Aldea las lagunas,Rural,Woman,44,Biparental,9
+4396,173525118,0.0,1,0,Guatemala,Chacaj,Rural,Woman,45,Biparental,10
+4416,173422986,0.0,2,0,Guatemala,La Trinidad,Rural,Woman,45,else,6
+4147,173738275,0.0,2,0,Guatemala,San rafael soche,Rural,Woman,46,Biparental,8
+2108,175149175,0.0,1,0,Guatemala,Chiquimula,Urban,Woman,46,else,5
+4752,173215189,0.0,2,0,Guatemala,Aldea Atulapa,Rural,Woman,47,Biparental,7
+4184,173736784,0.0,2,0,Guatemala,Caparja,Rural,Woman,47,Biparental,4
+4504,173410520,0.0,1,0,Guatemala,Ixmoco,Rural,Woman,48,Biparental,6
+4676,173221406,0.0,1,0,Guatemala,EL CARMEN BUXUP,Rural,Woman,48,Biparental,6
+3057,174667790,0.0,2,0,Guatemala,San juan atitan,Rural,Woman,48,Biparental,7
+4764,173215065,0.0,1,0,Guatemala,EL CARMEN BUXUP,Rural,Woman,49,Biparental,2
+2529,174937117,0.0,1,0,Guatemala,El cerro,Urban,Woman,50,Biparental,3
+2051,175155251,0.0,2,0,Guatemala,Cahaboncito,Rural,Woman,50,Biparental,8
+3821,174039187,0.0,1,0,Guatemala,Quezaltepeque,Urban,Woman,50,Biparental,1
+2517,174937777,0.0,2,0,Guatemala,Barrio el cerro,Urban,Woman,50,Biparental,4
+3346,174364216,0.0,2,0,Guatemala,Aldea Camojallito,Rural,Woman,52,Biparental,3
+3085,174657400,0.0,1,0,Guatemala,INC_,Rural,Woman,53,Biparental,5
+1711,175440600,0.0,2,0,Guatemala,Los planes,Rural,Woman,53,Biparental,4
+2587,174927481,0.0,1,0,Guatemala,Canton las casas zona 8,Urban,Woman,54,Biparental,8
+4768,173215059,0.0,1,0,Guatemala,EL CARMEN BUXUP,Rural,Woman,54,Biparental,3
+2105,175149186,0.0,1,0,Guatemala,Chiquimula,Urban,Woman,55,else,9
+4200,173730915,0.0,2,0,Guatemala,Caserio los bujes,Rural,Woman,55,Biparental,9
+1736,175438578,0.0,1,0,Guatemala,TEJUTLA,Urban,Woman,55,Biparental,4
+174,176660491,0.0,1,0,Guatemala,Alsea srjux setzuc,Rural,Woman,55,Biparental,4
+2144,175148049,0.0,1,0,Guatemala,El obraje,Rural,Woman,56,Biparental,2
+3112,174650609,0.0,1,0,Guatemala,Ipala,Urban,Woman,56,Biparental,2
+2466,175091910,0.0,2,0,Guatemala,Aldea Majadita,Urban,Woman,57,else,5
+2548,174932498,0.0,2,0,Guatemala,Zona 3,Urban,Woman,58,Biparental,6
+2689,174920862,0.0,1,0,Guatemala,San jose la Colonia,Urban,Woman,59,Biparental,6
+3438,174347854,0.0,1,0,Guatemala,Aldea la coronada,Rural,Woman,59,else,5
+888,175938345,0.0,2,0,Guatemala,Aldea Tuila,Rural,Woman,60,Biparental,4
+4095,173746924,0.0,2,0,Guatemala,San Jacinto,Urban,Woman,60,Biparental,2
+4455,173415252,0.0,1,0,Guatemala,QUIPAMBE,Rural,Woman,60,Biparental,3
+2975,174894108,0.0,1,0,Guatemala,Ojechejel,Urban,Woman,60,Biparental,2
+1604,175656199,0.0,2,0,Guatemala,Las islas,Rural,Woman,61,Biparental,5
+864,175940880,0.0,1,0,Guatemala,Las Veguitas,Rural,Woman,62,Biparental,3
+3799,174039641,0.0,2,0,Guatemala,Nuevo progeso ,Urban,Woman,63,Biparental,6
+3107,174650642,0.0,1,0,Guatemala,Ipala,Urban,Woman,63,Biparental,2
+1909,175292372,0.0,2,0,Guatemala,Barrio la playa,Urban,Woman,64,Biparental,5
+592,176201669,0.0,1,0,Guatemala,Sector 3 canaan,Rural,Woman,64,Biparental,4
+4996,174925764,0.0,2,0,Guatemala,Sanjuan ermita,Urban,Woman,64,Biparental,4
+4160,173737773,0.0,2,0,Guatemala,Aldea san antonio sechil,Rural,Woman,65,Biparental,8
+4428,173422018,0.0,2,0,Guatemala,La Trinidad ,Rural,Woman,65,Biparental,2
+4474,173412819,0.0,2,0,Guatemala,QUIPAMBE,Rural,Woman,65,Biparental,4
+2155,175146595,0.0,1,0,Guatemala,Zona 7,Urban,Woman,65,Biparental,5
+1848,175297224,0.0,2,0,Guatemala,CALIFORNIA,Rural,Woman,65,Biparental,3
+869,175940863,0.0,1,0,Guatemala,Ladea beguitas,Rural,Woman,66,else,2
+3048,174674861,0.0,2,0,Guatemala,San Ildefonso Ixtahuac_n,Rural,Woman,66,Biparental,5
+946,175934429,0.0,1,0,Guatemala,San Jose,Urban,Woman,67,Biparental,5
+4308,173567370,0.0,1,0,Guatemala,El platanar,Rural,Woman,68,Biparental,3
+3420,174348244,0.0,1,0,Guatemala,Urbano,Urban,Woman,68,Biparental,4
+2594,174926613,0.0,2,0,Guatemala,Zona 8,Urban,Woman,68,Biparental,2
+4803,173213289,0.0,2,0,Guatemala,CULVILLA,Rural,Woman,69,Biparental,2
+4327,173566350,0.0,1,0,Guatemala,Aldea olopita,Rural,Woman,69,Biparental,3
+2077,175150797,0.0,1,0,Guatemala,Zona,Urban,Woman,69,Biparental,2
+2129,175148475,0.0,1,0,Guatemala,Cahanboncito,Rural,Woman,70,Biparental,6
+1351,175673111,0.0,1,0,Guatemala,SIPACAPA,Urban,Woman,72,Biparental,2
+4103,173746907,0.0,1,0,Guatemala,San Jacinto,Urban,Woman,72,Biparental,3
+4997,174925765,0.0,1,0,Guatemala,San juan ermita,Urban,Woman,72,Biparental,4
+3721,174052585,0.0,1,0,Guatemala,Olopa,Urban,Woman,72,Biparental,4
+2606,174925469,0.0,1,0,Guatemala,San Juan Ermita,Urban,Woman,74,Biparental,3
+1327,175676923,0.0,2,0,Guatemala,Tesoro abajo,Rural,Woman,75,Biparental,2
+955,175934278,0.0,2,0,Guatemala,Barrio San Jos_,Urban,Woman,76,else,12
+4195,173730970,0.0,1,0,Guatemala,Caserio los bujes,Rural,Woman,76,Biparental,8
+1701,175440669,0.0,1,0,Guatemala,Los planes,Rural,Woman,78,Biparental,2
+2006,175278249,0.0,2,0,Guatemala,Barrio la playa ,Urban,Woman,81,Biparental,3
+1417,175668976,0.0,1,0,Guatemala,Camotan,Urban,Woman,83,Biparental,1
+545,176216531,0.0,2,0,Honduras,El Desvio,Rural,Man,25,Biparental,4
+1946,175286692,0.0,1,0,Honduras,Aldea Pavana,Urban,Man,27,else,4
+4240,173651171,0.0,1,0,Honduras,Chivana,Rural,Man,30,Biparental,2
+2045,175236040,0.0,2,0,Honduras,San Francisco,Rural,Man,32,Biparental,7
+585,176202429,0.0,1,0,Honduras,Jicarito,Rural,Man,32,else,2
+1119,175909859,0.0,1,0,Honduras,Tablado,Rural,Man,33,Biparental,4
+4611,173403865,0.0,2,0,Honduras,El sapote san fransisco d yojoa,Rural,Man,33,Biparental,4
+801,176141871,0.0,2,0,Honduras,Cerro bonito,Rural,Man,35,Biparental,4
+826,175953936,0.0,1,0,Honduras,El Coyolito ,Rural,Man,36,else,4
+1052,175919673,0.0,1,0,Honduras,Mandasta,Rural,Man,36,Biparental,4
+4128,173740449,0.0,1,0,Honduras,Corinto,Rural,Man,37,Biparental,4
+1654,175644027,0.0,1,0,Honduras,Malpaso,Rural,Man,40,Biparental,3
+1124,175909719,0.0,1,0,Honduras,Sabanagrande ,Urban,Man,46,else,8
+2268,175135644,0.0,1,0,Honduras,Los limones,Rural,Man,48,Biparental,4
+800,176146306,0.0,2,0,Honduras,Jicarito ,Rural,Man,49,Biparental,6
+1050,175919681,0.0,1,0,Honduras,Curaren centro,Urban,Man,51,Biparental,6
+4831,173200004,0.0,1,0,Honduras,La Bomba,Urban,Man,53,Biparental,5
+1930,175290809,0.0,2,0,Honduras,Las Hormigas,Rural,Man,54,else,4
+2809,174911695,0.0,2,0,Honduras,El Guanigiquil,Rural,Man,54,Biparental,7
+1062,175917877,0.0,2,0,Honduras,El Tablado ,Rural,Man,58,Biparental,7
+1121,175909848,0.0,1,0,Honduras,Tablado,Rural,Man,58,Biparental,5
+2351,175123563,0.0,2,0,Honduras,San Judas ,Rural,Man,59,Biparental,8
+3707,174069026,0.0,1,0,Honduras,Col.Adrian Bladimiro Zepeda,Urban,Man,60,Biparental,5
+4559,173407487,0.0,1,0,Honduras,"Colonia, La San pablo",Rural,Man,60,else,4
+807,176141145,0.0,2,0,Honduras,El Desvio,Rural,Man,60,else,5
+1808,175424685,0.0,1,0,Honduras,Agua Caliente,Urban,Man,61,Biparental,4
+974,175930355,0.0,1,0,Honduras,Agua Caliente,Rural,Man,61,Biparental,4
+2780,174914270,0.0,2,0,Honduras,San jose,Rural,Man,62,Biparental,14
+4935,172964778,0.0,2,0,Honduras,COLONIA SAN JOSE,Rural,Man,63,Biparental,3
+1465,175666170,0.0,1,0,Honduras,Los llanos,Rural,Man,64,else,1
+782,176166244,0.0,1,0,Honduras,Barrio La Quinta,Rural,Man,66,Biparental,5
+4854,172995788,0.0,2,0,Honduras,"Centro, San Isidro",Rural,Man,66,Biparental,6
+2781,174914269,0.0,1,0,Honduras,San jose,Rural,Man,67,Biparental,4
+4851,173193358,0.0,2,0,Honduras,El centro,Urban,Man,67,Biparental,3
+872,175940522,0.0,1,0,Honduras,Col. Santa Fe,Urban,Man,70,Biparental,2
+2016,175265901,0.0,2,0,Honduras,Aldea San Jose de la Landa,Urban,Man,70,Biparental,2
+1481,175665887,0.0,2,0,Honduras,El Llano,Rural,Man,70,else,4
+2355,175123547,0.0,1,0,Honduras,San Judas ,Rural,Man,74,Biparental,3
+4683,173220371,0.0,2,0,Honduras,El encanto ,Rural,Man,78,Biparental,1
+2782,174914265,0.0,2,0,Honduras,San jose,Rural,Man,80,Biparental,5
+2591,174926806,0.0,1,0,Honduras,Barrio El Calvario,Urban,Man,84,else,4
+4217,173703709,0.0,1,0,Honduras,Pe_a Blanca ,Rural,Woman,19,Biparental,6
+2353,175123556,0.0,1,0,Honduras,San Judas ,Rural,Woman,20,Biparental,3
+4788,173214430,0.0,2,0,Honduras,"COL. SAN JOSE
+
+",Rural,Woman,25,Biparental,2
+4698,173216373,0.0,1,0,Honduras,Col la mora,Urban,Woman,25,Biparental,6
+979,175927671,0.0,1,0,Honduras,Barrio Arriba,Urban,Woman,25,Biparental,4
+2347,175123578,0.0,2,0,Honduras,Sanjudas,Rural,Woman,25,else,3
+2248,175136151,0.0,2,0,Honduras,El Chocolate ,Rural,Woman,26,Biparental,5
+830,175946130,0.0,1,0,Honduras,San Francisco de soroguara,Rural,Woman,26,Biparental,10
+4123,173740456,0.0,2,0,Honduras,Corinto ,Rural,Woman,26,Biparental,4
+980,175927667,0.0,1,0,Honduras,Los Laureles ,Urban,Woman,26,Biparental,4
+2356,175123544,0.0,1,0,Honduras,San Judas,Rural,Woman,27,Biparental,3
+1699,175442581,0.0,1,0,Honduras,Puente Jal_n ,Rural,Woman,27,Biparental,4
+4220,173703702,0.0,2,0,Honduras,El Ed_n ,Rural,Woman,28,Biparental,8
+4210,173711809,0.0,1,0,Honduras,"El Eden, Pe_a Blanca ",Urban,Woman,28,Biparental,3
+3473,174329163,0.0,1,0,Honduras,El Palmar,Rural,Woman,28,else,7
+4226,173703693,0.0,1,0,Honduras,Pe_a Blanca,Rural,Woman,29,Biparental,3
+4564,173407474,0.0,2,0,Honduras,"Comunidad, San Isidro",Rural,Woman,29,else,5
+909,175936389,0.0,1,0,Honduras,El encino ,Rural,Woman,29,Biparental,5
+3125,174648327,0.0,1,0,Honduras,Cuyamel,Rural,Woman,30,Biparental,3
+4072,173759147,0.0,1,0,Honduras,LIMA CENTRO,Rural,Woman,33,Biparental,3
+4465,173414070,0.0,2,0,Honduras,La Bomba,Urban,Woman,33,Biparental,6
+4671,173221974,0.0,2,0,Honduras,Macro albergue,Rural,Woman,33,Biparental,5
+959,175932444,0.0,2,0,Honduras,Zarabanda ,Rural,Woman,33,Biparental,4
+927,175935249,0.0,2,0,Honduras,Francisco de soroguara,Rural,Woman,33,Biparental,4
+2723,174918148,0.0,1,0,Honduras,San Jose,Rural,Woman,34,Biparental,6
+3462,174339755,0.0,1,0,Honduras,Cuyamel,Rural,Woman,35,else,3
+2178,175144770,0.0,1,0,Honduras,Los Calpules,Rural,Woman,35,Biparental,3
+1672,175444933,0.0,1,0,Honduras,LIMA CENTRO,Urban,Woman,35,Biparental,3
+338,176475749,0.0,2,0,Honduras,Barrio abajo,Rural,Woman,35,Biparental,4
+3682,174264652,0.0,1,0,Honduras,Ocho de Febrero,Urban,Woman,36,Biparental,6
+827,175953935,0.0,2,0,Honduras,El Suyate ,Rural,Woman,36,Biparental,6
+2478,175087097,0.0,1,0,Honduras,Las arenas ,Urban,Woman,36,Biparental,4
+2672,174921026,0.0,2,0,Honduras,El zapotillo ,Rural,Woman,36,Biparental,5
+4689,173220333,0.0,2,0,Honduras,General Madrid ,Rural,Woman,37,Biparental,5
+1231,175690280,0.0,2,0,Honduras,Arena Blanca,Rural,Woman,38,else,8
+4862,172985504,0.0,2,0,Honduras,Funez barahona ,Rural,Woman,38,else,3
+1957,175286236,0.0,2,0,Honduras,R_o Abajo,Rural,Woman,38,Biparental,3
+926,175935250,0.0,2,0,Honduras,San Francisco de soroguara,Rural,Woman,38,Biparental,8
+4852,173405234,0.0,2,0,Honduras,Colonia la pas bloque 3,Rural,Woman,39,Biparental,5
+4924,172965797,0.0,2,0,Honduras,Barrio los laureles ,Rural,Woman,39,Biparental,4
+4124,173740455,0.0,1,0,Honduras,Corinto ,Rural,Woman,40,Biparental,10
+2210,175138379,0.0,2,0,Honduras,San Francisco,Rural,Woman,40,Biparental,2
+3725,174051409,0.0,2,0,Honduras,Tegucigalpita ,Rural,Woman,40,Biparental,6
+4173,173736811,0.0,2,0,Honduras,Col. Suyapa Chamelecon,Urban,Woman,40,Biparental,5
+999,175924254,0.0,2,0,Honduras,El Desvio,Rural,Woman,42,Biparental,6
+2350,175123568,0.0,2,0,Honduras,Sanjudas,Rural,Woman,43,else,4
+4785,173214435,0.0,2,0,Honduras,COL SAN JOSE,Rural,Woman,43,Biparental,4
+4108,173744297,0.0,1,0,Honduras,Corinto,Rural,Woman,44,Biparental,5
+4177,173736807,0.0,1,0,Honduras,Col.San Antonio,Urban,Woman,45,Biparental,7
+646,176187911,0.0,2,0,Honduras,Cerro Bonito,Rural,Woman,45,Biparental,5
+645,176188233,0.0,2,0,Honduras,Barrio el Centro ,Urban,Woman,46,Biparental,5
+4467,173414068,0.0,2,0,Honduras,La Bomba,Urban,Woman,46,Biparental,4
+3133,174644314,0.0,2,0,Honduras,Colonia Adrian Bladimiro Zepeda,Urban,Woman,47,Biparental,3
+1512,175663664,0.0,1,0,Honduras,Las Hormigas,Rural,Woman,48,Biparental,4
+1386,175670723,0.0,1,0,Honduras,Los charcos ,Rural,Woman,48,Biparental,5
+2599,174925719,0.0,1,0,Honduras,Colonia 5 de Enero,Urban,Woman,49,Biparental,4
+1782,175433253,0.0,1,0,Honduras,Aldea Pavana,Rural,Woman,50,Biparental,4
+829,175946601,0.0,1,0,Honduras,Jicarito ,Rural,Woman,50,Biparental,4
+2207,175138391,0.0,2,0,Honduras,San Francisco,Rural,Woman,52,Biparental,6
+1955,175286248,0.0,2,0,Honduras,R_o Abajo,Rural,Woman,53,Biparental,6
+836,175946116,0.0,2,0,Honduras,San Francisco soroguara,Rural,Woman,53,Biparental,6
+4446,173415503,0.0,1,0,Honduras,Chamelecon Centro,Urban,Woman,54,Biparental,4
+1483,175665880,0.0,2,0,Honduras,El llano,Rural,Woman,55,else,5
+981,175927663,0.0,1,0,Honduras,Los Laureles ,Urban,Woman,55,Biparental,3
+1511,175663666,0.0,2,0,Honduras,Las Hormigas,Rural,Woman,55,Biparental,3
+4073,173759145,0.0,1,0,Honduras,LIMA CENTRO,Rural,Woman,55,Biparental,3
+2619,174924852,0.0,1,0,Honduras,Coyoles Central ,Rural,Woman,55,Biparental,2
+4868,172982958,0.0,1,0,Honduras,Cocosur,Urban,Woman,55,Biparental,0
+2622,174924765,0.0,2,0,Honduras, Coyoles Central ,Rural,Woman,55,Biparental,5
+1060,175917885,0.0,2,0,Honduras,El Tablado ,Rural,Woman,58,Biparental,6
+2714,174919229,0.0,2,0,Honduras,Los calpules,Rural,Woman,58,Biparental,3
+3305,174590565,0.0,2,0,Honduras,Las Minas,Rural,Woman,58,Biparental,3
+1870,175293737,0.0,1,0,Honduras,Aldea rio abajo,Rural,Woman,58,Biparental,6
+962,175932439,0.0,1,0,Honduras,Zarabanda,Rural,Woman,58,Biparental,9
+2086,175150021,0.0,2,0,Honduras,Comali,Rural,Woman,59,Biparental,5
+1233,175689096,0.0,1,0,Honduras,Arena Blanca,Rural,Woman,60,Biparental,1
+3773,174046055,0.0,1,0,Honduras,LIMA CENTRO,Urban,Woman,60,Biparental,5
+3723,174051421,0.0,2,0,Honduras,Tegucigalpita ,Rural,Woman,60,Biparental,1
+2242,175136189,0.0,1,0,Honduras,_l chocolate,Rural,Woman,61,Biparental,3
+2738,174916528,0.0,2,0,Honduras,"Sulaco, Barrio Maria Auxiliadora",Urban,Woman,61,Biparental,8
+3691,174229295,0.0,2,0,Honduras,"Las Brisas, Pe_a Blanca ",Urban,Woman,62,else,2
+2194,175142535,0.0,2,0,Honduras,El zapotillo,Rural,Woman,62,Biparental,8
+983,175925386,0.0,2,0,Honduras,El Vertiente,Rural,Woman,62,Biparental,5
+640,176188265,0.0,2,0,Honduras,Cerro bonito ,Rural,Woman,62,else,0
+2987,174890958,0.0,2,0,Honduras,las vegas,Rural,Woman,62,Biparental,4
+1457,175667126,0.0,2,0,Honduras,El Sursular,Rural,Woman,63,else,4
+1392,175670629,0.0,1,0,Honduras,Colonia Villafranca,Urban,Woman,65,else,6
+3171,174631152,0.0,2,0,Honduras,Luquigue,Rural,Woman,65,Biparental,3
+1373,175672401,0.0,1,0,Honduras,Dulce nombre,Rural,Woman,66,Biparental,4
+547,176216526,0.0,1,0,Honduras,El Desvio,Rural,Woman,66,Biparental,5
+4047,173964125,0.0,1,0,Honduras,Arenal,Urban,Woman,67,else,7
+2319,175127459,0.0,2,0,Honduras,Luquigue,Rural,Woman,68,Biparental,4
+4834,173199999,0.0,1,0,Honduras,La Bomba ,Urban,Woman,68,Biparental,4
+2752,174916477,0.0,2,0,Honduras,Las Ca_as,Rural,Woman,68,Biparental,6
+3685,174259621,0.0,1,0,Honduras,Cuyamel,Rural,Woman,68,Biparental,3
+1001,175924252,0.0,2,0,Honduras,7 de mayo,Rural,Woman,69,else,5
+4923,172965798,0.0,1,0,Honduras,Barrio los laureles ,Rural,Woman,70,Biparental,4
+4219,173703703,0.0,1,0,Honduras,El Ed_n ,Rural,Woman,71,Biparental,3
+923,175935254,0.0,1,0,Honduras,San Francisco de soroguara,Rural,Woman,72,else,4
+2083,175150029,0.0,1,0,Honduras,Comali,Rural,Woman,73,Biparental,6
+2979,174890987,0.0,1,0,Honduras,Victoria ,Urban,Woman,75,else,6
+2750,174916484,0.0,2,0,Honduras,Las Ca_as,Rural,Woman,75,Biparental,4
