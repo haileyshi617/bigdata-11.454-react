@@ -16,15 +16,12 @@ const SurveyChart = ({ steps, direction }) => {
   const svgRef = React.useRef(null);
 
   const [data, setData] = useState(null);
+  const [nodes, setNodes] = useState(null);
 
   // when step updates, update data
   useEffect(() => {
     d3.csv(rawdata).then((data) => {
-      setData(
-        data.slice(0, 2000).map(function (d) {
-          return { ...d, radius: r };
-        })
-      );
+      setData(data.slice(0, 200));
     });
   }, []);
 
@@ -51,7 +48,9 @@ const SurveyChart = ({ steps, direction }) => {
   useEffect(() => {
     // when not scroll to page, there will be no data loading
     if (data) {
-      const nodes = data;
+      const nodes = data.map(function (d) {
+        return { ...d, radius: r };
+      });
 
       const simulation = d3
         .forceSimulation(nodes)
@@ -98,7 +97,7 @@ const SurveyChart = ({ steps, direction }) => {
             .strength(forceStrength)
             .x((d) => cariCenter[+d.cari - 1])
         );
-      } else if (steps == 3) {
+      } else if (steps == 3 || steps == 4) {
         simulation.force(
           'x',
           d3
@@ -108,13 +107,12 @@ const SurveyChart = ({ steps, direction }) => {
         );
       }
     }
-  }, [steps]);
+  }, [steps, data]);
 
   return (
     <>
       <div className="survey-tooltip hidden" ref={tooltipRef}></div>
       <svg className="survey-chart" ref={svgRef}></svg>
-      <button className="button">toggle</button>
     </>
   );
 };
