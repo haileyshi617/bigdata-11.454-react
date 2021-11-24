@@ -18,13 +18,6 @@ const SurveyChart = ({ steps, direction }) => {
   const [data, setData] = useState(null);
   const [nodes, setNodes] = useState(null);
 
-  // when step updates, update data
-  useEffect(() => {
-    d3.csv(rawdata).then((data) => {
-      setData(data.slice(0, 200));
-    });
-  }, []);
-
   //d3 chart update according to steps
   let width = '932';
   let height = '800';
@@ -44,13 +37,30 @@ const SurveyChart = ({ steps, direction }) => {
     return -Math.pow(d.radius, 2.0) * forceStrength;
   }
 
+  // when step updates, update data
+  useEffect(() => {
+    d3.csv(rawdata).then((data) => {
+      setData(
+        data.slice(0, 3000).map(function (d) {
+          return {
+            ...d,
+            radius: r,
+            // x: Math.random() * width,
+            // y: Math.random() * height,
+          };
+        })
+      );
+    });
+  }, []);
+
   // when data updates, update charts
   useEffect(() => {
     // when not scroll to page, there will be no data loading
     if (data) {
-      const nodes = data.map(function (d) {
-        return { ...d, radius: r };
-      });
+      const nodes = data;
+      //   const nodes = data.map(function (d) {
+      //     return { ...d, radius: r };
+      //   });
 
       const simulation = d3
         .forceSimulation(nodes)
@@ -60,30 +70,32 @@ const SurveyChart = ({ steps, direction }) => {
         .force('charge', d3.forceManyBody().strength(charge))
         .on('tick', ticked);
 
+      const bubbles = svg
+        .selectAll('circle')
+        .data(nodes)
+        .join('circle')
+        .attr('r', function (d) {
+          return d.radius;
+        })
+        .attr('fill', function (d) {
+          if (d.cari == '2') {
+            return COLOR.MARGIN;
+          } else if (d.cari == '3') {
+            return COLOR.MODERATE;
+          } else if (d.cari == '4') {
+            return COLOR.SEVERE;
+          } else {
+            return COLOR.GRAY;
+          }
+        });
+
       function ticked() {
-        const u = svg
-          .selectAll('circle')
-          .data(nodes)
-          .join('circle')
-          .attr('r', function (d) {
-            return d.radius;
-          })
+        bubbles
           .attr('cx', function (d) {
             return d.x;
           })
           .attr('cy', function (d) {
             return d.y;
-          })
-          .attr('fill', function (d) {
-            if (d.cari == '2') {
-              return COLOR.MARGIN;
-            } else if (d.cari == '3') {
-              return COLOR.MODERATE;
-            } else if (d.cari == '4') {
-              return COLOR.SEVERE;
-            } else {
-              return COLOR.GRAY;
-            }
           });
       }
 
