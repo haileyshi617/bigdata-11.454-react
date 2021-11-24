@@ -27,7 +27,7 @@ function Scroll01Dot() {
             onStepEnter={onStepEnter}
             progress
             onStepProgress={onStepProgress}
-            offset="0.5"
+            offset="0.8"
             // debug
           >
             <Step data={1} value={1}>
@@ -55,6 +55,9 @@ function Scroll01Dot() {
               </div>
             </Step>
             <Step data={3} key={3}>
+              <div className="step">blabla</div>
+            </Step>
+            <Step data={4} key={4}>
               <div className="step"></div>
             </Step>
           </Scrollama>
