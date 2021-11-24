@@ -9,7 +9,7 @@ const HEIGHT = 100 - MARGIN.TOP - MARGIN.BOTTOM;
 
 // GRID SETUP
 const NCOL = 100;
-const NROW = 4;
+const NROW = 10;
 
 // RENDERING SETUP
 const COLOR = {
