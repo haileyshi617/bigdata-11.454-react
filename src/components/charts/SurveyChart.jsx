@@ -12,7 +12,6 @@ const COLOR = {
 const SurveyChart = ({ steps }) => {
   const tooltipRef = React.useRef(null);
   const svgRef = React.useRef(null);
-  const gRef = React.useRef(null);
 
   const [data, setData] = useState(null);
 

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300&family=Spectral:wght@600;800&display=swap');
 
 @import 'variables';
 
@@ -15,8 +14,8 @@ h1,
 h2,
 h3 {
   font-family: $font-title;
+  font-weight: 800;
   font-style: normal;
-  font-weight: bold;
 }
 
 h1 {
@@ -60,6 +59,7 @@ small {
 }
 
 span {
+  font-weight: bold;
   &.red {
     color: $c-primary-dark;
   }

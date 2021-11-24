@@ -1,17 +1,16 @@
 import React from 'react';
-import GlobalWrapper from '../charts/FoodGlobalWrapper';
-import CardSection from '../ui/CardSection';
+import FoodGlobalChart from '../charts/FoodGlobalChart';
 
 const Section02FoodGlobal = () => {
   return (
     <div className="section">
-      <div className="section-card no-hover">
+      <div className="section-card">
         <h1>
-          <span className="red">Food security</span>
-          <br /> in the Northern Triangle Region
+          <span className="red">Food security</span> of the Northern Triangle
+          Region in the global context.
         </h1>
       </div>
-      <GlobalWrapper />
+      <FoodGlobalChart />
     </div>
   );
 };

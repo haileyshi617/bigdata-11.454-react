@@ -1,11 +1,11 @@
 import React, { Component, useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
 
-import CardSection from '../ui/CardSection';
-import GridChartWrapper from '../charts/GridChartWrapper';
+import GridMigrationChart from '../charts/GridMigrationChart';
 
-function Scroll02Bar() {
+function Section04Scroll() {
   const [steps, setSteps] = useState(null);
+  const [direction, setDirection] = useState(null);
   const [progress, setProgress] = useState(null);
 
   const text = {
@@ -15,7 +15,10 @@ function Scroll02Bar() {
 
   const onStepEnter = ({ data, entry, direction }) => {
     setSteps(data);
+    setDirection(direction);
   };
+
+  const onStepExit = () => {};
 
   const onStepProgress = ({ progress }) => {
     setProgress(progress);
@@ -25,12 +28,57 @@ function Scroll02Bar() {
     <div>
       <div className="main ">
         <div className="main__graphic">
-          <CardSection header={text.header} main={text.main} />
-          <GridChartWrapper />
+          <div className="scroll-chart-content-container">
+            <div className="title-container">
+              <p className="chart-title">
+                Food security and migration intention.
+              </p>
+              {steps > 1 && (
+                <div className="legend-container">
+                  <div className="legend">
+                    <div className="legend-block yes"></div>
+                    <p className="yes">Household answered "Yes"</p>
+                  </div>
+                  <div className="legend">
+                    <div className="legend-block no"></div>
+                    <p className="no">Household answered "No"</p>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <div className="chart-wrapper">
+              <div className="chart-container">
+                <p>Food Secure Group</p>
+                <div className="axis-container">
+                  <small>0</small>
+                  <small>100</small>
+                  <small>200</small>
+                  <small>300</small>
+                  <small>400</small>
+                </div>
+                <GridMigrationChart steps={steps} direction={direction} />
+              </div>
+
+              <div className="chart-container">
+                <p>Food Insecure Group</p>
+                <div className="axis-container">
+                  <small>0</small>
+                  <small>100</small>
+                  <small>200</small>
+                  <small>300</small>
+                  <small>400</small>
+                </div>
+                <GridMigrationChart steps={steps} direction={direction} />
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="scroller no-hover">
+
+        <div className="scroller">
           <Scrollama
             onStepEnter={onStepEnter}
+            onStepExit={onStepExit}
             progress
             onStepProgress={onStepProgress}
             offset="0.5"
@@ -49,6 +97,7 @@ function Scroll02Bar() {
                 <p>{Math.round(progress * 1000) / 10 + '%'}</p>
               </div>
             </Step>
+
             <Step data={2} key={2}>
               <div className="step">
                 <h2>II. Migration Preparation</h2>
@@ -60,6 +109,7 @@ function Scroll02Bar() {
                 <p>{Math.round(progress * 1000) / 10 + '%'}</p>
               </div>
             </Step>
+
             <Step data={3} key={3}>
               <div className="step">
                 <h2>II. Migration Preparation</h2>
@@ -71,6 +121,7 @@ function Scroll02Bar() {
                 <p>{Math.round(progress * 1000) / 10 + '%'}</p>
               </div>
             </Step>
+
             <Step data={4} key={4}>
               <div className="step"></div>
             </Step>
@@ -81,4 +132,4 @@ function Scroll02Bar() {
   );
 }
 
-export default Scroll02Bar;
+export default Section04Scroll;

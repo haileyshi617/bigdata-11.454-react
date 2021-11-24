@@ -1,4 +1,5 @@
 import * as d3 from 'd3';
+import React, { useRef, useState, useEffect } from 'react';
 
 // CANVAS SETUP
 const WIDTH = window.innerWidth;
@@ -9,84 +10,93 @@ const NT = ['GTM', 'HND', 'SLV'];
 const RED = { REGULAR: '#f8ad96', SELECT: '#eb5832' };
 const GRAY = { REGULAR: '#f0f0f0', SELECT: '#bcbcbc' };
 
-export default class Mapchart {
-  constructor(element) {
-    const vis = this;
+const MapChart = () => {
+  const tooltipRef = React.useRef(null);
+  const svgRef = React.useRef(null);
+  const [data, setData] = useState(null);
 
-    // CANVAS SETUP
-    vis.svg = d3
-      .select(element)
-      .append('svg')
-      .attr('width', WIDTH)
-      .attr('height', HEIGHT)
-      .append('g')
-      .attr('transform', `translate(${(WIDTH * 7) / 8}, ${HEIGHT / 6})`);
-
-    // Map and projection
-    vis.projection = d3
-      .geoNaturalEarth1()
-      .scale(WIDTH / 0.6 / Math.PI)
-      .translate([WIDTH / 2, HEIGHT / 2]);
-
-    // FETCHING DATA
-    Promise.all([
-      d3.json(
-        'https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson'
-      ),
-    ]).then((datasets) => {
-      vis.data = datasets[0];
-      vis.update();
+  // LOAD DATA
+  // useEffect => When parent element's target value updates, update data
+  useEffect(() => {
+    d3.json(
+      'https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson'
+    ).then((data) => {
+      setData(data);
     });
-  }
-  update() {
-    const vis = this;
-    vis.data = vis.data;
+  }, []);
 
-    // DATA JOIN
-    const map = vis.svg.selectAll('path').data(vis.data.features);
+  // CANVAS SETUP
+  // .current => necessary when use ref
+  const svg = d3
+    .select(svgRef.current)
+    .attr('width', WIDTH)
+    .attr('height', HEIGHT)
+    .append('g')
+    .attr('transform', `translate(${(WIDTH * 7) / 8}, ${HEIGHT / 6})`);
 
-    // MOUSE EVENT
-    const tooltip = d3.select('#tooltip-map');
+  // When data updates, update charts
+  useEffect(() => {
+    if (data) {
+      // Map and projection
+      const projection = d3
+        .geoNaturalEarth1()
+        .scale(WIDTH / 0.6 / Math.PI)
+        .translate([WIDTH / 2, HEIGHT / 2]);
 
-    const mouseover = function (event, d) {
-      tooltip
-        .html(
-          `<p>In <span>${d.properties.name}</span>, around <span>(??)%</span> of the population migrate to the US.<p>`
-        )
-        .style('left', `${event.clientX * 0.8}px`)
-        .style('top', () => {
-          if (event.clientY - window.innerHeight / 2 > 0)
-            return `${event.clientY * 0.8}px`;
-          return `${event.clientY}px`;
-        })
-        .classed('hidden', false);
+      // DATA JOIN
+      const map = svg.selectAll('path').data(data.features);
+      // MOUSE EVENT
+      const tooltip = d3.select('#tooltip-map');
 
-      d3.select(this).attr('fill', (d) =>
-        NT.includes(d.id) ? RED.SELECT : GRAY.SELECT
-      );
-    };
+      const mouseover = function (event, d) {
+        tooltip
+          .html(
+            `<p>In <span>${d.properties.name}</span>, around <span>(??)%</span> of the population migrate to the US.<p>`
+          )
+          .style('left', `${event.clientX * 0.8}px`)
+          .style('top', () => {
+            if (event.clientY - window.innerHeight / 2 > 0)
+              return `${event.clientY * 0.8}px`;
+            return `${event.clientY}px`;
+          })
+          .classed('hidden', false);
 
-    const mouseout = function (event, d) {
-      tooltip.classed('hidden', true);
+        d3.select(this).attr('fill', (d) =>
+          NT.includes(d.id) ? RED.SELECT : GRAY.SELECT
+        );
+      };
 
-      d3.select(this).attr('fill', (d) =>
-        NT.includes(d.id) ? RED.REGULAR : GRAY.REGULAR
-      );
-    };
+      const mouseout = function (event, d) {
+        tooltip.classed('hidden', true);
 
-    // ENTER
-    map
-      .enter()
-      .append('path')
-      .on('mouseover', mouseover)
-      .on('mouseout', mouseout)
-      .attr('fill', GRAY.REGULAR)
-      .transition()
-      .duration(1000)
-      .attr('fill', (d) => (NT.includes(d.id) ? RED.REGULAR : GRAY.REGULAR))
-      .attr('d', d3.geoPath().projection(vis.projection))
-      .style('stroke', '#fff')
-      .style('stroke-width', 1)
-      .attr('class', 'Country');
-  }
-}
+        d3.select(this).attr('fill', (d) =>
+          NT.includes(d.id) ? RED.REGULAR : GRAY.REGULAR
+        );
+      };
+
+      // ENTER
+      map
+        .enter()
+        .append('path')
+        .on('mouseover', mouseover)
+        .on('mouseout', mouseout)
+        .attr('fill', GRAY.REGULAR)
+        .transition()
+        .duration(1000)
+        .attr('fill', (d) => (NT.includes(d.id) ? RED.REGULAR : GRAY.REGULAR))
+        .attr('d', d3.geoPath().projection(projection))
+        .style('stroke', '#fff')
+        .style('stroke-width', 1)
+        .attr('class', 'Country');
+    }
+  }, [data]);
+
+  return (
+    <>
+      <div id="tooltip-map" className="tooltip hidden" ref={tooltipRef}></div>
+      <svg className="map-chart" ref={svgRef}></svg>
+    </>
+  );
+};
+
+export default MapChart;

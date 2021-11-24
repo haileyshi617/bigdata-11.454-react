@@ -5,7 +5,7 @@ const Section03Dot = () => {
   return (
     <div className="section">
       {/* <CardSection header={text.header} main={text.main} /> */}
-      <div className="section-card no-hover">
+      <div className="section-card">
         <h1>
           Is food security <span className="red">a solution to</span>
           <br /> migration issue?

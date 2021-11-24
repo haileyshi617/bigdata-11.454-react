@@ -3,19 +3,19 @@
 @import 'setup/variables';
 
 // === LAYOUT ===
-@import 'basics/layout';
+@import 'layout/layout';
+@import 'layout/footer';
 
 // === SECTIONS ===
 @import 'section/section';
+@import 'section/scroll';
 
 @import 'section/intro';
 @import 'section/outro';
 
-@import 'section/food-global';
-@import 'section/migration';
-
-@import 'section/scroll';
-@import 'section/footer';
+@import 'section/01-map';
+@import 'section/02-food-global';
+@import 'section/04-grid';
 
 // === COMPONENTS ===
 @import 'components/chart-area';

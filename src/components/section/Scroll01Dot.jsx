@@ -22,7 +22,7 @@ function Scroll01Dot() {
         <div className="main__graphic">
           <SurveyChart steps={steps} className="survey" />
         </div>
-        <div className="scroller disabled no-hover">
+        <div className="scroller">
           <Scrollama
             onStepEnter={onStepEnter}
             progress
