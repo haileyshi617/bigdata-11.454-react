@@ -145,9 +145,6 @@ const FoodGlobalChart = ({ steps, direction }) => {
         .attr('y2', function (d) {
           return y(d.moderate);
         })
-        .transition()
-        .ease(d3.easeCubicIn)
-        .duration(1000)
         .attr('y1', function (d) {
           return y(d.moderate);
         })
@@ -180,11 +177,7 @@ const FoodGlobalChart = ({ steps, direction }) => {
           return y(d.moderate);
         })
         .attr('class', (d) => `bellchart-${d.index}`)
-        .attr('r', '0')
         .style('fill', COLOR.GRAY)
-        .transition()
-        .ease(d3.easeCubicIn)
-        .duration(1000)
         .attr('r', CIRCLE.REGULAR)
         .attr('opacity', (d) => {
           return COUNTRIES.includes(d.country)
@@ -208,14 +201,7 @@ const FoodGlobalChart = ({ steps, direction }) => {
           return y(d.severe);
         })
         .attr('class', (d) => `bellchart-${d.index}`)
-        .attr('r', '0')
         .style('fill', COLOR.GRAY)
-        .transition()
-        .ease(d3.easeCubicIn)
-        .duration(1000)
-        .transition()
-        .ease(d3.easeCubicIn)
-        .duration(1000)
         .attr('r', CIRCLE.REGULAR)
         .attr('opacity', (d) => {
           return COUNTRIES.includes(d.country)
@@ -254,7 +240,7 @@ const FoodGlobalChart = ({ steps, direction }) => {
       // SCROLL ANIMATION
       // DOWN
       if (direction === 'down') {
-        if (steps >= 2) {
+        if (steps === 2) {
           circleModerate
             .transition()
             .ease(d3.easeCubicIn)
@@ -268,29 +254,50 @@ const FoodGlobalChart = ({ steps, direction }) => {
             .style('fill', COLOR.SEVERE);
           // NTlabel
         }
-        // if (steps === 2) {
-        //   circleModerate.style('fill', COLOR.MODERATE);
-        //   circleSevere.style('fill', COLOR.SEVERE);
-        //   // circleModerate
-        //   // circleSevere
-        //   // NTlabel
-        // }
+        if (steps > 2) {
+          circleModerate.style('fill', COLOR.MODERATE);
+
+          circleSevere.style('fill', COLOR.SEVERE);
+          // NTlabel
+        }
       }
       // UP
       if (direction === 'up') {
-        if (steps >= 2) {
+        if (steps > 2) {
+          circleModerate.style('fill', COLOR.MODERATE).attr('opacity', (d) => {
+            return COUNTRIES.includes(d.country)
+              ? OPACITY.SELECT
+              : OPACITY.REGULAR;
+          });
+
+          circleSevere.style('fill', COLOR.SEVERE).attr('opacity', (d) => {
+            return COUNTRIES.includes(d.country)
+              ? OPACITY.SELECT
+              : OPACITY.REGULAR;
+          });
+          // NTlabel
+        } else {
           circleModerate
             .transition()
             .ease(d3.easeCubicIn)
             .duration(500)
-            .style('fill', COLOR.MODERATE);
+            .style('fill', COLOR.GRAY)
+            .attr('opacity', (d) => {
+              return COUNTRIES.includes(d.country)
+                ? OPACITY.SELECT
+                : OPACITY.REGULAR;
+            });
 
           circleSevere
             .transition()
             .ease(d3.easeCubicIn)
             .duration(500)
-            .style('fill', COLOR.SEVERE);
-          // NTlabel
+            .style('fill', COLOR.GRAY)
+            .attr('opacity', (d) => {
+              return COUNTRIES.includes(d.country)
+                ? OPACITY.SELECT
+                : OPACITY.REGULAR;
+            });
         }
       }
     }
