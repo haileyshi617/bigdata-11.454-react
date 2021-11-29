@@ -38,28 +38,30 @@ const FoodGlobalChart = ({ steps, direction }) => {
     });
   }, []);
 
-  // CANVAS SETUP
-  // .current => necessary when use ref
-  const svg = d3
-    .select(svgRef.current)
-    .attr('width', '100%')
-    .attr(
-      'viewBox',
-      `0 0 ${WIDTH + MARGIN.LEFT + MARGIN.RIGHT} ${
-        HEIGHT + MARGIN.TOP + MARGIN.BOTTOM
-      }`
-    )
-    .attr('preserveAspectRatio', 'xMaxYMin meet')
-    .append('g')
-    .attr('transform', `translate(${MARGIN.LEFT}, ${MARGIN.TOP})`);
-
-  const xAxisGroup = svg
-    .append('g')
-    .attr('transform', `translate(0, ${HEIGHT})`);
-
   // When data updates, update charts
   useEffect(() => {
     if (data) {
+      // CANVAS SETUP
+      // .current => necessary when use ref
+      const svgEl = d3
+        .select(svgRef.current)
+        .attr('width', '100%')
+        .attr(
+          'viewBox',
+          `0 0 ${WIDTH + MARGIN.LEFT + MARGIN.RIGHT} ${
+            HEIGHT + MARGIN.TOP + MARGIN.BOTTOM
+          }`
+        )
+        .attr('preserveAspectRatio', 'xMaxYMin meet');
+      svgEl.selectAll('*').remove(); // Clear svg content before adding new elements
+
+      const svg = svgEl
+        .append('g')
+        .attr('transform', `translate(${MARGIN.LEFT}, ${MARGIN.TOP})`);
+
+      const xAxisGroup = svg
+        .append('g')
+        .attr('transform', `translate(0, ${HEIGHT})`);
       // MOUSE EVENT
       const tooltip = d3.select('#tooltip-food-global');
 
