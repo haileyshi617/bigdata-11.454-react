@@ -1,7 +1,8 @@
 import React, { Component, useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
 
-import GridMigrationChart from '../charts/GridMigrationChart';
+import GridSecureChartWrapper from '../charts/GridSecureChartWrapper';
+import GridInsecureChartWrapper from '../charts/GridInsecureChartWrapper';
 
 function Section04Scroll() {
   const [steps, setSteps] = useState(null);
@@ -33,7 +34,7 @@ function Section04Scroll() {
               <p className="chart-title">
                 Food security and migration intention.
               </p>
-              {steps > 1 && (
+              {steps === 1 && (
                 <div className="legend-container">
                   <div className="legend">
                     <div className="legend-block yes"></div>
@@ -45,32 +46,34 @@ function Section04Scroll() {
                   </div>
                 </div>
               )}
+
+              {steps >= 2 && (
+                <div className="legend-container">
+                  <div className="legend">
+                    <div className="legend-block yes mig-scale-1"></div>
+                    <p className="mig-scale-1">
+                      Household wants to migrate but no plan
+                    </p>
+                  </div>
+                  <div className="legend">
+                    <div className="legend-block no mig-scale-2"></div>
+                    <p className="mig-scale-2">
+                      Household has plan but no preparation
+                    </p>
+                  </div>
+                  <div className="legend">
+                    <div className="legend-block no mig-scale-3"></div>
+                    <p className="mig-scale-3">
+                      Household has plan and preparation
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
 
             <div className="chart-wrapper">
-              <div className="chart-container">
-                <p>Food Secure Group</p>
-                <div className="axis-container">
-                  <small>0</small>
-                  <small>100</small>
-                  <small>200</small>
-                  <small>300</small>
-                  <small>400</small>
-                </div>
-                <GridMigrationChart steps={steps} direction={direction} />
-              </div>
-
-              <div className="chart-container">
-                <p>Food Insecure Group</p>
-                <div className="axis-container">
-                  <small>0</small>
-                  <small>100</small>
-                  <small>200</small>
-                  <small>300</small>
-                  <small>400</small>
-                </div>
-                <GridMigrationChart steps={steps} direction={direction} />
-              </div>
+              <GridSecureChartWrapper steps={steps} direction={direction} />
+              <GridInsecureChartWrapper steps={steps} direction={direction} />
             </div>
           </div>
         </div>
@@ -86,39 +89,37 @@ function Section04Scroll() {
           >
             <Step data={1} value={1}>
               <div className="step">
-                <h2>I. Migration Desire</h2>
+                <h2>The food secure have higher desire to migrate.</h2>
                 <p>
-                  The probability of experiencing moderate or severe food
-                  insecurity varies widely across countries—from{' '}
-                  <span className="red">less than 2 percent</span> in
-                  Switzerland to <span className="blue">85 percent</span> in
-                  Liberia.
+                  Does this mean food security will actually drive people to
+                  migrate? Further research of the data tells a different story.
                 </p>
-                <p>{Math.round(progress * 1000) / 10 + '%'}</p>
               </div>
             </Step>
 
             <Step data={2} key={2}>
               <div className="step">
-                <h2>II. Migration Preparation</h2>
+                <h2>Desire does not equal to action.</h2>
                 <p>
-                  The probability of experiencing moderate or severe food
-                  insecurity varies widely across countries—from less than 2
-                  percent in Liberia.
+                  Even though food secure people are more likely to say they
+                  want to migrate, when it comes to migration, it takes{' '}
+                  <span className="red">actual planning and preparation</span>{' '}
+                  to actualize the action.
                 </p>
-                <p>{Math.round(progress * 1000) / 10 + '%'}</p>
               </div>
             </Step>
 
             <Step data={3} key={3}>
               <div className="step">
-                <h2>II. Migration Preparation</h2>
+                <h2>
+                  The food insecure are more likely to take actual action.
+                </h2>
                 <p>
-                  The probability of experiencing moderate or severe food
-                  insecurity varies widely across countries—from less than 2
-                  percent in Liberia.
+                  Given the food insecure people are already struggling with
+                  basic needs such as food, their plans to migrate are more
+                  likely to be <span className="red">out of desperation </span>
+                  rather than <span className="blue">by choice </span>.
                 </p>
-                <p>{Math.round(progress * 1000) / 10 + '%'}</p>
               </div>
             </Step>
 

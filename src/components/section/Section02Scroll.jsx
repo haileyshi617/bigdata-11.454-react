@@ -34,12 +34,12 @@ function Section02Scroll() {
               {steps > 1 && (
                 <div className="legend-container">
                   <div className="legend">
-                    <div className="legend-block dot yes"></div>
-                    <p className="yes">Moderate Hunger</p>
+                    <div className="legend-block dot no"></div>
+                    <p className="no">Moderate Hunger</p>
                   </div>
                   <div className="legend">
-                    <div className="legend-block dot no"></div>
-                    <p className="no">Severe Hunger</p>
+                    <div className="legend-block dot yes"></div>
+                    <p className="yes">Severe Hunger</p>
                   </div>
                 </div>
               )}
@@ -61,9 +61,9 @@ function Section02Scroll() {
                 <h2>Countries vary.</h2>
                 <p>
                   In the Northern Triangle Regions,
-                  <span className="red"> more than 45.6 percent</span> people
-                  are likely to experience some level of hunger, compared to the
-                  United States
+                  <span className="red"> more than 13.8 percent</span> people
+                  are likely to experience severe hunger, compared to the United
+                  States
                   <span className="blue"> less than 2 percent</span> people are
                   facing similar difficulty.
                 </p>
@@ -74,9 +74,12 @@ function Section02Scroll() {
               <div className="step">
                 <h2>Severities varies.</h2>
                 <p>
-                  The probability of experiencing moderate or severe food
-                  insecurity varies widely across countries—from less than 2
-                  percent in Liberia.
+                  In the Northern Triangle Regions,
+                  <span className="red"> more than 45.6 percent</span> people
+                  are likely to experience some level of hunger, compared to the
+                  United States
+                  <span className="blue"> less than 1 percent</span> people are
+                  facing similar difficulty.
                 </p>
               </div>
             </Step>

@@ -11,7 +11,7 @@ const COLOR = {
 };
 
 const SurveyChart = ({ steps, direction }) => {
-  console.log(steps);
+  // console.log(steps);
   const tooltipRef = React.useRef(null);
   const svgRef = React.useRef(null);
 

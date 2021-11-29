@@ -15,12 +15,13 @@ const COUNTRIES = [
   'United States of America',
 ];
 const CIRCLE = { REGULAR: 4, SELECT: 5 };
-const OPACITY = { REGULAR: 0.1, SELECT: 1 };
-const LINE = { REGULAR: 1, SELECT: 2 };
+const LINE = { REGULAR: 1, SELECT: 3 };
 const COLOR = {
-  MODERATE: '#6bbaad',
-  SEVERE: '#eb5832',
-  GRAY: '#e0e0e0',
+  MODERATE_S: '#6bbaad',
+  SEVERE_S: '#eb5832',
+  MODERATE_R: '#DFEBE8',
+  SEVERE_R: '#EBD7D0',
+  GRAY: '#F3F3F3',
   TEXT: '#808080',
 };
 
@@ -69,14 +70,14 @@ const FoodGlobalChart = ({ steps, direction }) => {
                     <p class="moderate"> Moderate Hunger: ${d.moderate}% </p>
                     <p> Severe Hunger: ${d.severe}% </p>`
           )
-          .style('left', `${event.clientX * 0.8}px`)
-          .style('top', `${event.clientY * 0.8}px`)
+          .style('left', `${event.clientX * 0.7}px`)
+          .style('top', `${event.clientY * 0.5}px`)
           .classed('hidden', false);
         svg
           .selectAll(`.bellchart-${d.index}`)
           .style('r', CIRCLE.SELECT)
-          .attr('stroke-width', LINE.SELECT)
-          .attr('opacity', OPACITY.SELECT);
+          .style('stroke', COLOR.TEXT)
+          .attr('stroke-width', LINE.REGULAR);
       };
 
       const mouseout = function (event, d) {
@@ -84,14 +85,12 @@ const FoodGlobalChart = ({ steps, direction }) => {
         svg
           .selectAll(`.bellchart-${d.index}`)
           .style('r', CIRCLE.REGULAR)
+          .style('stroke', 'transparent')
           .attr('stroke-width', (d) =>
             COUNTRIES.includes(d.country) ? LINE.SELECT : LINE.REGULAR
           )
-          .attr('opacity', (d) => {
-            return COUNTRIES.includes(d.country)
-              ? OPACITY.SELECT
-              : OPACITY.REGULAR;
-          });
+          .selectAll('line')
+          .style('stroke', COLOR.GRAY);
       };
 
       // SCALES
@@ -123,6 +122,7 @@ const FoodGlobalChart = ({ steps, direction }) => {
       // DATA JOIN
       const highlightData = data.filter((d) => COUNTRIES.includes(d.country));
 
+      // STEP 0
       const lines = svg
         .append('g')
         .attr('class', 'lines')
@@ -154,11 +154,6 @@ const FoodGlobalChart = ({ steps, direction }) => {
         .attr('stroke', COLOR.GRAY)
         .attr('stroke-width', (d) => {
           return COUNTRIES.includes(d.country) ? LINE.SELECT : LINE.REGULAR;
-        })
-        .attr('opacity', (d) => {
-          return COUNTRIES.includes(d.country)
-            ? OPACITY.SELECT
-            : OPACITY.REGULAR;
         });
 
       const circleModerate = svg
@@ -178,12 +173,7 @@ const FoodGlobalChart = ({ steps, direction }) => {
         })
         .attr('class', (d) => `bellchart-${d.index}`)
         .style('fill', COLOR.GRAY)
-        .attr('r', CIRCLE.REGULAR)
-        .attr('opacity', (d) => {
-          return COUNTRIES.includes(d.country)
-            ? OPACITY.SELECT
-            : OPACITY.REGULAR;
-        });
+        .attr('r', CIRCLE.REGULAR);
 
       const circleSevere = svg
         .append('g')
@@ -202,27 +192,14 @@ const FoodGlobalChart = ({ steps, direction }) => {
         })
         .attr('class', (d) => `bellchart-${d.index}`)
         .style('fill', COLOR.GRAY)
-        .attr('r', CIRCLE.REGULAR)
-        .attr('opacity', (d) => {
-          return COUNTRIES.includes(d.country)
-            ? OPACITY.SELECT
-            : OPACITY.REGULAR;
-        });
+        .attr('r', CIRCLE.REGULAR);
 
       const NTlabel = svg
         .append('g')
         .attr('class', 'NTlabel')
         .selectAll('text')
-        .data(highlightData);
-
-      svg
-        .append('g')
-        .transition()
-        .ease(d3.easeCubicIn)
-        .duration(1000)
-        .call(yAxis);
-
-      NTlabel.enter()
+        .data(highlightData)
+        .enter()
         .append('text')
         .attr('y', (d) =>
           d.country === 'El Salvador'
@@ -237,68 +214,79 @@ const FoodGlobalChart = ({ steps, direction }) => {
         .attr('font-size', '12px')
         .text((d) => d.country);
 
+      svg
+        .append('g')
+        .transition()
+        .ease(d3.easeCubicIn)
+        .duration(1000)
+        .call(yAxis);
+
       // SCROLL ANIMATION
-      // DOWN
-      if (direction === 'down') {
-        if (steps === 2) {
-          circleModerate
-            .transition()
+      // console.log(steps);
+      // console.log(direction);
+      // STEP 1:
+      // 1) Highlight selected countries -> text
+      if (steps === 1) {
+        if (direction === 'down') {
+          NTlabel.transition()
             .ease(d3.easeCubicIn)
             .duration(500)
-            .style('fill', COLOR.MODERATE);
-
-          circleSevere
-            .transition()
-            .ease(d3.easeCubicIn)
-            .duration(500)
-            .style('fill', COLOR.SEVERE);
-          // NTlabel
-        }
-        if (steps > 2) {
-          circleModerate.style('fill', COLOR.MODERATE);
-
-          circleSevere.style('fill', COLOR.SEVERE);
-          // NTlabel
+            .style('fill', (d) =>
+              d.country === 'United States of America'
+                ? COLOR.MODERATE_S
+                : COLOR.SEVERE_S
+            );
         }
       }
-      // UP
-      if (direction === 'up') {
-        if (steps > 2) {
-          circleModerate.style('fill', COLOR.MODERATE).attr('opacity', (d) => {
-            return COUNTRIES.includes(d.country)
-              ? OPACITY.SELECT
-              : OPACITY.REGULAR;
-          });
 
-          circleSevere.style('fill', COLOR.SEVERE).attr('opacity', (d) => {
-            return COUNTRIES.includes(d.country)
-              ? OPACITY.SELECT
-              : OPACITY.REGULAR;
-          });
-          // NTlabel
-        } else {
+      // STEP 2:
+      // 1) Undo highlight selected countries -> tex
+      // 2) Add in colors based on countries and severity to the circles
+      if (steps === 2) {
+        if (direction === 'down') {
+          NTlabel.transition()
+            .ease(d3.easeCubicIn)
+            .duration(500)
+            .style('fill', COLOR.TEXT);
+
           circleModerate
             .transition()
             .ease(d3.easeCubicIn)
             .duration(500)
-            .style('fill', COLOR.GRAY)
-            .attr('opacity', (d) => {
-              return COUNTRIES.includes(d.country)
-                ? OPACITY.SELECT
-                : OPACITY.REGULAR;
-            });
+            .style('fill', (d) =>
+              COUNTRIES.includes(d.country)
+                ? COLOR.MODERATE_S
+                : COLOR.MODERATE_R
+            );
 
           circleSevere
             .transition()
             .ease(d3.easeCubicIn)
             .duration(500)
-            .style('fill', COLOR.GRAY)
-            .attr('opacity', (d) => {
-              return COUNTRIES.includes(d.country)
-                ? OPACITY.SELECT
-                : OPACITY.REGULAR;
-            });
+            .style('fill', (d) =>
+              COUNTRIES.includes(d.country) ? COLOR.SEVERE_S : COLOR.SEVERE_R
+            );
+        } else {
+          NTlabel.style('fill', COLOR.TEXT);
+          circleModerate.style('fill', (d) =>
+            COUNTRIES.includes(d.country) ? COLOR.MODERATE_S : COLOR.MODERATE_R
+          );
+
+          circleSevere.style('fill', (d) =>
+            COUNTRIES.includes(d.country) ? COLOR.SEVERE_S : COLOR.SEVERE_R
+          );
         }
+      }
+
+      // STEP 3
+      if (steps > 2) {
+        circleModerate.style('fill', (d) =>
+          COUNTRIES.includes(d.country) ? COLOR.MODERATE_S : COLOR.MODERATE_R
+        );
+        circleSevere.style('fill', (d) =>
+          COUNTRIES.includes(d.country) ? COLOR.SEVERE_S : COLOR.SEVERE_R
+        );
+        NTlabel.style('fill', COLOR.TEXT);
       }
     }
   }, [data, steps, direction]);
