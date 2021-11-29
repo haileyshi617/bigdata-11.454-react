@@ -18,11 +18,11 @@ const Section01Map = () => {
         </p>
         <br />
         <p>
-          More recently, the number of immigrants –
-          <span>lawful and unauthorized</span> – from the three Northern
-          Triangle nations <span>rose by 25%</span> between 2007 and 2015.
-          During that same period, the immigrant population from Mexico, the
-          largest birth country for U.S. immigrants, declined 6%.
+          More recently, the number of immigrants{' '}
+          <span>–– from the three Northern Triangle nations rose by 25%</span>{' '}
+          between 2007 and 2015. During that same period, the immigrant
+          population from Mexico, the largest birth country for U.S. immigrants,
+          declined 6%.
         </p>
       </div>
     </div>

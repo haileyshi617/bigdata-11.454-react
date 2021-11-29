@@ -34,12 +34,11 @@ function Scroll01Dot() {
           >
             <Step data={1} value={1}>
               <div className="step">
-                <h2>4996 Survey response</h2>
+                <h2>4,498 Survey response</h2>
                 <p>
-                  In an ??-month investigation, the World Food Programme (WFP)
-                  has conducted a survey of civilians in the Northern Triangle
-                  region, compiling a database of 4996 responses with
-                  information on a number of dimensions.
+                  In April-May 2021, the World Food Programme conducted a
+                  face-to-face household survey of 4,498 responses in El
+                  Salvador, Guatemala, and Honduras.
                 </p>
                 {/* <p>{Math.round(progress * 1000) / 10 + '%'}</p> */}
               </div>
@@ -59,7 +58,10 @@ function Scroll01Dot() {
             <Step data={3} key={3}>
               <div className="step">
                 <h2>Around half have migration desire</h2>
-                <p>Of all the participants, 43% have migration desire.</p>
+                <p>
+                  Around half of household respondents indicated a desire to
+                  migrate, but only 6% are making plans to do so.
+                </p>
               </div>
             </Step>
             <Step data={4} key={4}>

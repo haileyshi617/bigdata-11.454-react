@@ -30,7 +30,9 @@ function Section02Scroll() {
         <div className="main__graphic">
           <div className="scroll-chart-content-container">
             <div className="title-container">
-              <p className="chart-title">Food insecurity varies greatly.</p>
+              <p className="chart-title">
+                Food Insecurity is High in El Salvador, Guatemala, and Honduras
+              </p>
               {steps > 1 && (
                 <div className="legend-container">
                   <div className="legend">
@@ -58,7 +60,7 @@ function Section02Scroll() {
           >
             <Step data={1} value={1}>
               <div className="step">
-                <h2>Countries vary.</h2>
+                <h2>Hunger is Pressing</h2>
                 <p>
                   In the Northern Triangle Regions,
                   <span className="red"> more than 13.8 percent</span> people
@@ -72,7 +74,7 @@ function Section02Scroll() {
 
             <Step data={2} key={2}>
               <div className="step">
-                <h2>Severities varies.</h2>
+                <h2>Severe Food Insecurity</h2>
                 <p>
                   In the Northern Triangle Regions,
                   <span className="red"> more than 45.6 percent</span> people

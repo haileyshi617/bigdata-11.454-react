@@ -51,7 +51,9 @@ const MapChart = () => {
       const mouseover = function (event, d) {
         tooltip
           .html(
-            `<p>In <span>${d.properties.name}</span>, around <span>(??)%</span> of the population migrate to the US.<p>`
+            d.properties.name == 'USA'
+              ? `<p>The <span>${d.properties.name}</span> receives ??% of migrants from El Salvador, Guatemala, and Honduras.</p>`
+              : `<p>Around <span>(??)%</span> of the population from <span>${d.properties.name}</span> migrate to the US in 2020.<p>`
           )
           .style('left', `${event.clientX * 0.8}px`)
           .style('top', () => {
