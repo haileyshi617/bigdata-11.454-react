@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
-import dataSrc_400 from '../../data/food_insecure_400_mig_int.csv';
-import dataSrc_100 from '../../data/food_insecure_100.csv';
+import dataSrc_int from '../../data/food-insecure-mig-int.csv';
+import dataSrc_prep from '../../data/food-insecure-mig-prep.csv';
 
 /* ---------------------------------- SETUP --------------------------------- */
 // CANVAS SETUP
@@ -9,19 +9,19 @@ const WIDTH = window.innerWidth - MARGIN.LEFT - MARGIN.RIGHT;
 const HEIGHT = 200 - MARGIN.TOP - MARGIN.BOTTOM;
 
 // GRID SETUP
-const NCOL = 100;
-const NROW = { INTENTION: 4, PREPARATION: 1 };
+const NCOL = 80;
+const NROW = { INTENTION: 5, PREPARATION: 2 };
 
 // RENDERING SETUP
-const COLOR_GRAY = '#e0e0e0';
+const COLOR_GRAY = '#efefef';
 const COLOR_INTENTION = {
-  NO: '#6bbaad',
+  NO: '#efefef',
   YES: '#eb5832',
 };
 const COLOR_PREPARATION = {
-  PLAN_NO_PREP: '#e0e0e0',
-  PREP_NO_ACTION: '#eb5832',
-  ACTION: '#780000',
+  PLAN_NO_PREP: '#F3EBEB',
+  PREP_NO_ACTION: '#e2b9ad',
+  ACTION: '#eb5832',
 };
 
 /* -------------------------- FUNCTION TO DRAW GRID ------------------------- */
@@ -87,12 +87,14 @@ export default class GirdSecureChart {
     vis.yAxisGroup = vis.svg.append('g').attr('id', 'y-axis');
 
     // LOAD THE DATA
-    Promise.all([d3.csv(dataSrc_400), d3.csv(dataSrc_100)]).then((datasets) => {
-      vis.intention = datasets[0];
-      vis.preparation = datasets[1];
+    Promise.all([d3.csv(dataSrc_int), d3.csv(dataSrc_prep)]).then(
+      (datasets) => {
+        vis.intention = datasets[0];
+        vis.preparation = datasets[1];
 
-      vis.update(steps, direction);
-    });
+        vis.update(steps, direction);
+      }
+    );
   }
 
   update(steps, direction) {
@@ -145,7 +147,6 @@ export default class GirdSecureChart {
       .on('mouseout', mouseout)
       .style('fill', COLOR_GRAY)
       .style('stroke', '#fff');
-
     // UPDATE
     const square = vis.svg.selectAll('rect');
 
@@ -234,7 +235,6 @@ export default class GirdSecureChart {
         });
       }
     }
-
     /* ------------------------------- MOUSE EVENT ------------------------------ */
     const tooltip = d3.select('#tooltip-grid');
 

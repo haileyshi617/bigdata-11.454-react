@@ -31,6 +31,7 @@
 
 .legend-container {
   padding-bottom: 5vh;
+
   .legend {
     display: flex;
     flex-direction: row;
@@ -39,12 +40,30 @@
 
     p {
       font-size: 13px;
+
+      // hunger
       &.yes {
         color: $c-primary-dark;
       }
-
       &.no {
         color: $c-accent-dark;
+      }
+
+      // migrate
+      &.mig-no {
+        color: $c-grey-dark;
+      }
+      &.mig-yes {
+        color: $c-grey-dark;
+      }
+      &.mig-scale-1 {
+        color: $c-grey-dark;
+      }
+      &.mig-scale-2 {
+        color: $c-grey-dark;
+      }
+      &.mig-scale-3 {
+        color: $c-grey-dark;
       }
     }
   }
@@ -54,16 +73,32 @@
     height: 1rem;
     margin-right: 0.5rem;
 
+    &.dot {
+      border-radius: 50%;
+    }
+
+    // hunger
     &.yes {
       background-color: $c-primary-dark;
     }
-
     &.no {
       background-color: $c-accent-dark;
     }
-
-    &.dot {
-      border-radius: 50%;
+    // migrate
+    &.mig-no {
+      background-color: #efefef;
+    }
+    &.mig-yes {
+      background-color: #eb5832;
+    }
+    &.mig-scale-1 {
+      background-color: #f3ebeb;
+    }
+    &.mig-scale-2 {
+      background-color: #e2b9ad;
+    }
+    &.mig-scale-3 {
+      background-color: #eb5832;
     }
   }
 }
@@ -71,7 +106,7 @@
 // === CHART ===
 .scroll-chart-content-container {
   .title-container {
-    height: 18vh;
+    height: 24vh;
 
     p.chart-title {
       font-size: 24px;

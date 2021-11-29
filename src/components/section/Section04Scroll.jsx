@@ -25,6 +25,66 @@ function Section04Scroll() {
     setProgress(progress);
   };
 
+  let legend;
+  if (steps === 1) {
+    legend = (
+      <div className="legend-container">
+        <div className="legend">
+          <div className="legend-block mig-no"></div>
+          <p className="mig-no">Household answered "No"</p>
+        </div>
+        <div className="legend">
+          <div className="legend-block mig-yes"></div>
+          <p className="mig-yes">Household answered "Yes"</p>
+        </div>
+      </div>
+    );
+  } else if (steps === 2) {
+    legend = (
+      <div className="legend-container">
+        <div className="legend">
+          <div className="legend-block mig-no"></div>
+          <p className="mig-no">Household does not want to migrate</p>
+        </div>
+        <div className="legend">
+          <div className="legend-block mig-scale-1"></div>
+          <p className="mig-scale-1">
+            Household wants to migrate but has no plan
+          </p>
+        </div>
+        <div className="legend">
+          <div className="legend-block mig-scale-2"></div>
+          <p className="mig-scale-2">Household has plan but no preparation</p>
+        </div>
+        <div className="legend">
+          <div className="legend-block mig-scale-3"></div>
+          <p className="mig-scale-3">Household has plan and preparation</p>
+        </div>
+      </div>
+    );
+  } else if (steps === 3) {
+    legend = (
+      <div className="legend-container">
+        <div className="legend">
+          <div className="legend-block mig-scale-1"></div>
+          <p className="mig-scale-1">
+            Household wants to migrate but has no plan
+          </p>
+        </div>
+        <div className="legend">
+          <div className="legend-block mig-scale-2"></div>
+          <p className="mig-scale-2">Household has plan but no preparation</p>
+        </div>
+        <div className="legend">
+          <div className="legend-block mig-scale-3"></div>
+          <p className="mig-scale-3">Household has plan and preparation</p>
+        </div>
+      </div>
+    );
+  } else {
+    legend = <div></div>;
+  }
+
   return (
     <div>
       <div className="main ">
@@ -34,41 +94,7 @@ function Section04Scroll() {
               <p className="chart-title">
                 Food security and migration intention.
               </p>
-              {steps === 1 && (
-                <div className="legend-container">
-                  <div className="legend">
-                    <div className="legend-block yes"></div>
-                    <p className="yes">Household answered "Yes"</p>
-                  </div>
-                  <div className="legend">
-                    <div className="legend-block no"></div>
-                    <p className="no">Household answered "No"</p>
-                  </div>
-                </div>
-              )}
-
-              {steps >= 2 && (
-                <div className="legend-container">
-                  <div className="legend">
-                    <div className="legend-block yes mig-scale-1"></div>
-                    <p className="mig-scale-1">
-                      Household wants to migrate but no plan
-                    </p>
-                  </div>
-                  <div className="legend">
-                    <div className="legend-block no mig-scale-2"></div>
-                    <p className="mig-scale-2">
-                      Household has plan but no preparation
-                    </p>
-                  </div>
-                  <div className="legend">
-                    <div className="legend-block no mig-scale-3"></div>
-                    <p className="mig-scale-3">
-                      Household has plan and preparation
-                    </p>
-                  </div>
-                </div>
-              )}
+              {legend}
             </div>
 
             <div className="chart-wrapper">
