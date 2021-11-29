@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/bigdata-11.454-react/static/css/main.ce8dc454.chunk.css",
-    "main.js": "/bigdata-11.454-react/static/js/main.b5723a6d.chunk.js",
-    "main.js.map": "/bigdata-11.454-react/static/js/main.b5723a6d.chunk.js.map",
+    "main.css": "/bigdata-11.454-react/static/css/main.03ec4c3f.chunk.css",
+    "main.js": "/bigdata-11.454-react/static/js/main.2b229665.chunk.js",
+    "main.js.map": "/bigdata-11.454-react/static/js/main.2b229665.chunk.js.map",
     "runtime-main.js": "/bigdata-11.454-react/static/js/runtime-main.86023fc2.js",
     "runtime-main.js.map": "/bigdata-11.454-react/static/js/runtime-main.86023fc2.js.map",
-    "static/js/2.5a2d9072.chunk.js": "/bigdata-11.454-react/static/js/2.5a2d9072.chunk.js",
-    "static/js/2.5a2d9072.chunk.js.map": "/bigdata-11.454-react/static/js/2.5a2d9072.chunk.js.map",
+    "static/js/2.230192b4.chunk.js": "/bigdata-11.454-react/static/js/2.230192b4.chunk.js",
+    "static/js/2.230192b4.chunk.js.map": "/bigdata-11.454-react/static/js/2.230192b4.chunk.js.map",
     "index.html": "/bigdata-11.454-react/index.html",
-    "static/css/main.ce8dc454.chunk.css.map": "/bigdata-11.454-react/static/css/main.ce8dc454.chunk.css.map",
-    "static/js/2.5a2d9072.chunk.js.LICENSE.txt": "/bigdata-11.454-react/static/js/2.5a2d9072.chunk.js.LICENSE.txt",
+    "static/css/main.03ec4c3f.chunk.css.map": "/bigdata-11.454-react/static/css/main.03ec4c3f.chunk.css.map",
+    "static/js/2.230192b4.chunk.js.LICENSE.txt": "/bigdata-11.454-react/static/js/2.230192b4.chunk.js.LICENSE.txt",
     "static/media/cari-mig.9035924e.csv": "/bigdata-11.454-react/static/media/cari-mig.9035924e.csv",
     "static/media/food-global.2b92dcb9.csv": "/bigdata-11.454-react/static/media/food-global.2b92dcb9.csv",
-    "static/media/sliced1000.f97036a9.csv": "/bigdata-11.454-react/static/media/sliced1000.f97036a9.csv"
+    "static/media/food-insecure-mig-int.7aef0d68.csv": "/bigdata-11.454-react/static/media/food-insecure-mig-int.7aef0d68.csv",
+    "static/media/food-insecure-mig-prep.e947a1eb.csv": "/bigdata-11.454-react/static/media/food-insecure-mig-prep.e947a1eb.csv",
+    "static/media/food-secure-mig-int.4eeae34c.csv": "/bigdata-11.454-react/static/media/food-secure-mig-int.4eeae34c.csv",
+    "static/media/food-secure-mig-prep.764b7a0b.csv": "/bigdata-11.454-react/static/media/food-secure-mig-prep.764b7a0b.csv"
   },
   "entrypoints": [
     "static/js/runtime-main.86023fc2.js",
-    "static/js/2.5a2d9072.chunk.js",
-    "static/css/main.ce8dc454.chunk.css",
-    "static/js/main.b5723a6d.chunk.js"
+    "static/js/2.230192b4.chunk.js",
+    "static/css/main.03ec4c3f.chunk.css",
+    "static/js/main.2b229665.chunk.js"
   ]
 }

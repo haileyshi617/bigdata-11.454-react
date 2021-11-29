@@ -106,7 +106,11 @@
 // === CHART ===
 .scroll-chart-content-container {
   .title-container {
-    height: 24vh;
+    height: 18vh;
+
+    &.tall {
+      height: 24vh;
+    }
 
     p.chart-title {
       font-size: 24px;

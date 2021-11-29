@@ -41,7 +41,7 @@ function Section04Scroll() {
     );
   } else if (steps === 2) {
     legend = (
-      <div className="legend-container">
+      <div className="legend-container ">
         <div className="legend">
           <div className="legend-block mig-no"></div>
           <p className="mig-no">Household does not want to migrate</p>
@@ -90,7 +90,7 @@ function Section04Scroll() {
       <div className="main ">
         <div className="main__graphic">
           <div className="scroll-chart-content-container">
-            <div className="title-container">
+            <div className="title-container tall">
               <p className="chart-title">
                 Food security and migration intention.
               </p>
