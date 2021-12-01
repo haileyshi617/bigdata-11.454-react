@@ -4,7 +4,7 @@ import CardScroll from '../ui/CardScroll';
 import SurveyChart from '../charts/SurveyChart';
 // import CardScroll from '../ui/CardScroll';
 
-function Scroll01Dot() {
+function Section03Scroll() {
   const [steps, setSteps] = useState(null);
   const [progress, setProgress] = useState(null);
   const [direction, setDirection] = useState(null);
@@ -74,4 +74,4 @@ function Scroll01Dot() {
   );
 }
 
-export default Scroll01Dot;
+export default Section03Scroll;

@@ -50,7 +50,7 @@ export default function Intro() {
 
       {/* ACTUAL CODE BELOW */}
       <div className="header-container">
-        <h1>Food Security and Migration</h1>
+        <h1>Food Insecurity and Migration</h1>
         <p className="subtitle">
           A Data Visualization Story in Northern Triangle Region of Central
           America

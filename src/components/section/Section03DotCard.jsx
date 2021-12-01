@@ -1,7 +1,7 @@
 import React from 'react';
 import CardSection from '../ui/CardSection';
 
-const Section03Dot = () => {
+const Section03DotCard = () => {
   return (
     <div className="section">
       {/* <CardSection header={text.header} main={text.main} /> */}
@@ -21,4 +21,4 @@ const Section03Dot = () => {
   );
 };
 
-export default Section03Dot;
+export default Section03DotCard;

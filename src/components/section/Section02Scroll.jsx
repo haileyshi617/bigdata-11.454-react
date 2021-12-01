@@ -90,9 +90,10 @@ function Section02Scroll() {
               <div className="step">
                 <h2>What does it mean?</h2>
                 <p>
-                  Since the Northern Triangle Regions are far worse in food
-                  security, we further explored the survey data to find the
-                  relationship between migration and food insecurity.
+                  Since the Northern Triangle Regions are far worse in the food
+                  insecurity issue, we further explored the survey data to find
+                  the relationship between{' '}
+                  <span className="red"> migration and food insecurity </span>.
                 </p>
               </div>
             </Step>

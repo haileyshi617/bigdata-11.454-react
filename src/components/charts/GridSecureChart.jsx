@@ -16,12 +16,12 @@ const NROW = { INTENTION: 5, PREPARATION: 2 };
 const COLOR_GRAY = '#efefef';
 const COLOR_INTENTION = {
   NO: '#efefef',
-  YES: '#eb5832',
+  YES: '#c00000',
 };
 const COLOR_PREPARATION = {
-  PLAN_NO_PREP: '#F3EBEB',
-  PREP_NO_ACTION: '#e2b9ad',
-  ACTION: '#eb5832',
+  PLAN_NO_PREP: '#eacece',
+  PREP_NO_ACTION: '#ff0000',
+  ACTION: '#c00000',
 };
 
 /* -------------------------- FUNCTION TO DRAW GRID ------------------------- */
@@ -147,6 +147,7 @@ export default class GirdSecureChart {
       .on('mouseout', mouseout)
       .style('fill', COLOR_GRAY)
       .style('stroke', '#fff');
+
     // UPDATE
     const square = vis.svg.selectAll('rect');
 
@@ -275,8 +276,20 @@ export default class GirdSecureChart {
       result.familySize = dataOrg.family_size;
 
       tooltip
-        .style('left', `${event.clientX * 0.5}px`)
-        .style('top', `${event.clientY * 0.1}px`)
+        .style('left', () => {
+          if (event.clientX - window.innerWidth / 2 > 0) {
+            return `${event.clientX - window.innerWidth / 5}px`;
+          }
+
+          return `${event.clientX}px`;
+        })
+        .style('top', () => {
+          // if (event.clientY - window.innerHeight / 2 > 0) {
+          //   return `${event.clientY - window.innerHeight / 6}px`;
+          // }
+
+          return `${event.clientY - window.innerHeight / 1.8}px`;
+        })
         .html(
           `<p class="header"><span>${result.sex}, ${result.age}</span></p>
         <p> Living in ${result.rural_urban} area in ${result.country}, with a family size of ${result.familySize}.</p>`

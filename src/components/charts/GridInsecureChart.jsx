@@ -16,12 +16,12 @@ const NROW = { INTENTION: 5, PREPARATION: 2 };
 const COLOR_GRAY = '#efefef';
 const COLOR_INTENTION = {
   NO: '#efefef',
-  YES: '#eb5832',
+  YES: '#c00000',
 };
 const COLOR_PREPARATION = {
-  PLAN_NO_PREP: '#F3EBEB',
-  PREP_NO_ACTION: '#e2b9ad',
-  ACTION: '#eb5832',
+  PLAN_NO_PREP: '#eacece',
+  PREP_NO_ACTION: '#ff0000',
+  ACTION: '#c00000',
 };
 
 /* -------------------------- FUNCTION TO DRAW GRID ------------------------- */
