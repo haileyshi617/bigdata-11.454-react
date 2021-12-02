@@ -14,39 +14,26 @@ const SurveyChart = ({ steps, direction }) => {
     // console.log(steps);
     const tooltipRef = React.useRef(null);
     const svgRef = React.useRef(null);
-
     const [data, setData] = useState(null);
-    const [nodes, setNodes] = useState(null);
 
     //d3 chart update according to steps
-    let width = '932';
+    let width = '1200';
     let height = '800';
     let center = { x: width / 2, y: height / 2 };
-    let forceStrength = 0.02;
+    let forceStrength = 0.023;
     let r = 2;
-    let xCenter = [width / 4, width / 2, (width * 3) / 4, width];
-    let cariCenter = [width / 4, width / 2, (width * 3) / 4, width];
-
-    const svg = d3
-        .select(svgRef.current)
-        .style('width', '100vw')
-        .style('height', '800px')
-        .attr('text-anchor', 'middle');
-
-    function charge(d) {
-        return -Math.pow(d.radius, 2.0) * forceStrength;
-    }
+    let padding = 2;
+    let cariCenter = [width / 6, width / 2.3, width / 1.5, width / 1.2];
+    let xCenter = [width / 6, width / 2.3, width / 1.5, width / 1.2];
 
     // when step updates, update data
     useEffect(() => {
         d3.csv(rawdata).then((data) => {
             setData(
-                data.slice(0, 3000).map(function (d) {
+                data.slice(0, 1000).map(function (d) {
                     return {
                         ...d,
                         radius: r,
-                        // x: Math.random() * width,
-                        // y: Math.random() * height,
                     };
                 })
             );
@@ -56,27 +43,35 @@ const SurveyChart = ({ steps, direction }) => {
     // when data updates, update charts
     useEffect(() => {
         // when not scroll to page, there will be no data loading
+
         if (data) {
-            const nodes = data;
-            //   const nodes = data.map(function (d) {
-            //     return { ...d, radius: r };
-            //   });
+            const svg = d3
+                .select(svgRef.current)
+                .style('width', '100vw')
+                .style('height', '800px')
+                .attr('text-anchor', 'middle');
 
             const simulation = d3
-                .forceSimulation(nodes)
+                .forceSimulation(data)
                 .velocityDecay(0.2)
+                .force(
+                    'collide',
+                    d3
+                        .forceCollide()
+                        .radius(function (d) {
+                            return d.radius + padding;
+                        })
+                        .strength(0.65)
+                )
                 .force('x', d3.forceX().strength(forceStrength).x(center.x))
                 .force('y', d3.forceY().strength(forceStrength).y(center.y))
-                .force('charge', d3.forceManyBody().strength(charge))
                 .on('tick', ticked);
 
             const bubbles = svg
                 .selectAll('circle')
-                .data(nodes)
+                .data(data)
                 .join('circle')
-                .attr('r', function (d) {
-                    return d.radius;
-                })
+                .attr('r', 0)
                 .attr('fill', function (d) {
                     if (d.cari == '2') {
                         return COLOR.MARGIN;
@@ -89,14 +84,16 @@ const SurveyChart = ({ steps, direction }) => {
                     }
                 });
 
+            bubbles
+                .transition()
+                .ease(d3.easeBounce)
+                .duration(0.5)
+                .attr('r', function (d) {
+                    return d.radius;
+                });
+
             function ticked() {
-                bubbles
-                    .attr('cx', function (d) {
-                        return d.x;
-                    })
-                    .attr('cy', function (d) {
-                        return d.y;
-                    });
+                bubbles.attr('cx', (d) => d.x).attr('cy', (d) => d.y);
             }
 
             if (steps == 1 && direction == 'down') {
@@ -104,6 +101,11 @@ const SurveyChart = ({ steps, direction }) => {
                     'x',
                     d3.forceX().strength(forceStrength).x(center.x)
                 );
+                simulation.force(
+                    'y',
+                    d3.forceY().strength(forceStrength).y(center.y)
+                );
+                simulation.alpha(1).restart();
             } else if (steps == 2) {
                 simulation.force(
                     'x',
@@ -112,6 +114,11 @@ const SurveyChart = ({ steps, direction }) => {
                         .strength(forceStrength)
                         .x((d) => cariCenter[+d.cari - 1])
                 );
+                simulation.force(
+                    'y',
+                    d3.forceY().strength(forceStrength).y(center.y)
+                );
+                simulation.alpha(1).restart();
             } else if (steps == 3 || steps == 4) {
                 simulation.force(
                     'x',
@@ -120,7 +127,13 @@ const SurveyChart = ({ steps, direction }) => {
                         .strength(forceStrength)
                         .x((d) => xCenter[+d.ifMig])
                 );
+                simulation.force(
+                    'y',
+                    d3.forceY().strength(forceStrength).y(center.y)
+                );
+                simulation.alpha(1).restart();
             }
+            simulation.alpha(1).restart();
         }
     }, [steps, data]);
 

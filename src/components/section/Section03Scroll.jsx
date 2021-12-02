@@ -37,8 +37,9 @@ function Section03Scroll() {
                 <h2>4,498 Survey response</h2>
                 <p>
                   In April-May 2021, the World Food Programme conducted a
-                  face-to-face household survey of 4,498 responses in El
-                  Salvador, Guatemala, and Honduras.
+                  face-to-face household survey of{' '}
+                  <span className="red">4,498 responses</span> in El Salvador,
+                  Guatemala, and Honduras.
                 </p>
                 {/* <p>{Math.round(progress * 1000) / 10 + '%'}</p> */}
               </div>
@@ -59,8 +60,10 @@ function Section03Scroll() {
               <div className="step">
                 <h2>Around half have migration desire</h2>
                 <p>
-                  Around half of household respondents indicated a desire to
-                  migrate, but only 6% are making plans to do so.
+                  <span className="red">Around half</span> of household
+                  respondents indicated a desire to migrate, but{' '}
+                  <span className="red">only 6%</span> are making plans to do
+                  so.
                 </p>
               </div>
             </Step>
