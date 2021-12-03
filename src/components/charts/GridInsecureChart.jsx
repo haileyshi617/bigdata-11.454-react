@@ -2,6 +2,11 @@ import * as d3 from 'd3';
 import dataSrc_int from '../../data/food-insecure-mig-int.csv';
 import dataSrc_prep from '../../data/food-insecure-mig-prep.csv';
 
+// TODO: change into a bar chart?
+// TODO: start by pointing out one square is one person
+// TODO: smooth the transition
+// TODO: add the data overlay to the chart
+
 /* ---------------------------------- SETUP --------------------------------- */
 // CANVAS SETUP
 const MARGIN = { TOP: 0, BOTTOM: 0, LEFT: 0, RIGHT: 0 };
@@ -147,6 +152,7 @@ export default class GirdSecureChart {
       .on('mouseout', mouseout)
       .style('fill', COLOR_GRAY)
       .style('stroke', '#fff');
+
     // UPDATE
     const square = vis.svg.selectAll('rect');
 

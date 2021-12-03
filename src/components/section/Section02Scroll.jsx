@@ -62,12 +62,11 @@ function Section02Scroll() {
               <div className="step">
                 <h2>Hunger is Pressing</h2>
                 <p>
-                  In the Northern Triangle Regions,
-                  <span className="red"> more than 13.8 percent</span> people
-                  are likely to experience severe hunger, compared to the United
-                  States
-                  <span className="blue"> less than 2 percent</span> people are
-                  facing similar difficulty.
+                  In the Northern Triangle Regions,{' '}
+                  <span className="red">more than 13.8 percent</span> people are
+                  likely to experience severe hunger, compared to the United
+                  States <span className="blue"> less than 2 percent</span>{' '}
+                  people are facing similar difficulty.
                 </p>
               </div>
             </Step>
@@ -76,11 +75,11 @@ function Section02Scroll() {
               <div className="step">
                 <h2>Severe Food Insecurity</h2>
                 <p>
-                  In the Northern Triangle Regions,
-                  <span className="red"> more than 45.6 percent</span> people
-                  are likely to experience some level of hunger, compared to the
-                  United States
-                  <span className="blue"> less than 1 percent</span> people are
+                  In the Northern Triangle Regions,{' '}
+                  <span className="red">more than 45.6 percent</span> people are
+                  likely to experience some level of hunger, compared to the
+                  United States{' '}
+                  <span className="blue">less than 1 percent</span> people are
                   facing similar difficulty.
                 </p>
               </div>

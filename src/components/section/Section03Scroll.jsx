@@ -48,9 +48,9 @@ function Section03Scroll() {
               <div className="step">
                 <h2>The majority are suffering from food insecurity</h2>
                 <p>
-                  In terms of
-                  <span className="red"> food insecurity level</span>, the
-                  participants are classified into 4 groups based on CARI food
+                  In terms of <span className="red">food insecurity level</span>
+                  , the participants are classified into{' '}
+                  <span className="blue"> four groups</span> based on CARI food
                   security indicators given from WFP.
                 </p>
                 {/* <p>{Math.round(progress * 1000) / 10 + '%'}</p> */}
@@ -60,9 +60,9 @@ function Section03Scroll() {
               <div className="step">
                 <h2>Around half have migration desire</h2>
                 <p>
-                  <span className="red">Around half</span> of household
+                  Around <span className="blue">half of household</span>{' '}
                   respondents indicated a desire to migrate, but{' '}
-                  <span className="red">only 6%</span> are making plans to do
+                  <span className="red">only 6% are making plans</span> to do
                   so.
                 </p>
               </div>

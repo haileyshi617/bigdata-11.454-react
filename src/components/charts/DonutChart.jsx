@@ -1,10 +1,8 @@
 import * as d3 from 'd3';
 import React, { useRef, useEffect } from 'react';
 
-//example
-
-// dataArray:[{name:'a',value:77},{name:'b',value:23}]
-//  colorsArray=['#D9D9D9', '#CC0000']
+// TODO: Trigger transition on scrolled to section
+// TODO: Add hover tooltips
 
 const DonutChart = ({ dataArray, colorsArray }) => {
   const svgRef = useRef(null);
@@ -87,6 +85,19 @@ const DonutChart = ({ dataArray, colorsArray }) => {
       .append('title')
       .text((d) => title(d.data));
 
+    const path = d3.select(svgRef.current).selectAll('path');
+    path
+      .transition()
+      .duration(480)
+      .ease(d3.easeLinear)
+      .attrTween('d', (d) => {
+        const i = d3.interpolate(d.startAngle + 0.1, d.endAngle);
+        return function (t) {
+          d.endAngle = i(t);
+          return arc(d);
+        };
+      });
+
     d3.select(svgRef.current)
       .append('g')
       .attr('font-family', 'sans-serif')
@@ -122,12 +133,7 @@ const DonutChart = ({ dataArray, colorsArray }) => {
     });
   }, [dataArray, colorsArray]);
 
-  return (
-    <>
-      <div className="legend-pie"></div>
-      <svg className="donut-chart" ref={svgRef}></svg>
-    </>
-  );
+  return <svg className="donut-chart" ref={svgRef}></svg>;
 };
 
 export default DonutChart;

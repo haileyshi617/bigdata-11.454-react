@@ -66,12 +66,12 @@ body {
 }
 
 // // Customer cursor
-// html,
-// body {
-//   * {
-//     cursor: none;
-//   }
-// }
+html,
+body {
+  * {
+    cursor: none;
+  }
+}
 
 .no-hover {
   pointer-events: none;

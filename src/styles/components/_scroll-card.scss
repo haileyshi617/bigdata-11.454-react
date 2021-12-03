@@ -18,4 +18,17 @@
   h2 {
     margin-bottom: 10px;
   }
+
+  span {
+    font-weight: bold;
+    &.red {
+      background-color: $c-primary-dark;
+      color: $c-white;
+    }
+
+    &.blue {
+      background-color: $c-accent-dark;
+      color: $c-white;
+    }
+  }
 }

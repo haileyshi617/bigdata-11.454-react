@@ -1,13 +1,13 @@
 import React from 'react';
 
 import ProgressBar from './ProgressBar';
-// import CustomCursor from './CustomCursor';
+import CustomCursor from './CustomCursor';
 import Footer from './Footer';
 
 function Layout(props) {
   return (
     <div className="layout">
-      {/* <CustomCursor /> */}
+      <CustomCursor />
       <ProgressBar />
       <main className="main">{props.children}</main>
       <Footer />

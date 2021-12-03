@@ -25,8 +25,6 @@ const COLOR = {
   TEXT: '#808080',
 };
 
-//TODO fix hover
-
 const FoodGlobalChart = ({ steps, direction }) => {
   const tooltipRef = React.useRef(null);
   const svgRef = React.useRef(null);
@@ -44,9 +42,8 @@ const FoodGlobalChart = ({ steps, direction }) => {
   useEffect(() => {
     if (data) {
       // CANVAS SETUP
-      // .current => necessary when use ref
       const svgEl = d3
-        .select(svgRef.current)
+        .select(svgRef.current) // .current => necessary when use ref
         .attr('width', '100%')
         .attr(
           'viewBox',
@@ -64,6 +61,7 @@ const FoodGlobalChart = ({ steps, direction }) => {
       const xAxisGroup = svg
         .append('g')
         .attr('transform', `translate(0, ${HEIGHT})`);
+
       // MOUSE EVENT
       const tooltip = d3.select('#tooltip-food-global');
 
@@ -89,12 +87,13 @@ const FoodGlobalChart = ({ steps, direction }) => {
         svg
           .selectAll(`.bellchart-${d.index}`)
           .style('r', CIRCLE.REGULAR)
-          .style('stroke', 'transparent')
+          .style('stroke', 'transparent');
+        svg
+          .selectAll('line')
+          .style('stroke', COLOR.GRAY)
           .attr('stroke-width', (d) =>
             COUNTRIES.includes(d.country) ? LINE.SELECT : LINE.REGULAR
-          )
-          .selectAll('line')
-          .style('stroke', COLOR.GRAY);
+          );
       };
 
       // SCALES
@@ -128,6 +127,8 @@ const FoodGlobalChart = ({ steps, direction }) => {
 
       // DATA JOIN
       const highlightData = data.filter((d) => COUNTRIES.includes(d.country));
+
+      // TODO: Fix animations!
 
       // STEP 0
       const lines = svg
@@ -223,13 +224,38 @@ const FoodGlobalChart = ({ steps, direction }) => {
 
       svg.append('g').call(yAxis);
 
-      // SCROLL ANIMATION
-      // console.log(steps);
-      // console.log(direction);
       // STEP 1:
       // 1) Highlight selected countries -> text
       if (steps === 1) {
         if (direction === 'down') {
+          circleModerate
+            .transition()
+            .ease(d3.easeCubicIn)
+            .duration(500)
+            .style('fill', (d) => {
+              if (COUNTRIES.includes(d.country))
+                if (d.country === 'United States of America') {
+                  return COLOR.MODERATE_S;
+                } else {
+                  return COLOR.SEVERE_S;
+                }
+              return COLOR.GRAY;
+            });
+
+          circleSevere
+            .transition()
+            .ease(d3.easeCubicIn)
+            .duration(500)
+            .style('fill', (d) => {
+              if (COUNTRIES.includes(d.country))
+                if (d.country === 'United States of America') {
+                  return COLOR.MODERATE_S;
+                } else {
+                  return COLOR.SEVERE_S;
+                }
+              return COLOR.GRAY;
+            });
+
           NTlabel.transition()
             .ease(d3.easeCubicIn)
             .duration(500)
@@ -237,7 +263,34 @@ const FoodGlobalChart = ({ steps, direction }) => {
               d.country === 'United States of America'
                 ? COLOR.MODERATE_S
                 : COLOR.SEVERE_S
-            );
+            )
+            .style('font-weight', 'bold');
+        } else {
+          circleModerate.style('fill', (d) => {
+            if (COUNTRIES.includes(d.country))
+              if (d.country === 'United States of America') {
+                return COLOR.MODERATE_S;
+              } else {
+                return COLOR.SEVERE_S;
+              }
+            return COLOR.GRAY;
+          });
+
+          circleSevere.style('fill', (d) => {
+            if (COUNTRIES.includes(d.country))
+              if (d.country === 'United States of America') {
+                return COLOR.MODERATE_S;
+              } else {
+                return COLOR.SEVERE_S;
+              }
+            return COLOR.GRAY;
+          });
+
+          NTlabel.style('fill', (d) =>
+            d.country === 'United States of America'
+              ? COLOR.MODERATE_S
+              : COLOR.SEVERE_S
+          ).style('font-weight', 'bold');
         }
       }
 
