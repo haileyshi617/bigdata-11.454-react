@@ -39,16 +39,21 @@ const MapChart = () => {
 
   // CANVAS SETUP
   // .current => necessary when use ref
-  const svg = d3
+  
+  
+   
+
+  // When data updates, update charts
+  useEffect(() => {
+    if (data && migdata) {
+      const svg = d3
     .select(svgRef.current)
     .attr('width', WIDTH)
     .attr('height', HEIGHT)
     .append('g')
     .attr('transform', `translate(${(WIDTH * 7) / 8}, ${HEIGHT / 6})`);
 
-  // When data updates, update charts
-  useEffect(() => {
-    if (data && migdata) {
+    svg.selectAll('*').remove(); 
       // Map and projection
       const projection = d3
         .geoNaturalEarth1()
@@ -78,17 +83,15 @@ const MapChart = () => {
       };
 
       const mousemove = function (event, d) {
-        tooltip
-          .style('left', `${event.clientX * 0.8}px`)
-          .style('top', () => {
-            if (event.clientY - window.innerHeight / 2 > 0)
-              return `${event.clientY * 0.8}px`;
-            return `${event.clientY}px`;
-          })
-          .classed('hidden', false);
+        tooltip.style('left', `${event.clientX * 0.8}px`).style('top', () => {
+          if (event.clientY - window.innerHeight / 2 > 0)
+            return `${event.clientY * 0.8}px`;
+          return `${event.clientY}px`;
+        });
       };
 
       const mouseout = function (event, d) {
+        console.log('out');
         tooltip.classed('hidden', true);
 
         d3.select(this).attr('fill', (d) =>

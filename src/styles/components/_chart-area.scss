@@ -104,6 +104,9 @@
 }
 
 // === CHART ===
+.main__graphic{
+  z-index: 1;
+}
 .scroll-chart-content-container {
   .title-container {
     height: 18vh;
