@@ -48,30 +48,27 @@ button {
 }
 
 html {
-  width: 100%;
-  height: 100%;
   overflow-x: hidden;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-
-  @media screen and (max-height: 500px) {
-    height: inherit;
-  }
 }
 
-body {
-  background-color: $c-white;
-}
+// @media screen and (max-width: 600px) {
+//   body {
+//     height: inherit;
+//     width: $content-width-mobile;
+//   }
+// }
 
-// // Customer cursor
-html,
-body {
-  * {
-    cursor: none;
-  }
-}
+// Customer cursor
+// html,
+// body {
+//   * {
+//     cursor: none;
+//   }
+// }
 
 .no-hover {
   pointer-events: none;

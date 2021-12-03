@@ -25,7 +25,7 @@ function Section02Scroll() {
   };
 
   return (
-    <div>
+    <div className="section scroll">
       <div className="main ">
         <div className="main__graphic">
           <div className="scroll-chart-content-container">
