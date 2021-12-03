@@ -17,10 +17,10 @@
     h1 {
       animation: article-load $title-load-time ease-in;
       animation-fill-mode: forwards;
-      font-size: 60px;
+      font-size: 4rem;
       font-weight: 800;
-      padding-bottom: 20px;
-      line-height: 60px;
+      padding-bottom: 2rem;
+      line-height: 4rem;
       color: $c-primary-dark;
     }
 
@@ -29,10 +29,9 @@
       animation: article-load $subtitle-load-time ease-in $subtitle-delay-time;
       animation-fill-mode: forwards;
       font-family: $font-main;
-      font-size: 24px;
+      font-size: 1.6rem;
       font-weight: 100;
-      padding-bottom: 30px;
-      line-height: 30px;
+      padding-bottom: 3rem;
     }
   }
 

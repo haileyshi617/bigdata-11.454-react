@@ -1,11 +1,32 @@
-import React from 'react';
-import CardSection from '../ui/CardSection';
+import { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 const Section03DotCard = () => {
+  const section03cardRef = useRef(null);
+
+  useEffect(() => {
+    gsap.to('#section03cardRef', {
+      x: 100,
+      duration: 1,
+      ease: 'ease',
+
+      scrollTrigger: {
+        trigger: '#section03cardRef',
+        markers: false,
+        start: 'top center',
+      },
+    });
+  }, []);
+
   return (
     <div className="section">
-      {/* <CardSection header={text.header} main={text.main} /> */}
-      <div className="section-card">
+      <div
+        className="section-card"
+        id="section03cardRef"
+        ref={section03cardRef}
+      >
         <h1>
           Is food security <span className="red">a solution to</span>
           <br /> migration issue?

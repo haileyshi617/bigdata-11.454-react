@@ -5,6 +5,7 @@
 // === LAYOUT ===
 @import 'layout/layout';
 @import 'layout/footer';
+@import 'layout/preloader';
 
 // === SECTIONS ===
 @import 'section/section';
@@ -59,6 +60,18 @@ html {
     height: inherit;
   }
 }
+
+body {
+  background-color: $c-white;
+}
+
+// // Customer cursor
+// html,
+// body {
+//   * {
+//     cursor: none;
+//   }
+// }
 
 .no-hover {
   pointer-events: none;

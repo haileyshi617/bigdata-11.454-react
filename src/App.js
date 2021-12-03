@@ -1,4 +1,5 @@
 import { Transition, animated } from 'react-spring';
+import React, { useState, useEffect, useRef } from 'react';
 
 import Layout from './components/layout/Layout';
 import Intro from './components/section/Intro';
@@ -18,24 +19,76 @@ import Section05PieCard from './components/section/Section05PieCard';
 import Section05Pie from './components/section/Section05Pie';
 
 export default function App() {
+  const ref = useRef(null);
+  const [preloader, setPreload] = useState(true);
+
+  // useLocoScroll(!preloader);
+
+  useEffect(() => {
+    if (!preloader && ref) {
+      if (typeof window === 'undefined' || !window.document) {
+        return;
+      }
+    }
+  }, [preloader]);
+
+  const [timer, setTimer] = React.useState(2);
+
+  const id = React.useRef(null);
+
+  const clear = () => {
+    window.clearInterval(id.current);
+    setPreload(false);
+  };
+
+  React.useEffect(() => {
+    id.current = window.setInterval(() => {
+      setTimer((time) => time - 1);
+    }, 1000);
+    return () => clear();
+  }, []);
+
+  React.useEffect(() => {
+    if (timer === 0) {
+      clear();
+    }
+  }, [timer]);
+
+  if (typeof window === 'undefined' || !window.document) {
+    return null;
+  }
+
   return (
-    <Layout>
-      <Intro />
+    <>
+      {preloader ? (
+        <div className="loader-wrapper absolute">
+          <h1>Is food security a solution to migration?</h1>
+        </div>
+      ) : (
+        <Layout
+          className="main-container"
+          id="main-container"
+          data-scroll-container
+          ref={ref}
+        >
+          <Intro />
 
-      <Section01Map />
+          <Section01Map />
 
-      <Section02Scroll />
+          <Section02Scroll />
 
-      <Section03DotCard />
-      <Section03Scroll />
+          <Section03DotCard />
+          <Section03Scroll />
 
-      <Section04GridCard />
-      <Section04Scroll />
+          <Section04GridCard />
+          <Section04Scroll />
 
-      <Section05PieCard />
-      <Section05Pie />
+          <Section05PieCard />
+          <Section05Pie />
 
-      <Outro />
-    </Layout>
+          <Outro />
+        </Layout>
+      )}
+    </>
   );
 }
