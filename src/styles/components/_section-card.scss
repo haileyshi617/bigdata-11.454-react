@@ -6,6 +6,7 @@
   text-align: left;
   padding-top: 20vh;
   z-index: 2;
+  pointer-events: none;
 
   @media (max-width: 600px) {
     width: $section-card-width-mobile;

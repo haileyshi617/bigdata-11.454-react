@@ -1,15 +1,16 @@
+.scroller {
+  z-index: 99;
+}
 .step {
   max-width: $card-width;
   margin: 400px auto;
   padding: 30px 20px;
   background-color: $c-white;
-  opacity: 0.8;
+  opacity: 0.95;
   box-shadow: 1px 1px 7px -3px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  z-index: 2;
 
   &:last-child {
     opacity: 0;

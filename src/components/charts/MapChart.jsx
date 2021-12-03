@@ -1,6 +1,7 @@
 import * as d3 from 'd3';
 import React, { useRef, useState, useEffect } from 'react';
 import rawdata from '../../data/mig_rate.csv';
+import ArcChart from './ArcChart';
 
 // TODO: change the data
 
@@ -16,8 +17,11 @@ const GRAY = { REGULAR: '#f0f0f0', SELECT: '#bcbcbc' };
 const MapChart = () => {
   const tooltipRef = React.useRef(null);
   const svgRef = React.useRef(null);
+  const arcRef = React.createRef();
+
   const [data, setData] = useState(null);
   const [migdata, setMigData] = useState(null);
+  const [id, setId] = useState(null);
 
   // LOAD DATA
   // useEffect => When parent element's target value updates, update data
@@ -35,16 +39,21 @@ const MapChart = () => {
 
   // CANVAS SETUP
   // .current => necessary when use ref
-  const svg = d3
+  
+  
+   
+
+  // When data updates, update charts
+  useEffect(() => {
+    if (data && migdata) {
+      const svg = d3
     .select(svgRef.current)
     .attr('width', WIDTH)
     .attr('height', HEIGHT)
     .append('g')
     .attr('transform', `translate(${(WIDTH * 7) / 8}, ${HEIGHT / 6})`);
 
-  // When data updates, update charts
-  useEffect(() => {
-    if (data && migdata) {
+    svg.selectAll('*').remove(); 
       // Map and projection
       const projection = d3
         .geoNaturalEarth1()
@@ -57,21 +66,15 @@ const MapChart = () => {
       const tooltip = d3.select('#tooltip-map');
 
       const mouseover = function (event, d) {
+        setId(d.id);
         let rate = migdata.find((e) => e['Alpha-3 code'] == d.id).rate;
-        // console.log(rate.toFixed(2));
 
         tooltip
           .html(
             d.properties.name == 'USA'
-              ? `<p>The <span>${d.properties.name}</span> receives ${rate}% of migrants from El Salvador, Guatemala, and Honduras.</p>`
-              : `<p>Around <span>${rate}%</span> of the population from <span>${d.properties.name}</span> migrate to the US in 2020.<p>`
+              ? `<p>The <span>${d.properties.name}</span> receives <span>${rate}% </span>of migrants from <span>El Salvador, Guatemala, and Honduras</span>.</p>`
+              : `<p>Around <span>${rate}%</span> of the population from <span>${d.properties.name}</span> are migrants to the US by 2020.<p>`
           )
-          .style('left', `${event.clientX * 0.8}px`)
-          .style('top', () => {
-            if (event.clientY - window.innerHeight / 2 > 0)
-              return `${event.clientY * 0.8}px`;
-            return `${event.clientY}px`;
-          })
           .classed('hidden', false);
 
         d3.select(this).attr('fill', (d) =>
@@ -79,7 +82,16 @@ const MapChart = () => {
         );
       };
 
+      const mousemove = function (event, d) {
+        tooltip.style('left', `${event.clientX * 0.8}px`).style('top', () => {
+          if (event.clientY - window.innerHeight / 2 > 0)
+            return `${event.clientY * 0.8}px`;
+          return `${event.clientY}px`;
+        });
+      };
+
       const mouseout = function (event, d) {
+        console.log('out');
         tooltip.classed('hidden', true);
 
         d3.select(this).attr('fill', (d) =>
@@ -92,6 +104,7 @@ const MapChart = () => {
         .enter()
         .append('path')
         .on('mouseover', mouseover)
+        .on('mousemove', mousemove)
         .on('mouseout', mouseout)
         .attr('fill', GRAY.REGULAR)
         .transition()
@@ -108,6 +121,7 @@ const MapChart = () => {
     <>
       <div id="tooltip-map" className="tooltip hidden" ref={tooltipRef}></div>
       <svg className="map-chart" ref={svgRef}></svg>
+      {/* <ArcChart id={id} data={migdata} ref={arcRef}/> */}
     </>
   );
 };
