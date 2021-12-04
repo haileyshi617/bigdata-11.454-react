@@ -3,8 +3,6 @@ import React, { useRef, useState, useEffect } from 'react';
 import rawdata from '../../data/mig_rate.csv';
 import ArcChart from './ArcChart';
 
-// TODO: change the data
-
 // CANVAS SETUP
 const WIDTH = window.innerWidth;
 const HEIGHT = window.innerHeight;
@@ -39,21 +37,19 @@ const MapChart = () => {
 
   // CANVAS SETUP
   // .current => necessary when use ref
-  
-  
-   
 
   // When data updates, update charts
   useEffect(() => {
     if (data && migdata) {
       const svg = d3
-    .select(svgRef.current)
-    .attr('width', WIDTH)
-    .attr('height', HEIGHT)
-    .append('g')
-    .attr('transform', `translate(${(WIDTH * 7) / 8}, ${HEIGHT / 6})`);
+        .select(svgRef.current)
+        .attr('width', WIDTH)
+        .attr('height', HEIGHT)
+        .append('g')
+        .attr('transform', `translate(${(WIDTH * 7) / 8}, ${HEIGHT / 6})`);
 
-    svg.selectAll('*').remove(); 
+      svg.selectAll('*').remove();
+
       // Map and projection
       const projection = d3
         .geoNaturalEarth1()
@@ -62,6 +58,7 @@ const MapChart = () => {
 
       // DATA JOIN
       const map = svg.selectAll('path').data(data.features);
+
       // MOUSE EVENT
       const tooltip = d3.select('#tooltip-map');
 
@@ -72,8 +69,8 @@ const MapChart = () => {
         tooltip
           .html(
             d.properties.name == 'USA'
-              ? `<p>The <span>${d.properties.name}</span> receives <span>${rate}% </span>of migrants from <span>El Salvador, Guatemala, and Honduras</span>.</p>`
-              : `<p>Around <span>${rate}%</span> of the population from <span>${d.properties.name}</span> are migrants to the US by 2020.<p>`
+              ? `<p>The <span class="big">${d.properties.name}</span> receives <span class="big">${rate}% </span>of migrants from <span>El Salvador, Guatemala, and Honduras</span>.</p>`
+              : `<p>Around <span class="big">${rate}%</span> of the population from <span class="big">${d.properties.name}</span> are migrants to the US by 2020.<p>`
           )
           .classed('hidden', false);
 
@@ -83,10 +80,10 @@ const MapChart = () => {
       };
 
       const mousemove = function (event, d) {
-        tooltip.style('left', `${event.clientX * 0.8}px`).style('top', () => {
+        tooltip.style('left', `${event.clientX * 0.7}px`).style('top', () => {
           if (event.clientY - window.innerHeight / 2 > 0)
-            return `${event.clientY * 0.8}px`;
-          return `${event.clientY}px`;
+            return `${event.clientY * 0.9}px`;
+          return `${event.clientY * 0.9}px`;
         });
       };
 
@@ -119,7 +116,11 @@ const MapChart = () => {
 
   return (
     <>
-      <div id="tooltip-map" className="tooltip hidden" ref={tooltipRef}></div>
+      <div
+        id="tooltip-map"
+        className="tooltip red hidden"
+        ref={tooltipRef}
+      ></div>
       <svg className="map-chart" ref={svgRef}></svg>
       {/* <ArcChart id={id} data={migdata} ref={arcRef}/> */}
     </>

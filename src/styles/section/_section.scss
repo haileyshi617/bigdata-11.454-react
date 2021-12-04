@@ -2,7 +2,7 @@
 
 // GLOBAL
 .section {
-  min-height: 100vh;
+  min-height: 103vh;
   width: 100%;
 
   // REGULAR
@@ -27,6 +27,7 @@
   &.center {
     justify-content: center;
     align-items: center;
+    // background-color: blue;
   }
 
   &.start {

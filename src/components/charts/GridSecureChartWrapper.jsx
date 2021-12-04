@@ -47,7 +47,7 @@ const ChartWrapper = ({ steps, direction }) => {
         {axis}
         <div
           id="tooltip-grid"
-          className="tooltip hidden"
+          className="tooltip red hidden"
           ref={tooltipRef}
         ></div>
         <svg className="grid-chart chart-area" ref={svgRef}></svg>

@@ -1,10 +1,15 @@
 .footer {
   height: $footer-height;
+  width: 100vw;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  padding-left: 10vw;
+  align-items: center;
+
+  .container {
+    width: $content-width-pc;
+  }
 
   h1 {
     padding-bottom: 36px;

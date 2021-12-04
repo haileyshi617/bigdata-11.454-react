@@ -1,7 +1,14 @@
+.map-container {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
 .map-chart {
   position: absolute;
   right: 0;
 }
+
 .tooltip {
   pointer-events: none;
 }

@@ -47,7 +47,7 @@ const ChartWrapper = ({ steps, direction }) => {
         {axis}
         <div
           id="tooltip-grid"
-          className="tooltip hidden"
+          className="tooltip hidden red"
           ref={tooltipRef}
         ></div>
 

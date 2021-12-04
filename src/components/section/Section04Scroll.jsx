@@ -30,12 +30,12 @@ function Section04Scroll() {
     legend = (
       <div className="legend-container">
         <div className="legend">
-          <div className="legend-block mig-no"></div>
-          <p className="mig-no">Household answered "No"</p>
-        </div>
-        <div className="legend">
           <div className="legend-block mig-yes"></div>
           <p className="mig-yes">Household answered "Yes"</p>
+        </div>
+        <div className="legend">
+          <div className="legend-block mig-no"></div>
+          <p className="mig-no">Household answered "No"</p>
         </div>
       </div>
     );
@@ -43,8 +43,12 @@ function Section04Scroll() {
     legend = (
       <div className="legend-container ">
         <div className="legend">
-          <div className="legend-block mig-no"></div>
-          <p className="mig-no">Household does not want to migrate</p>
+          <div className="legend-block mig-scale-3"></div>
+          <p className="mig-scale-3">Household has plan and preparation</p>
+        </div>
+        <div className="legend">
+          <div className="legend-block mig-scale-2"></div>
+          <p className="mig-scale-2">Household has plan but no preparation</p>
         </div>
         <div className="legend">
           <div className="legend-block mig-scale-1"></div>
@@ -53,12 +57,8 @@ function Section04Scroll() {
           </p>
         </div>
         <div className="legend">
-          <div className="legend-block mig-scale-2"></div>
-          <p className="mig-scale-2">Household has plan but no preparation</p>
-        </div>
-        <div className="legend">
-          <div className="legend-block mig-scale-3"></div>
-          <p className="mig-scale-3">Household has plan and preparation</p>
+          <div className="legend-block mig-no"></div>
+          <p className="mig-no">Household does not want to migrate</p>
         </div>
       </div>
     );
@@ -66,18 +66,18 @@ function Section04Scroll() {
     legend = (
       <div className="legend-container">
         <div className="legend">
-          <div className="legend-block mig-scale-1"></div>
-          <p className="mig-scale-1">
-            Household wants to migrate but has no plan
-          </p>
+          <div className="legend-block mig-scale-3"></div>
+          <p className="mig-scale-3">Household has plan and preparation</p>
         </div>
         <div className="legend">
           <div className="legend-block mig-scale-2"></div>
           <p className="mig-scale-2">Household has plan but no preparation</p>
         </div>
         <div className="legend">
-          <div className="legend-block mig-scale-3"></div>
-          <p className="mig-scale-3">Household has plan and preparation</p>
+          <div className="legend-block mig-scale-1"></div>
+          <p className="mig-scale-1">
+            Household wants to migrate but has no plan
+          </p>
         </div>
       </div>
     );

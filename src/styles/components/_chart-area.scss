@@ -11,12 +11,17 @@
 
 .tooltip {
   position: absolute;
-  width: 15vw;
-  padding: 5px 10px;
-  border: $c-primary-dark solid 1px;
+  max-width: 15vw;
+  padding: 15px;
+
   background: white;
-  color: $c-primary-dark;
+  box-shadow: 1px 1px 7px -3px rgba(0, 0, 0, 0.5);
   z-index: 100;
+
+  &.red {
+    color: $c-primary-dark;
+    border-left: thick solid $c-primary-dark;
+  }
 
   .header {
     padding-bottom: 6px;
@@ -24,6 +29,11 @@
 
   span {
     font-weight: bold;
+    line-height: 40px;
+
+    &.big {
+      font-size: 30px;
+    }
   }
 }
 
@@ -31,6 +41,8 @@
 
 .legend-container {
   padding-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
 
   .legend {
     display: flex;
@@ -89,22 +101,22 @@
       background-color: #efefef;
     }
     &.mig-yes {
-      background-color: #eb5832;
+      background-color: #ffe3e0;
     }
     &.mig-scale-1 {
-      background-color: #eacece;
+      background-color: #ffe3e0;
     }
     &.mig-scale-2 {
-      background-color: #ff0000;
+      background-color: #ad2e24;
     }
     &.mig-scale-3 {
-      background-color: #c00000;
+      background-color: #540804;
     }
   }
 }
 
 // === CHART ===
-.main__graphic{
+.main__graphic {
   z-index: 1;
 }
 .scroll-chart-content-container {

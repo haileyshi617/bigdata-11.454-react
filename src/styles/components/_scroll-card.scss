@@ -1,12 +1,12 @@
 .scroller {
   z-index: 99;
 }
+
 .step {
   max-width: $card-width;
-  margin: 400px auto;
+  margin: 600px auto;
   padding: 30px 20px;
-  background-color: $c-white;
-  opacity: 0.95;
+  background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 1px 1px 7px -3px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
     margin-bottom: 0;
   }
   h2 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   span {
