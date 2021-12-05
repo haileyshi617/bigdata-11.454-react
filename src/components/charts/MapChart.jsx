@@ -37,23 +37,18 @@ const MapChart = () => {
     });
   }, []);
 
-  // CANVAS SETUP
-  // .current => necessary when use ref
-  
-  
-   
-
   // When data updates, update charts
   useEffect(() => {
     if (data && migdata) {
       const svg = d3
-    .select(svgRef.current)
-    .attr('width', WIDTH)
-    .attr('height', HEIGHT)
-    .append('g')
-    .attr('transform', `translate(${(WIDTH * 7) / 8}, ${HEIGHT / 6})`);
+        .select(svgRef.current)
+        .attr('width', WIDTH)
+        .attr('height', HEIGHT)
+        .append('g')
+        .attr('transform', `translate(${(WIDTH * 7) / 8}, ${HEIGHT / 6})`);
 
-    svg.selectAll('*').remove(); 
+      svg.selectAll('*').remove();
+
       // Map and projection
       const projection = d3
         .geoNaturalEarth1()
@@ -73,7 +68,7 @@ const MapChart = () => {
           .html(
             d.properties.name == 'USA'
               ? `<p>The <span>${d.properties.name}</span> receives <span>${rate}% </span>of migrants from <span>El Salvador, Guatemala, and Honduras</span>.</p>`
-              : `<p>Around <span>${rate}%</span> of the population from <span>${d.properties.name}</span> are migrants to the US by 2020.<p>`
+              : `<p>Around <span>${rate}%</span> of the population of <span>${d.properties.name}</span> are migrants to the US by 2020.<p>`
           )
           .classed('hidden', false);
 

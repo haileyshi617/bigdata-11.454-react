@@ -3,6 +3,10 @@
   width: 100%;
 }
 
+.grey {
+  color: #bcbcbc;
+}
+
 // === TOOLTIP ===
 .hidden {
   display: none;
@@ -104,7 +108,7 @@
 }
 
 // === CHART ===
-.main__graphic{
+.main__graphic {
   z-index: 1;
 }
 .scroll-chart-content-container {
@@ -131,6 +135,11 @@
     position: absolute;
     left: 0;
     // bottom: -100;
+
+    .cariLabel {
+      font-size: 20px;
+      color: #c00000;
+    }
 
     .chart-container {
       width: 100%;

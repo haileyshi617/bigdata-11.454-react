@@ -18,12 +18,35 @@ function Section03Scroll() {
     setProgress(progress);
   };
 
+  const myelement =
+    steps == 2 ? (
+      <p className="chart-title grey">
+        Survey data, <span className="red">food security</span>, Migration
+        Intension
+      </p>
+    ) : steps >= 3 ? (
+      <p className="chart-title grey">
+        Survey data, food security, <span className="red">Migration Intension</span>
+      </p>
+    ) : (
+      <p className="chart-title grey">
+        <span className="red">Survey data</span>, food security, Migration
+        Intension
+      </p>
+    );
+
   return (
     <div>
       <div className="main">
         <div className="main__graphic">
-          <SurveyChart steps={steps} className="survey" />
+          <div className="scroll-chart-content-container">
+            <div className="title-container tall">{myelement}</div>
+          </div>
+          <div className="chart-wrapper">
+            <SurveyChart steps={steps} className="survey" />
+          </div>
         </div>
+
         <div className="scroller">
           <Scrollama
             onStepEnter={onStepEnter}
