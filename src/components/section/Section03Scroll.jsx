@@ -26,7 +26,8 @@ function Section03Scroll() {
       </p>
     ) : steps >= 3 ? (
       <p className="chart-title grey">
-        Survey data, food security, <span className="red">Migration Intension</span>
+        Survey data, food security,{' '}
+        <span className="red">Migration Intension</span>
       </p>
     ) : (
       <p className="chart-title grey">
@@ -38,16 +39,20 @@ function Section03Scroll() {
   return (
     <div>
       <div className="main">
-        <div className="main__graphic">
+        <div className="main__graphic dot">
           <div className="scroll-chart-content-container">
-            <div className="title-container tall">{myelement}</div>
+            <div className="title-container">{myelement}</div>
           </div>
           <div className="chart-wrapper">
-            <SurveyChart steps={steps} className="survey" />
+            <SurveyChart
+              steps={steps}
+              direction={direction}
+              className="survey"
+            />
           </div>
         </div>
 
-        <div className="scroller">
+        <div className="scroller dot-scroller">
           <Scrollama
             onStepEnter={onStepEnter}
             progress
@@ -90,9 +95,9 @@ function Section03Scroll() {
                 </p>
               </div>
             </Step>
-            <Step data={4} key={4}>
+            {/* <Step data={4} key={4}>
               <div className="step"></div>
-            </Step>
+            </Step> */}
           </Scrollama>
         </div>
       </div>

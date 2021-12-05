@@ -1,6 +1,15 @@
 .scroller {
   z-index: 99;
 }
+.dot-scroller {
+  margin-bottom: 500px;
+  .step {
+    &:last-child {
+      opacity: 1;
+      margin-bottom: 0;
+    }
+  }
+}
 
 .step {
   max-width: $card-width;
@@ -37,7 +46,7 @@
 .cariLabel,
 .migLabel {
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 700;
   fill: $c-grey-dark;
 }
 
