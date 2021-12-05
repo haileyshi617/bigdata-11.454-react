@@ -77,7 +77,7 @@ const MapChart = () => {
       };
 
       const mousemove = function (event, d) {
-        tooltip.style('left', `${event.clientX * 0.7}px`).style('top', () => {
+        tooltip.style('left', `${event.clientX}px`).style('top', () => {
           if (event.clientY - window.innerHeight / 2 > 0)
             return `${event.clientY * 0.9}px`;
           return `${event.clientY * 0.9}px`;

@@ -41,7 +41,7 @@ function Section03Scroll() {
       <div className="main">
         <div className="main__graphic dot">
           <div className="scroll-chart-content-container">
-            <div className="title-container">{myelement}</div>
+            <div className="">{myelement}</div>
           </div>
           <div className="chart-wrapper">
             <SurveyChart

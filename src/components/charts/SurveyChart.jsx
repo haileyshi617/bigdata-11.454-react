@@ -8,6 +8,7 @@ const COLOR = {
   SEVERE: '#EB5832',
   GRAY: '#e0e0e0',
   TEXT: '#808080',
+  // TEXT: '#BCBCBC',
 };
 
 const SurveyChart = ({ steps, direction }) => {
@@ -69,9 +70,10 @@ const SurveyChart = ({ steps, direction }) => {
   //update charts
   useEffect(() => {
     if (data) {
+      //svg
       const svgEl = d3
         .select(svgRef.current)
-        .style('width', '100vw')
+        .style('width', width)
         .attr('text-anchor', 'middle')
         .attr('viewBox', `0 0 ${width} ${height}`)
         .attr('preserveAspectRatio', 'xMinYMin meet');
@@ -80,6 +82,18 @@ const SurveyChart = ({ steps, direction }) => {
 
       const svg = svgEl.append('g');
 
+      //color
+      const myColorMain = d3
+        .scaleOrdinal()
+        .range([COLOR.GRAY, COLOR.MARGIN, COLOR.MODERATE, COLOR.SEVERE])
+        .domain([1, 2, 3, 4]);
+
+      const myCariMain = d3
+        .scaleOrdinal()
+        .range(['Secure', 'Marginally', 'Moderately', 'Severely'])
+        .domain([1, 2, 3, 4]);
+
+      //simulation
       const simulation = d3
         .forceSimulation(data)
         .velocityDecay(0.14)
@@ -97,6 +111,44 @@ const SurveyChart = ({ steps, direction }) => {
         .on('tick', ticked);
       simulation.stop();
 
+      //mouse functions
+      const tooltip = d3.select('#tooltip-survey');
+      const mouseover = function (event, d) {
+        d3.select(this).attr('fill', '#ff6666').attr('r', 3.5);
+
+        tooltip
+          .style('left', event.clientX - 50 + 'px')
+          .style('top', height - 30 + 'px')
+          .html(
+            `<h3>${d.sex}, ${+d.age}</h3><p>Food Insecurity: <span>${myCariMain(
+              +d.cari
+            )}</span><br/>Family size: <span>${+d.fam_size}</span><br/>Location: <span>${
+              d.rural_urban
+            }</span></p>`
+          )
+          .classed('hidden', false);
+
+        svg
+          .append('line')
+          .attr('class', 'scattertooltip')
+          .attr('x1', event.layerX + 'px')
+          .attr('y1', event.layerY + 'px')
+          .attr('x2', event.layerX + 'px')
+          .attr('y2', height + 'px')
+          .attr('stroke-width', 1)
+          .attr('stroke', '#ff6666');
+      };
+
+      const mouseout = function (event, d) {
+        tooltip.classed('hidden', true);
+        d3.select(this)
+          .attr('fill', (d) => myColorMain(d.cari))
+          .attr('r', 2);
+
+        d3.selectAll('.scattertooltip').remove();
+      };
+
+      //bubbles
       const bubbles = svg
         .append('g')
         .attr('class', 'bubbles')
@@ -104,17 +156,9 @@ const SurveyChart = ({ steps, direction }) => {
         .data(data)
         .join('circle')
         .attr('r', 0)
-        .attr('fill', function (d) {
-          if (d.cari == '2') {
-            return COLOR.MARGIN;
-          } else if (d.cari == '3') {
-            return COLOR.MODERATE;
-          } else if (d.cari == '4') {
-            return COLOR.SEVERE;
-          } else {
-            return COLOR.GRAY;
-          }
-        });
+        .attr('fill', (d) => myColorMain(d.cari))
+        .on('mouseover', mouseover)
+        .on('mouseout', mouseout);
 
       bubbles
         .transition()
@@ -128,6 +172,7 @@ const SurveyChart = ({ steps, direction }) => {
         bubbles.attr('cx', (d) => d.x).attr('cy', (d) => d.y);
       }
 
+      //update
       if (update == 2) {
         const cariLabel = svg
           .append('g')
@@ -136,6 +181,7 @@ const SurveyChart = ({ steps, direction }) => {
           .data(cariData)
           .enter()
           .append('text')
+          .style('fill', COLOR.TEXT)
           .attr('x', (d) => cariCenter[+d.index])
           .attr('y', center.y / 3)
           .attr('text-anchor', 'middle')
@@ -181,6 +227,7 @@ const SurveyChart = ({ steps, direction }) => {
           .data(migData)
           .enter()
           .append('text')
+          .style('fill', COLOR.TEXT)
           .attr('x', (d) => migCenter[+d.index])
           .attr('y', center.y / 3)
           .attr('text-anchor', 'middle')
@@ -219,13 +266,14 @@ const SurveyChart = ({ steps, direction }) => {
         simulation.force('y', d3.forceY().strength(forceStrength).y(center.y));
         simulation.alpha(1).restart();
       } else {
-        const migLabel = svg
+        const surveyLabel = svg
           .append('g')
           .attr('class', 'migLabel')
           .selectAll('text')
           .data(migData)
           .enter()
           .append('text')
+          .style('fill', COLOR.TEXT)
           .attr('x', (d) => center.x)
           .attr('y', center.y / 3.5)
           .attr('text-anchor', 'middle')
@@ -236,7 +284,7 @@ const SurveyChart = ({ steps, direction }) => {
           .duration(1000)
           .style('opacity', 1);
 
-        const migLabel2 = svg
+        const surveyLabel2 = svg
           .append('g')
           .attr('class', 'migLabel2')
           .selectAll('text')
@@ -263,7 +311,7 @@ const SurveyChart = ({ steps, direction }) => {
 
   return (
     <>
-      <div className="survey-tooltip hidden" ref={tooltipRef}></div>
+      <div id="tooltip-survey" className="hidden" ref={tooltipRef}></div>
       <svg className="survey-chart" ref={svgRef}></svg>
     </>
   );

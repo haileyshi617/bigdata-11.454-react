@@ -9,6 +9,7 @@
       margin-bottom: 0;
     }
   }
+  pointer-events: none;
 }
 
 .step {
@@ -41,18 +42,4 @@
       color: $c-white;
     }
   }
-}
-
-.cariLabel,
-.migLabel {
-  font-size: 16px;
-  font-weight: 700;
-  fill: $c-grey-dark;
-}
-
-.cariLabel2,
-.migLabel2 {
-  font-size: 24px;
-  font-weight: 400;
-  font-family: $font-title;
 }
