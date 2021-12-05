@@ -69,6 +69,8 @@ function Section03Scroll() {
                   <span className="red">4,498 responses</span> in El Salvador,
                   Guatemala, and Honduras.
                 </p>
+                <br />
+                <strong>Hover a dot to view details.</strong>
                 {/* <p>{Math.round(progress * 1000) / 10 + '%'}</p> */}
               </div>
             </Step>

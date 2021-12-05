@@ -113,11 +113,12 @@ const SurveyChart = ({ steps, direction }) => {
 
       //mouse functions
       const tooltip = d3.select('#tooltip-survey');
+      tooltip.classed('hidden', true);
       const mouseover = function (event, d) {
         d3.select(this).attr('fill', '#ff6666').attr('r', 3.5);
 
         tooltip
-          .style('left', event.clientX - 50 + 'px')
+          .style('left', event.clientX - 70 + 'px')
           .style('top', height - 30 + 'px')
           .html(
             `<h3>${d.sex}, ${+d.age}</h3><p>Food Insecurity: <span>${myCariMain(
