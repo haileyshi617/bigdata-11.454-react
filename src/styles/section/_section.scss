@@ -1,20 +1,33 @@
 @import '../components/section-card';
 
+// GLOBAL
 .section {
-  min-height: 100vh;
+  min-height: 103vh;
   width: 100%;
 
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
+  // REGULAR
+  &.regular {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
 
-  padding-left: 50px;
-  padding-right: 50px;
+  // POSITION
+  &.absolute {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
 
+  // ALIGN
   &.center {
     justify-content: center;
     align-items: center;
+    // background-color: blue;
   }
 
   &.start {

@@ -1,6 +1,6 @@
 export default function Intro() {
   return (
-    <div className="section center intro" data-scroll-section>
+    <div className="section regular center intro" data-scroll-section>
       <div className="header-container">
         <h1>Food Insecurity and Migration</h1>
         <p className="subtitle">

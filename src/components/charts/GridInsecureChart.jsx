@@ -21,12 +21,12 @@ const NROW = { INTENTION: 5, PREPARATION: 2 };
 const COLOR_GRAY = '#efefef';
 const COLOR_INTENTION = {
   NO: '#efefef',
-  YES: '#c00000',
+  YES: '#ffe3e0',
 };
 const COLOR_PREPARATION = {
-  PLAN_NO_PREP: '#eacece',
-  PREP_NO_ACTION: '#ff0000',
-  ACTION: '#c00000',
+  PLAN_NO_PREP: '#ffe3e0',
+  PREP_NO_ACTION: '#ad2e24',
+  ACTION: '#540804',
 };
 
 /* -------------------------- FUNCTION TO DRAW GRID ------------------------- */
@@ -80,7 +80,7 @@ export default class GirdSecureChart {
           HEIGHT + MARGIN.TOP + MARGIN.BOTTOM
         }`
       )
-      .attr('preserveAspectRatio', 'xMinYMin slice')
+      .attr('preserveAspectRatio', 'xMinYMin meet')
       .append('g')
       .attr('transform', `translate(${MARGIN.LEFT}, ${MARGIN.TOP})`);
 

@@ -25,13 +25,14 @@ function Section02Scroll() {
   };
 
   return (
-    <div>
+    <div className="section scroll">
       <div className="main ">
         <div className="main__graphic">
           <div className="scroll-chart-content-container">
             <div className="title-container">
               <p className="chart-title">
-                Food Insecurity is High in El Salvador, Guatemala, and Honduras
+                <span className="red">High Food Insecurity</span> in El
+                Salvador, Guatemala, and Honduras
               </p>
               {steps > 1 && (
                 <div className="legend-container">
@@ -60,7 +61,7 @@ function Section02Scroll() {
           >
             <Step data={1} value={1}>
               <div className="step">
-                <h2>Hunger is Pressing</h2>
+                <h2>Gap Between Countries</h2>
                 <p>
                   In the Northern Triangle Regions,{' '}
                   <span className="red">more than 13.8 percent</span> people are
@@ -89,10 +90,16 @@ function Section02Scroll() {
               <div className="step">
                 <h2>What does it mean?</h2>
                 <p>
-                  Since the Northern Triangle Regions are far worse in the food
-                  insecurity issue, we further explored the survey data to find
-                  the relationship between{' '}
-                  <span className="red"> migration and food insecurity </span>.
+                  Food insecurity is an issue in the Northern Triangle area.
+                  This can be <span className="blue"> a driving factor</span>{' '}
+                  for people to migrate to countries which are more food secure
+                  like the US.
+                </p>
+                <br />
+                <p>
+                  We further explored the survey data to study the relationship
+                  between <span className="red"> migration</span> and{' '}
+                  <span className="red">food insecurity </span>.
                 </p>
               </div>
             </Step>

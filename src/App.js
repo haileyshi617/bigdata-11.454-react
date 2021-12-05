@@ -1,4 +1,4 @@
-import { Transition, animated } from 'react-spring';
+// import { Transition, animated } from 'react-spring';
 import React, { useState, useEffect, useRef } from 'react';
 
 import Layout from './components/layout/Layout';
@@ -61,8 +61,8 @@ export default function App() {
   return (
     <>
       {preloader ? (
-        <div className="loader-wrapper absolute">
-          <h1>Is food security a solution to migration?</h1>
+        <div className="section regular loader-wrapper absolute">
+          <h1>Is Food Security a Solution to Migration?</h1>
         </div>
       ) : (
         <Layout

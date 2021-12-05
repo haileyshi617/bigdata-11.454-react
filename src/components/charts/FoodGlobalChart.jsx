@@ -72,8 +72,8 @@ const FoodGlobalChart = ({ steps, direction }) => {
                     <p class="moderate"> Moderate Hunger: ${d.moderate}% </p>
                     <p> Severe Hunger: ${d.severe}% </p>`
           )
-          .style('left', `${event.clientX * 0.7}px`)
-          .style('top', `${event.clientY * 0.5}px`)
+          .style('left', `${event.clientX - window.innerWidth / 8}px`)
+          .style('top', `${event.clientY - window.innerHeight / 3}px`)
           .classed('hidden', false);
         svg
           .selectAll(`.bellchart-${d.index}`)
@@ -127,8 +127,6 @@ const FoodGlobalChart = ({ steps, direction }) => {
 
       // DATA JOIN
       const highlightData = data.filter((d) => COUNTRIES.includes(d.country));
-
-      // TODO: Fix animations!
 
       // STEP 0
       const lines = svg
@@ -350,7 +348,7 @@ const FoodGlobalChart = ({ steps, direction }) => {
     <>
       <div
         id="tooltip-food-global"
-        className="tooltip hidden"
+        className="tooltip red hidden"
         ref={tooltipRef}
       ></div>
       <svg className="grid-chart" ref={svgRef}></svg>

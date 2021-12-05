@@ -29,9 +29,30 @@ const Section05Pie = () => {
     `,
   };
 
+  // TODO: Text change
+
   return (
-    <div className="section" id="section05cardRef" ref={section05cardRef}>
-      <CardSection header={text.header} main={text.main} />
+    <div className="section regular center">
+      <div className="content-container">
+        <div
+          className="section-card"
+          id="section05cardRef"
+          ref={section05cardRef}
+        >
+          <h1>
+            Is <span className="red">migration plan </span>
+            related to <br />
+            the <span className="red">economic pressure on food?</span>
+          </h1>
+          <p>
+            For those who suffer food insecurity tend to make solid plan and
+            preparation to migrate than those don’t have food issue. To answer
+            this, we need to study the how many people have to work to ensure
+            food security and understand how economic status impact migration
+            plan and action.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

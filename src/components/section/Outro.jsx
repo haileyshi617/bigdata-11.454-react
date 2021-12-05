@@ -2,7 +2,7 @@ import React from 'react';
 
 function Outro() {
   return (
-    <div className="section outro">
+    <div className="section regular center outro">
       <div className="container">
         <div className="summary">
           <h1>Summary</h1>
