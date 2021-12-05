@@ -17,6 +17,7 @@ import Section04Scroll from './components/section/Section04Scroll';
 
 import Section05PieCard from './components/section/Section05PieCard';
 import Section05Pie from './components/section/Section05Pie';
+import Footer from './components/layout/Footer';
 
 export default function App() {
   const ref = useRef(null);

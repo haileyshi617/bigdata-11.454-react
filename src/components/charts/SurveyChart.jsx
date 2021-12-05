@@ -114,11 +114,15 @@ const SurveyChart = ({ steps, direction }) => {
       //mouse functions
       const tooltip = d3.select('#tooltip-survey');
       tooltip.classed('hidden', true);
+
+      //mouseover
       const mouseover = function (event, d) {
         d3.select(this).attr('fill', '#ff6666').attr('r', 3.5);
+        console.log(event);
 
+        //add tooltip
         tooltip
-          .style('left', event.clientX - 70 + 'px')
+          .style('left', event.clientX - 50 + 'px')
           .style('top', height - 30 + 'px')
           .html(
             `<h3>${d.sex}, ${+d.age}</h3><p>Food Insecurity: <span>${myCariMain(
@@ -129,6 +133,7 @@ const SurveyChart = ({ steps, direction }) => {
           )
           .classed('hidden', false);
 
+        //add line
         svg
           .append('line')
           .attr('class', 'scattertooltip')
@@ -140,12 +145,16 @@ const SurveyChart = ({ steps, direction }) => {
           .attr('stroke', '#ff6666');
       };
 
+      //mouseout
       const mouseout = function (event, d) {
-        tooltip.classed('hidden', true);
         d3.select(this)
           .attr('fill', (d) => myColorMain(d.cari))
           .attr('r', 2);
 
+        //remove tooltip
+        tooltip.classed('hidden', true);
+
+        //remove line
         d3.selectAll('.scattertooltip').remove();
       };
 

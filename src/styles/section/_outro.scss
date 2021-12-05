@@ -1,6 +1,8 @@
 .outro {
   .container {
     max-width: $content-width-pc;
+    margin-left: 100px;
+    margin-right: 100px;
     display: inline-flex;
     justify-content: center;
     gap: 120px;
@@ -23,9 +25,17 @@
     margin-bottom: 30px;
   }
 
+  ul {
+    padding-left: 20px;
+  }
   li {
-    list-style: none;
+    // list-style: none;
     padding-bottom: 10px;
+    line-height: 24px;
+  }
+
+  a {
+    color: $c-primary-dark !important;
   }
 }
 
