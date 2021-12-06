@@ -7,24 +7,48 @@ function Outro() {
         <div className="summary">
           <h1>Summary</h1>
           <p>
-            To conclude, food insecurity has opposite effects on migration
-            desire and migration plan. Solving food insecurity alone does not
-            indicate a reduction of migration desire but may rather decrease
-            possibility of someone to make solid plan for migration. As people
-            need less to worry about basic need for food, they may have more
-            resources and time to think of new possibilities such as migration
-            that may further improve their living standard. Yet better-off does
-            not necessary solidify their migration action.
+            <strong>Limited Impact of Food Security</strong>
+          </p>
+          <p>
+            To conclude, food insecurity has limited impact on migration issue.
+            The correlation between food security and migration intension and
+            action are not significant in these three countries.
           </p>
           <br />
           <p>
-            Therefore, food security shall not be considered as the bargaining
-            chip for immigration policy, but rather a bottom line that every
-            nation and individual shall hold. From the survey, there is still a
-            large portion of people suffering food insecurity in the triangle
-            region. Ensuring basic human right – the right to food is
-            undoubtedly the first priority for everyone, regardless of migration
-            desire and action.
+            <strong>Food Insecurity and Migration</strong>
+          </p>
+          <p>
+            People with better food supply tend to have greater desire to
+            migrate. Yet their possibility of making solid plan for migration is
+            smaller.
+          </p>
+          <br />
+          <p>
+            One explanation to this might be, as people need less to worry about
+            basic need for food, they may have more resources and time to think
+            of new possibilities such as migration that may further improve
+            their living standard. However, these better-off people do not
+            necessarily make actual plan for migration in the near future
+            compared with the food insecure.
+          </p>
+          <br />
+          <p>
+            <strong>Migration Issue's Complexity</strong>
+          </p>
+          <p>
+            Migration issue is a complicated and multi-causal subject that
+            require a much wider perspective. Food security shall not be
+            considered as the only solution or even bargaining chip to solve the
+            immigration issue, but rather a bottom line that every nation and
+            individual shall hold and ensure.
+          </p>
+          <br />
+          <p>
+            From the survey, it’s astonishing to see that there is still a large
+            portion of people suffering food insecurity in the triangle region.
+            Ensuring basic human right – the right to food is undoubtedly the
+            first priority.
           </p>
         </div>
         <div className="sources">

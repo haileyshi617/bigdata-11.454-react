@@ -175,8 +175,8 @@ function Section04Scroll() {
                   Given <span className="red">the food insecure</span> are
                   already struggling with basic needs such as food, their plans
                   to migrate are more likely to be{' '}
-                  <span className="red">out of desperation </span>
-                  rather than <span className="blue">by choice </span>.
+                  <span className="red">out of desperation</span> rather than{' '}
+                  <span className="blue">by choice </span>.
                 </p>
               </div>
             </Step>
