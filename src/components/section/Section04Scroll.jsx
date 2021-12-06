@@ -115,10 +115,21 @@ function Section04Scroll() {
           >
             <Step data={1} value={1}>
               <div className="step">
-                <h2>The food secure have higher desire to migrate.</h2>
+                <h2> Higher migration desire?</h2>
                 <p>
-                  Does this mean food security will actually drive people to
-                  migrate? Further research of the data tells a different story.
+                  <span className="red">44% of the food secure</span> have a
+                  desire to migrated, compared with{' '}
+                  <span className="red">
+                    37% of those who are food insecure
+                  </span>
+                  . Does this mean food security will actually drive people to
+                  migrate?
+                </p>
+                <br />
+                <p>
+                  However it takes{' '}
+                  <span className="blue">more than just desire</span> to
+                  migrate.
                 </p>
               </div>
             </Step>
@@ -128,9 +139,17 @@ function Section04Scroll() {
                 <h2>Desire does not equal to action.</h2>
                 <p>
                   Even though food secure people are more likely to say they
-                  want to migrate, when it comes to migration, it takes{' '}
-                  <span className="red">actual planning and preparation</span>{' '}
-                  to actualize the action.
+                  want to migrate, it is important to consider{' '}
+                  <span className="red">
+                    how serious those people are for the action of migration
+                  </span>
+                  .
+                </p>
+                <br />
+                <p>
+                  Thus, we classified those who answered yes to migrate to{' '}
+                  <span className="blue">three groups</span> based on the level
+                  of preparation they have for migration in the near future.
                 </p>
               </div>
             </Step>
@@ -141,9 +160,22 @@ function Section04Scroll() {
                   The food insecure are more likely to take actual action.
                 </h2>
                 <p>
-                  Given the food insecure people are already struggling with
-                  basic needs such as food, their plans to migrate are more
-                  likely to be <span className="red">out of desperation </span>
+                  The ratio of having the intention to migrate and having plans
+                  or preparations is:
+                  <br />
+                  <li>
+                    <span className="blue">14% among the food secure</span>
+                  </li>
+                  <li>
+                    <span className="red">19% among the food insecure. </span>
+                  </li>
+                </p>
+                <br />
+                <p>
+                  Given <span className="red">the food insecure</span> are
+                  already struggling with basic needs such as food, their plans
+                  to migrate are more likely to be{' '}
+                  <span className="red">out of desperation </span>
                   rather than <span className="blue">by choice </span>.
                 </p>
               </div>

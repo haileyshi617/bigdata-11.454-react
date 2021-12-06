@@ -148,8 +148,8 @@ export default class GirdSecureChart {
       .attr('height', function (d) {
         return d.height;
       })
-      .on('mouseover', mouseover)
-      .on('mouseout', mouseout)
+      // .on('mouseover', mouseover)
+      // .on('mouseout', mouseout)
       .style('fill', COLOR_GRAY)
       .style('stroke', '#fff');
 
