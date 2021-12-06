@@ -66,8 +66,8 @@ const MapChart = () => {
         tooltip
           .html(
             d.properties.name == 'USA'
-              ? `<p>The <span class="big">${d.properties.name}</span> receives <span class="big">${rate}% </span>of migrants from <span>El Salvador, Guatemala, and Honduras</span>.</p>`
-              : `<p>Around <span class="big">${rate}%</span> of the population from <span class="big">${d.properties.name}</span> are migrants to the US by 2020.<p>`
+              ? `<p>Among all migrants to the <span class="big">${d.properties.name}</span>, <span class="big">${rate}% </span>are from <span>El Salvador, Guatemala, and Honduras</span>.</p>`
+              : `<p>Around <span class="big">${rate}%</span> of the population of <span class="big">${d.properties.name}</span> are migrants to the US by 2020.<p>`
           )
           .classed('hidden', false);
 

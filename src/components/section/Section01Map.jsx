@@ -67,11 +67,11 @@ const Section01Map = () => {
           </p>
           <br />
           <p>
-            More recently, the number of immigrants{' '}
+            More recently, the number of migrants{' '}
             <span>–– from the three Northern Triangle nations rose by 25%</span>{' '}
-            between 2007 and 2015. During that same period, the immigrant
-            population from Mexico, the largest birth country for U.S.
-            immigrants, declined 6%.
+            between 2007 and 2015. During that same period, the migrant
+            population from Mexico, the largest birth country for U.S. migrants,
+            declined by 6%.
           </p>
         </div>
       </div>
