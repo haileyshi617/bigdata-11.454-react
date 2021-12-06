@@ -16,7 +16,8 @@
       text-align: center;
       .title {
         margin-bottom: 24px;
-        font-size: 22px;
+        font-size: 20px;
+        // font-weight: 700;
       }
     }
     .divider {
@@ -36,10 +37,19 @@
           margin-left: 4px;
           color: #7d7d7d;
           font-weight: normal;
-          font-size: 16px;
+          font-size: 14px;
         }
       }
     }
+  }
+
+  h1 {
+    max-width: 43%;
+    margin-bottom: 1rem;
+  }
+  .top-p {
+    margin-bottom: 3rem;
+    max-width: 30%;
   }
 }
 

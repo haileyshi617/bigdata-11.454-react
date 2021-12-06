@@ -40,15 +40,13 @@ const Section05Pie = () => {
           ref={section05cardRef}
         >
           <h1>
-            Is <span className="red">migration plan </span>
-            related to <br />
-            the <span className="red">economic pressure on food?</span>
+            How <span className="red">economic status </span>impact migration
+            plan and action?
           </h1>
           <p>
-            For those who suffer food insecurity tend to make solid plan and
-            preparation to migrate than those don’t have food issue. To answer
-            this, we need to study the how many people have to work to ensure
-            food security and understand how economic status impact migration
+            To confirm better off people have are less actions on migration, we
+            need to study the how many people have to work to ensure food
+            security to better understand how economic status impact migration
             plan and action.
           </p>
         </div>

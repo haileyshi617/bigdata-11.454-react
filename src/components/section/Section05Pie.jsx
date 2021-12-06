@@ -10,6 +10,15 @@ const Section05Pie = () => {
     <div className="section regular center">
       <div className="donut-container">
         <div className="donut-chart-part">
+          <h1>
+            Those have to <span className="red">work for food</span> are more
+            likely to make plans for migration.
+          </h1>
+          <p className="top-p">
+            This means food has become their last hope for surviving, a
+            desperate food-insecure situation that leads to greater chance of
+            migration action.
+          </p>
           <div className="top-legend">
             <Square color="#DFBFBF" width={18} />
             <span>Have to work for food but NO PLAN to migrate</span>
