@@ -17,28 +17,15 @@ const ChartWrapper = ({ steps, direction }) => {
   }, [chart, steps, direction]);
 
   // AXIS
-  let axis;
-  if (steps >= 3) {
-    axis = (
-      <div className="axis-container">
-        <small>0</small>
-        <small>40</small>
-        <small>60</small>
-        <small>80</small>
-        <small>160</small>
-      </div>
-    );
-  } else {
-    axis = (
-      <div className="axis-container">
-        <small>0</small>
-        <small>100</small>
-        <small>200</small>
-        <small>300</small>
-        <small>400</small>
-      </div>
-    );
-  }
+  const axis = (
+    <div className="axis-container">
+      <small>0%</small>
+      <small>25%</small>
+      <small>50%</small>
+      <small>75%</small>
+      <small>100%</small>
+    </div>
+  );
 
   return (
     <>

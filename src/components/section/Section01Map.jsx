@@ -46,7 +46,7 @@ const Section01Map = () => {
   }, []);
 
   return (
-    <div className="section regular center migration">
+    <div className="section regular center">
       <div className="map-container" ref={mapRef} id="mapRef">
         <MapChart />
       </div>

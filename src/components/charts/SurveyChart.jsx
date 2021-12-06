@@ -19,14 +19,14 @@ const SurveyChart = ({ steps, direction }) => {
 
   //d3 chart settings
   let width = '1500';
-  let height = '600';
+  let height = '800';
   let center = { x: width / 2, y: height / 2 };
   let cariCenter = [width / 6, width / 2.3, width / 1.5, width / 1.2];
   let migCenter = [width / 5, width / 1.8, width / 1.2];
 
   //bubble settings
   let forceStrength = 0.023;
-  let r = 2;
+  let r = 3;
   let padding = 2;
 
   //label settings
@@ -73,10 +73,10 @@ const SurveyChart = ({ steps, direction }) => {
       //svg
       const svgEl = d3
         .select(svgRef.current)
-        .style('width', width)
+        .attr('width', '100%')
         .attr('text-anchor', 'middle')
         .attr('viewBox', `0 0 ${width} ${height}`)
-        .attr('preserveAspectRatio', 'xMinYMin meet');
+        .attr('preserveAspectRatio', 'xMaxYMid meet');
 
       svgEl.selectAll('*').remove();
 
@@ -322,7 +322,7 @@ const SurveyChart = ({ steps, direction }) => {
   return (
     <>
       <div id="tooltip-survey" className="hidden" ref={tooltipRef}></div>
-      <svg className="survey-chart" ref={svgRef}></svg>
+      <svg className="chart-area survey-chart" ref={svgRef}></svg>
     </>
   );
 };

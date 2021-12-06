@@ -1,6 +1,8 @@
 .scroller {
   z-index: 99;
+  pointer-events: none;
 }
+
 .dot-scroller {
   margin-bottom: 500px;
   .step {

@@ -8,7 +8,8 @@
   align-items: center;
 
   .container {
-    width: $content-width-pc;
+    width: 80vw;
+    max-width: $content-width-pc;
   }
 
   h1 {

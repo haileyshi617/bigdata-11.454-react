@@ -1,0 +1,33 @@
+// === TOOLTIP ===
+.hidden {
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.tooltip {
+  position: absolute;
+  max-width: 300px;
+  padding: 15px;
+
+  background: white;
+  box-shadow: 1px 1px 7px -3px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+
+  &.red {
+    color: $c-primary-dark;
+    border-left: thick solid $c-primary-dark;
+  }
+
+  .header {
+    padding-bottom: 6px;
+  }
+
+  span {
+    font-weight: bold;
+    line-height: 30px;
+
+    &.big {
+      font-size: 24px;
+    }
+  }
+}

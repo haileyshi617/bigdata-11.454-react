@@ -1,0 +1,80 @@
+// === LEGEND ===
+
+.legend-container {
+  padding-bottom: 5vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.legend {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  // LEGEND TEXT
+  p {
+    font-size: 13px;
+
+    // hunger
+    &.yes {
+      color: $c-primary-dark;
+    }
+    &.no {
+      color: $c-accent-dark;
+    }
+
+    // migrate
+    &.mig-no {
+      color: $c-grey-dark;
+    }
+    &.mig-yes {
+      color: $c-grey-dark;
+    }
+    &.mig-scale-1 {
+      color: $c-grey-dark;
+    }
+    &.mig-scale-2 {
+      color: $c-grey-dark;
+    }
+    &.mig-scale-3 {
+      color: $c-grey-dark;
+    }
+  }
+
+  // LEGEND IMG
+  .legend-block {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+
+    &.dot {
+      border-radius: 50%;
+    }
+
+    // hunger
+    &.yes {
+      background-color: $c-primary-dark;
+    }
+    &.no {
+      background-color: $c-accent-dark;
+    }
+    // migrate
+    &.mig-no {
+      background-color: #efefef;
+    }
+    &.mig-yes {
+      background-color: #ffe3e0;
+    }
+    &.mig-scale-1 {
+      background-color: #ffe3e0;
+    }
+    &.mig-scale-2 {
+      background-color: #ad2e24;
+    }
+    &.mig-scale-3 {
+      background-color: #540804;
+    }
+  }
+}

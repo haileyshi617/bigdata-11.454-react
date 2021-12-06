@@ -77,11 +77,13 @@ const MapChart = () => {
       };
 
       const mousemove = function (event, d) {
-        tooltip.style('left', `${event.clientX}px`).style('top', () => {
-          if (event.clientY - window.innerHeight / 2 > 0)
+        tooltip
+          .style('left', `${event.clientX - window.innerWidth / 5}px`)
+          .style('top', () => {
+            if (event.clientY - window.innerHeight / 2 > 0)
+              return `${event.clientY * 0.9}px`;
             return `${event.clientY * 0.9}px`;
-          return `${event.clientY * 0.9}px`;
-        });
+          });
       };
 
       const mouseout = function (event, d) {
@@ -118,7 +120,7 @@ const MapChart = () => {
         className="tooltip red hidden"
         ref={tooltipRef}
       ></div>
-      <svg className="map-chart" ref={svgRef}></svg>
+      <svg className="chart-area map-chart" ref={svgRef}></svg>
       {/* <ArcChart id={id} data={migdata} ref={arcRef}/> */}
     </>
   );

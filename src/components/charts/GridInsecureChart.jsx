@@ -2,20 +2,15 @@ import * as d3 from 'd3';
 import dataSrc_int from '../../data/food-insecure-mig-int.csv';
 import dataSrc_prep from '../../data/food-insecure-mig-prep.csv';
 
-// TODO: change into a bar chart?
-// TODO: start by pointing out one square is one person
-// TODO: smooth the transition
-// TODO: add the data overlay to the chart
-
 /* ---------------------------------- SETUP --------------------------------- */
 // CANVAS SETUP
 const MARGIN = { TOP: 0, BOTTOM: 0, LEFT: 0, RIGHT: 0 };
 const WIDTH = window.innerWidth - MARGIN.LEFT - MARGIN.RIGHT;
-const HEIGHT = 200 - MARGIN.TOP - MARGIN.BOTTOM;
+const HEIGHT = window.innerWidth / 16 - MARGIN.TOP - MARGIN.BOTTOM;
 
 // GRID SETUP
 const NCOL = 80;
-const NROW = { INTENTION: 5, PREPARATION: 2 };
+const NROW = { INTENTION: 5, PREPARATION: 5 };
 
 // RENDERING SETUP
 const COLOR_GRAY = '#efefef';
@@ -28,6 +23,10 @@ const COLOR_PREPARATION = {
   PREP_NO_ACTION: '#ad2e24',
   ACTION: '#540804',
 };
+
+// LABELS
+const L_INT = { YES: '37%', NO: '63%' };
+const L_PREP = { L1: '7%', L2: '7%', L3: '85%' };
 
 /* -------------------------- FUNCTION TO DRAW GRID ------------------------- */
 function setGridData(visData, nrow) {
@@ -74,13 +73,14 @@ export default class GirdSecureChart {
     vis.svg = d3
       .select(element)
       .append('svg')
+      .attr('width', '100%')
       .attr(
         'viewBox',
         `0 0 ${WIDTH + MARGIN.LEFT + MARGIN.RIGHT} ${
           HEIGHT + MARGIN.TOP + MARGIN.BOTTOM
         }`
       )
-      .attr('preserveAspectRatio', 'xMinYMin meet')
+      .attr('preserveAspectRatio', 'xMidYMin meet')
       .append('g')
       .attr('transform', `translate(${MARGIN.LEFT}, ${MARGIN.TOP})`);
 

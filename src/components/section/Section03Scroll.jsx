@@ -18,7 +18,7 @@ function Section03Scroll() {
     setProgress(progress);
   };
 
-  const myelement =
+  const title =
     steps == 2 ? (
       <p className="chart-title grey">
         Survey data, <span className="red">food security</span>, Migration
@@ -37,19 +37,14 @@ function Section03Scroll() {
     );
 
   return (
-    <div>
+    <div className="section scroll">
       <div className="main">
-        <div className="main__graphic dot">
+        <div className="main__graphic">
           <div className="scroll-chart-content-container">
-            <div className="">{myelement}</div>
+            <div className="title-container short">{title}</div>
           </div>
-          <div className="chart-wrapper">
-            <SurveyChart
-              steps={steps}
-              direction={direction}
-              className="survey"
-            />
-          </div>
+
+          <SurveyChart steps={steps} direction={direction} className="survey" />
         </div>
 
         <div className="scroller dot-scroller">

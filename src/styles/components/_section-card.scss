@@ -1,15 +1,14 @@
 .section-card {
+  // background-color: red;
   width: $section-card-width;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
   text-align: left;
   z-index: 2;
   pointer-events: none;
-
-  @media (max-width: 600px) {
-    width: $section-card-width-mobile;
-  }
 
   h1 {
     margin-bottom: 30px;
@@ -17,5 +16,9 @@
 
   p {
     padding-left: 72px;
+  }
+
+  @media (max-width: 600px) {
+    width: $section-card-width-mobile;
   }
 }

@@ -9,19 +9,10 @@
 
 // === SECTIONS ===
 @import 'section/section';
-@import 'section/scroll';
-
-@import 'section/intro';
-@import 'section/outro';
-
-@import 'section/01-map';
-@import 'section/02-food-global';
-@import 'section/03-dot';
-@import 'section/04-grid';
+@import 'section/section-scroll';
 
 // === COMPONENTS ===
-@import 'components/chart-area';
-@import 'components/chart-donut';
+@import './charts/chart-area';
 
 @import 'components/progress-bar';
 @import 'components/content-container';

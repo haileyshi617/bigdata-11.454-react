@@ -51,7 +51,7 @@ const FoodGlobalChart = ({ steps, direction }) => {
             HEIGHT + MARGIN.TOP + MARGIN.BOTTOM
           }`
         )
-        .attr('preserveAspectRatio', 'xMaxYMin meet');
+        .attr('preserveAspectRatio', 'xMaxYMid meet');
       svgEl.selectAll('*').remove(); // Clear svg content before adding new elements
 
       const svg = svgEl
@@ -351,7 +351,7 @@ const FoodGlobalChart = ({ steps, direction }) => {
         className="tooltip red hidden"
         ref={tooltipRef}
       ></div>
-      <svg className="grid-chart" ref={svgRef}></svg>
+      <svg className="chart-area" ref={svgRef}></svg>
     </>
   );
 };

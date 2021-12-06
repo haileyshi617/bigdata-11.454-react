@@ -1,16 +1,33 @@
+// COMPONENTS
 @import '../components/section-card';
+
+// === SECTIONS ===
+@import './intro';
+@import './outro';
+
+@import './01-map';
+@import './02-food-global';
+@import './03-dot';
+@import './04-grid';
 
 // GLOBAL
 .section {
   min-height: 100vh;
   width: 100%;
 
-  // REGULAR
+  // TYPE
   &.regular {
     display: flex;
     flex-direction: column;
     position: relative;
     overflow: hidden;
+  }
+
+  &.scroll {
+    // background-color: rgb(238, 213, 213);
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
 
   // POSITION
@@ -21,6 +38,11 @@
     left: 0;
     right: 0;
     z-index: 1;
+  }
+
+  // SIZE
+  &.max-height {
+    max-height: 100vh;
   }
 
   // ALIGN
